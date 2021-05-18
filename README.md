@@ -48,5 +48,5 @@ We will work on this project for 6 week's.
 
 
 # Communication
-- test
+- The team has 2 meeting's per sprint
 
