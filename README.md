@@ -1,6 +1,6 @@
 # Bit-Project
-- Project goal:
-- Secondary goals:
+- Project goal: Web shop for bit Academy
+- Secondary goals:To learn from this expierence
 
 
 # Team
@@ -13,7 +13,13 @@
 
 # scope
 Features:
-- test
+- Account System 
+- filter 
+- Responsive website 
+- Functional Database 
+- Search bar 
+- Add to Cart and Wishlist 
+- Contacts
 
 Will do:
 - test
