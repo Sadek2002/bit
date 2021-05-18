@@ -40,9 +40,9 @@ Might do:
 
 
 # Milestones
-We will work on this project for 6 week's
+We will work on this project for 6 week's.
 
-- test
+- Frontend 
 
 
 # Communication
