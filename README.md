@@ -1,7 +1,7 @@
 # bit-project
 
 # team
-- Alica Fernandes
+- Alicia Fernandes
 - Oscar Lemstra
 - Sadek Almousawi
 - Tim Spekking
