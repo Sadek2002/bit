@@ -13,9 +13,9 @@
 
 # scope
 Features:
-- Product, account, contact, admin page
+- Product, account and contact page
 - A manager for the admin
-- filter for product's
+- Filter for product's
 - Search bar
 - Responsive website: a site that can be used on phone, tablet and computer
 - Functional Database: to save the data on the site
@@ -24,14 +24,19 @@ Features:
 - Advertisment
 
 Will do:
-- 
+- Product, account and contact page
+- Filter for product's
+- Search bar
+- Responsive website: a site that can be used on phone, tablet and computer
+- Functional Database: to save the data on the site
+- Add to Cart: order page
 
 Won't do:
-- Payment system 
-- Advertisment 
+- Payment system
+- Advertisment
 
 Might do:
-- 
+- A manager for the admin
 
 
 # Milestones
