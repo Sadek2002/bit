@@ -13,6 +13,7 @@
 
 # scope
 Features:
+- Product page
 - Account System 
 - filter 
 - Responsive website 
