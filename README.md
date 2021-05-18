@@ -13,27 +13,24 @@
 
 # scope
 Features:
-- Product page
-- Account System 
-- filter 
+- Product, account, contact, admin page
+- Account and admin System 
+- filter for product's 
 - Responsive website 
 - Functional Database 
-- Search bar 
+- Search bar
 - Add to Cart
 - Contacts
-- Information page 
+- Information page
+- Payment system
+- Advertisment
 
 Will do:
-- A webshop with a functional database for products and accounts
-- A website that is viewable on all devices(smartphone, laptop, table, enz)
-- A search bar with a product filter and an account 
-- A contact page and information page 
-- It will have a login system and profile page with forget password page 
 - 
 
 Won't do:
-- No payment system 
-- No advertisment 
+- Payment system 
+- Advertisment 
 
 Might do:
 - 
