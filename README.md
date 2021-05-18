@@ -46,6 +46,5 @@ tekst
 
 
 # Communication
-
-
 - test
+
