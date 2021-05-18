@@ -1,6 +1,6 @@
 # Bit-Project
 
-# team
+# Team
 - Alicia Fernandes
 - Oscar Lemstra
 - Sadek Almousawi
@@ -8,13 +8,13 @@
 - Terique Blijder
 
 
-# will do
+# Will do
 - test
 
 
-# want do
+# Want do
 - test
 
 
-# won't do
+# Won't do
 - test
