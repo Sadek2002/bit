@@ -14,14 +14,12 @@
 # scope
 Features:
 - Product, account, contact, admin page
-- Account and admin System 
-- filter for product's 
-- Responsive website 
-- Functional Database 
+- A manager for the admin
+- filter for product's
 - Search bar
-- Add to Cart
-- Contacts
-- Information page
+- Responsive website: a site that can be used on phone, tablet and computer
+- Functional Database: to save the data on the site
+- Add to Cart: order page
 - Payment system
 - Advertisment
 
