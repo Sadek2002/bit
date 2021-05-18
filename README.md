@@ -1,6 +1,6 @@
 # Bit-Project
-- Project goal: building a webshop for Bit Academy
-- Secondary goals:To learn from this expierence
+- Project goal: Building a webshop for Bit Academy
+- Secondary goals: To learn from this expierence
 
 
 # Team
