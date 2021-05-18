@@ -18,17 +18,24 @@ Features:
 - Responsive website 
 - Functional Database 
 - Search bar 
-- Add to Cart and Wishlist 
+- Add to Cart
 - Contacts
+- Information page 
 
 Will do:
-- test
+- A webshop with a functional database for products and accounts
+- A website that is viewable on all devices(smartphone, laptop, table, enz)
+- A search bar with a product filter and an account 
+- A contact page and information page 
+- It will have a login system and profile page with forget password page 
+- 
 
 Won't do:
-- test
+- No payment system 
+- No advertisment 
 
 Might do:
-- test
+- 
 
 
 # Milestones
@@ -38,6 +45,6 @@ tekst
 
 
 # Communication
-tekst
+
 
 - test
