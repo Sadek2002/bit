@@ -1,6 +1,6 @@
 # Bit-Project
-Project goal:
-Secondary goals:
+- Project goal:
+- Secondary goals:
 
 
 # Team
@@ -18,10 +18,20 @@ Features:
 Will do:
 - test
 
-Want do:
-- test
-
 Won't do:
 - test
 
+Might do:
+- test
 
+
+# Milestones
+tekst
+
+- test
+
+
+# Communication
+tekst
+
+- test
