@@ -49,4 +49,6 @@ We will work on this project for 6 week's.
 
 # Communication
 - The team has 2 meeting's per sprint
+- We will have 2 Stand-up's per week
+- We have 1 review per week
 
