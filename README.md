@@ -1,11 +1,11 @@
 # bit-project
 
 # team
-- alica vernades
-- oscar lemstra
-- sadek almousawi
-- tim spekking
-- terique blijder
+- Alica Fernades
+- Oscar Lemstra
+- Sadek Almousawi
+- Tim Spekking
+- Terique Blijder
 
 
 # will do
