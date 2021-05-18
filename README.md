@@ -25,9 +25,9 @@ Features:
 
 Will do:
 - Product, account and contact page
+- A manager for the admin
 - Filter for product's
 - Search bar
-- Responsive website: a site that can be used on phone, tablet and computer
 - Functional Database: to save the data on the site
 - Add to Cart: order page
 
@@ -36,15 +36,15 @@ Won't do:
 - Advertisment
 
 Might do:
-- A manager for the admin
+- Responsive website: a site that can be used on phone, tablet and computer
 
 
 # Milestones
 We will work on this project for 6 week's.
 
-- Layout finished (in 2 week's)
-- Database ready (in 2 week's)
-- Responsive website (in 2 week's)
+- Layout finished (week 1)
+- Database ready (week 3)
+- Responsive website (week 6)
 
 
 # Communication
