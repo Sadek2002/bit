@@ -40,7 +40,7 @@ Might do:
 
 
 # Milestones
-tekst
+We will work on this project for 6 week's
 
 - test
 
