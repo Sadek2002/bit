@@ -1,6 +1,11 @@
 # bit-project
 
-
+# team
+- alica vernades
+- oscar lemstra
+- sadek almousawi
+- tim spekking
+- terique blijder
 
 
 # will do
@@ -11,5 +16,5 @@
 - test
 
 
-# might do
+# won't do
 - test
