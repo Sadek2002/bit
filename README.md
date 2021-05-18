@@ -1,4 +1,4 @@
-# bit-project
+# Bit-Project
 
 # team
 - Alicia Fernandes
