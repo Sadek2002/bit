@@ -42,7 +42,9 @@ Might do:
 # Milestones
 We will work on this project for 6 week's.
 
-- Frontend 
+- Layout finished (in 2 week's)
+- Database ready (in 2 week's)
+- Responsive website (in 2 week's)
 
 
 # Communication
