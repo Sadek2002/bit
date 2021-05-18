@@ -4,11 +4,11 @@
 
 
 # Team
-- Alicia Fernandes
-- Oscar Lemstra
-- Sadek Almousawi
-- Tim Spekking
-- Terique Blijden
+- Alicia Fernandes: developer
+- Oscar Lemstra: developer
+- Sadek Almousawi: developer
+- Tim Spekking: developer
+- Terique Blijden: developer
 
 
 # scope
