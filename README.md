@@ -1,5 +1,5 @@
 # Bit-Project
-- Project goal: Web shop for bit Academy
+- Project goal: building a webshop for Bit Academy
 - Secondary goals:To learn from this expierence
 
 
