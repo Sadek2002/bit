@@ -26,7 +26,6 @@ Features:
 Will do:
 - Product, account and contact page
 - A manager for the admin
-- Filter for product's
 - Search bar
 - Functional Database: to save the data on the site
 - Add to Cart: order page
@@ -34,6 +33,8 @@ Will do:
 Won't do:
 - Payment system
 - Advertisment
+- Filter for product's
+
 
 Might do:
 - Responsive website: a site that can be used on phone, tablet and computer
