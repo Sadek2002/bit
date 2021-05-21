@@ -1,7 +1,3 @@
-.contact_form_input{
-
-}
-
 
 body{
     background-color: #000563;
@@ -9,3 +5,27 @@ body{
     text-decoration: none;
 
 }
+#wrapper{
+     color: white;
+
+ }
+form{
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    text-align: center;
+}
+input{
+    background-color: #f1f1f1;
+    padding: 10px;
+    flex: 50%;
+}
+button{
+    background-color: #f1f1f1;
+    padding: 10px;
+    flex: 50%;
+}
+.contact_form_input{
+
+}
+
