@@ -33,12 +33,11 @@ Will do:
 Won't do:
 - Payment system
 - Advertisment
-- Filter for product's
 
 
 Might do:
 - Responsive website: a site that can be used on phone, tablet and computer
-
+- Filter for product's
 
 # Milestones
 We will work on this project for 6 week's.
