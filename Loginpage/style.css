@@ -17,3 +17,10 @@ a:hover {
 body {
     background-color: #000563;
 }
+
+label {
+    font-size: 16px;
+    color: white;
+    font-family: sans-serif;
+    padding-left: 3px;
+}
