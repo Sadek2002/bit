@@ -16,7 +16,7 @@ if (isset($_POST['submit'])) {
         $message_sent = mail($to, $subject, $message, 'From: ' . $email);
 
         if ($message_sent) {
-            header('emailhasbeensent.php');
+            header('.php');
         } else {
             exit("Niet verzonden, probeer het opnieuw.");
         }
