@@ -1,6 +1,6 @@
 <?php
 
-$message_sent = "false";
+$message_sent= false;
 if (isset($_POST['submit'])) {
     $name = $_POST['name'];
     $last_name = $_POST['last_name'];
