@@ -23,7 +23,8 @@ form{
     padding: 10px;
     flex: 50%;
 }
-submit_button{
+
+.submit_button{
 
 }
 .contact_form_input{
