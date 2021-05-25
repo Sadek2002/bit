@@ -63,6 +63,11 @@ li a, .dropbtn {
     display: block;
   }
 
+  #bit_img{
+      margin: auto;
+      width: 50%;
+
+  }
 
 
 body{
