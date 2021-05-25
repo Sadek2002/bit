@@ -1,7 +1,30 @@
-#nav  {
-    display: inline;
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:blue;
+}
+
+nav li {
+    float: left;
 
 }
+nav li a {
+    display: block;
+    text-align: center;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+
+nav li a:hover {
+    background-color: cornflowerblue;
+}
+
+
+
 
 
 
@@ -25,8 +48,7 @@
 
 body{
     background-color: #000563;
-    text-align: center;
-    text-decoration: none;
+    
 
 }
 #wrapper{
