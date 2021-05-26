@@ -2,18 +2,36 @@
 
 class Database {
     private $host = "localhost";
+    private $dbname = "bit_academy";
     private $port = "3306";
     private $user = "root";
     private $pass = "";
-    private $db = "bit_academy";
 
 
-    function test () {
-        if (1 + 2 === 3) {
-            echo "het werkt waaaaat!";
+    //functions for connecting to database
+    private function dbh () {
+        $dbh = new PDO('mysql:host='.$this->host.';dbname='.$this->dbname.';port='.$this->port, $this->user, $this->pass);
+        return $dbh;
+    }
+
+    public function checkConnectionToDatabase () {
+        try {
+            $this->dbh();
+        } catch (PDOException $e) {
+            print "Error!: " . $e->getMessage() . "<br/>";
+            die();
         }
-        else {
-            echo "dat is jammer";
+    }
+
+
+    //functions
+    public function getTableByName ($tableName) {
+        $query = "SELECT * FROM ".$tableName;
+        $tableArray = array();
+
+        foreach ($this->dbh()->query($query) as $row) {
+            $tableArray[] = $row;
         }
+        return $tableArray;
     }
 }
