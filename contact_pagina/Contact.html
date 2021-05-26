@@ -7,6 +7,26 @@
     </header>
     <body>
         <div id="wrapper">
+            <header>
+                <img src="img/bit.png" id="bit_img" alt="image">
+            </header>
+            <nav id= "nav">
+                <ul>
+                    <li><a href="index.html" target = "_self">Home</a></li>
+                    <li class = "dropdown">
+                        <a href = "javascript:void(0)" class="dropbtn">Categorieen</a>
+                        <div class="dropdown-content">
+                            <a href="#">link 1</a>
+                            <a href="#">link 2</a>
+                        </div>
+                    </li>
+                    <li><a href = "about.html" target = "_self">About</a>
+                    <li><a href = "Contact.html" target = "_self">Contact</a></li>
+                    <li>search</li>
+                    <li>acount</li>
+                    <li style="float:right">basket</li>
+                </ul>
+            </nav>
             <h1>Contact</h1>
             <form action="contact_php.php" method="POST" id="contact_form">
                 <label>Naam
@@ -27,7 +47,7 @@
                 <label>Bericht
                     <textarea name="message" id="contact_textarea">Bericht......</textarea>
                 </label>
-                <button type="submit" value="submit" name="submit" id="submit_button">Submit</button>
+                <button type="submit" value="submit" name="submit" id="submit_button">Verstuur</button>
             </form>
         </div>
     </body>
