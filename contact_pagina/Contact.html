@@ -22,13 +22,14 @@
                     </li>
                     <li><a href = "about.html" target = "_self">About</a>
                     <li><a href = "Contact.html" target = "_self">Contact</a></li>
-                    <li>search</li>
-                    <li>acount</li>
-                    <li style="float:right">basket</li>
+                    <li><a id="search_bar"><input type="text" placeholder="Search"></a></li>
+                    <li><a href="">Account</a></li>
+                    <li style="float:right"><a href="">Basket</a></li>
                 </ul>
             </nav>
-            <h1>Contact</h1>
             <form action="contact_php.php" method="POST" id="contact_form">
+                <h1>Contact</h1>
+
                 <label>Naam
                     <input name="name" type="text" class="contact_form_input">
                 </label>
@@ -45,7 +46,7 @@
                     <input name="subject" type="text" class="contact_form_input">
                 </label>
                 <label>Bericht
-                    <textarea name="message" id="contact_textarea">Bericht......</textarea>
+                    <textarea name="message" id="contact_textarea" placeholder="bericht"></textarea>
                 </label>
                 <button type="submit" value="submit" name="submit" id="submit_button">Verstuur</button>
             </form>
