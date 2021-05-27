@@ -7,12 +7,12 @@ $db->checkConnectionToDatabase();
 
 
 echo "<pre>";
-print_r($db->getRecordFromTableById("products", "product_id", 5));
+print_r($db->getRecordsFromTableByName("products", "price", "1.25"));
 echo "</pre>";
 
 
 //this way you can use getTableByName
-/*foreach ($db->getTableByName("admins") as $row) {
+foreach ($db->getTableByName("products") as $row) {
     foreach ($row as $item => $value) {
         if ($item === "$item") {
             echo $item.": ".$value;
@@ -20,4 +20,4 @@ echo "</pre>";
         }
     }
     echo "<br><br>";
-}*/
+}
