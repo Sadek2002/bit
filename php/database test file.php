@@ -6,13 +6,13 @@ $db = new Database();
 $db->checkConnectionToDatabase();
 
 
-//echo "<pre>";
-//print_r($db->getTableByName("products"));
-//echo "</pre>";
+echo "<pre>";
+print_r($db->getRecordFromTableById("products", "product_id", 5));
+echo "</pre>";
 
 
 //this way you can use getTableByName
-foreach ($db->getTableByName("admins") as $row) {
+/*foreach ($db->getTableByName("admins") as $row) {
     foreach ($row as $item => $value) {
         if ($item === "$item") {
             echo $item.": ".$value;
@@ -20,4 +20,4 @@ foreach ($db->getTableByName("admins") as $row) {
         }
     }
     echo "<br><br>";
-}
+}*/

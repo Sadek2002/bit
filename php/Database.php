@@ -24,7 +24,7 @@ class Database {
     }
 
 
-    //functions
+    //get functions
     public function getTableByName ($tableName) {
         $query = "SELECT * FROM ".$tableName;
         $tableArray = array();
@@ -33,5 +33,15 @@ class Database {
             $tableArray[] = $row;
         }
         return $tableArray;
+    }
+
+    public function getRecordFromTableById ($tableName, $idName, $idValue) {
+        $query = "SELECT * FROM ".$tableName." WHERE ".$idName." = "."'$idValue'";
+        $record = array();
+
+        foreach ($this->dbh()->query($query) as $row) {
+            $record = $row;
+        }
+        return $record;
     }
 }
