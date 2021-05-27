@@ -1,11 +1,19 @@
 <?php
 
 class Database {
-    private $host = "localhost";
-    private $dbname = "bit_academy";
-    private $port = "3306";
-    private $user = "root";
+    private $host = "";
+    private $dbname = "";
+    private $port = "";
+    private $user = "";
     private $pass = "";
+
+    public function __construct ($host, $dbname, $port, $user, $pass) {
+        $this->host = $host;
+        $this->dbname = $dbname;
+        $this->port = $port;
+        $this->user = $user;
+        $this->pass = $pass;
+    }
 
 
     //functions for connecting to database
