@@ -6,6 +6,17 @@
 
 </head>
 <body>
+<?php
+require_once "../php/Database.php";
+$db = new Database("localhost", "bit_academy", "3306", "root", "");
+$db->checkConnectionToDatabase();
+
+print_r($db->getRecordsFromTableByName("products", "product_id", 1));
+
+?>
+
+
+
 <header>
     <img src = "img/logo.svg" id="bit_img" alt="image">
 </header>
