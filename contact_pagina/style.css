@@ -83,6 +83,7 @@ li a, .dropbtn {
 
 body{
     background-color: #000563;
+    
 
 }
 
@@ -94,6 +95,7 @@ footer {
     position: absolute;
     float: inline-end;
     width: 100%;
+    margin: 0;
 
 
 }
@@ -138,4 +140,11 @@ footer {
 #Klantenservice{
     float: right;
     margin-top: 18%;
+}
+
+#producten li {
+    display: inline-block;
+    background-color: white;
+    height: 300px;
+    width: 300px;
 }
