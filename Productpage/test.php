@@ -11,30 +11,30 @@ require_once "../php/Database.php";
 $db = new Database("localhost", "bit_academy", "3306", "root", "");
 $db->checkConnectionToDatabase();
 
-print_r($db->getRecordsFromTableByName("products", "product_id", 1));
+//print_r($db->getRecordsFromTableByName("products", "product_id", 1));
 
 ?>
 
 
 
 <header>
-    <img src = "img/logo.svg" id="bit_img" alt="image">
+
 </header>
 <nav id= "nav">
     <ul>
-        <li><a href="index.html" target = "_self">Home</a></li>
-        <li class = "dropdown">
-            <a href = "javascript:void(0)" class="dropbtn">Categorie&#235;n</a>
+        <li><img id="bit-img" src="img/logo.svg"></li>
+        <!--<li style="float: right; padding-right: 30px;" ><a href = "Contact.html" target = "_self">contact</a></li>-->
+        <li style = "float: right"><a href = "">basket</a></li>
+        <li style = "float: right"><a href = "">acount</a></li>
+        <li style = "float: right"><a href = "">search</a></li>
+        <li class = "dropdown" style="float: right;">
+            <a href = "javascript:void(0)" class="dropbtn">Filter</a>
             <div class="dropdown-content">
                 <a href="#">link 1</a>
                 <a href="#">link 2</a>
             </div>
         </li>
-        <li><a href = "about.html" target = "_self">About</a>
-        <li><a href = "Contact.html" target = "_self">Contact</a></li>
-        <li><a id="search_bar"><input type="text" placeholder="Search"></a></li>
-        <li><a href="">Account</a></li>
-        <li style="float:right"><a href="">Basket</a></li>
+        <li style = "float: right"><a href="index.html" target = "_self">Shop</a></li>
     </ul>
 </nav>
 
