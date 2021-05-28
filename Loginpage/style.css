@@ -1,0 +1,19 @@
+h1 {
+    color: white;
+    font-size: 40px;
+    font-family: sans-serif, Arial;
+}
+
+a {
+    color: white;
+    font-family: sans-serif, Arial;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(169,229,236);
+}
+
+body {
+    background-color: #000563;
+}
