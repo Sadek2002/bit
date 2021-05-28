@@ -81,9 +81,6 @@ li a, .dropbtn {
 body{
     background-color: #000563;
     
-
-    
-
 }
 
 
@@ -94,7 +91,8 @@ footer {
     position: absolute;
     bottom: -100%;
     width: 100%;
-    
+
+
 }
 #wrapper{
     color: white ;
