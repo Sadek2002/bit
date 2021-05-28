@@ -1,15 +1,35 @@
 <html lang="en">
     <head>
-        <link href=style.css" type="text/css" rel="stylesheet">
+        <link href="style.css" type="text/css" rel="stylesheet">
         <title>Contact</title>
-
     </head>
     <header>
     </header>
     <body>
         <div id="wrapper">
-            <h1>Contact</h1>
-            <form action="contact_php.php" method="POST">
+            <header>
+                <img src="img/logo.svg" id="bit_img" alt="image">
+            </header>
+            <nav id= "nav">
+                <ul>
+                    <li><a href="index.html" target = "_self">Home</a></li>
+                    <li class = "dropdown">
+                        <a href = "javascript:void(0)" class="dropbtn">Categorie&#235;n</a>
+                        <div class="dropdown-content">
+                            <a href="#">link 1</a>
+                            <a href="#">link 2</a>
+                        </div>
+                    </li>
+                    <li><a href = "about.html" target = "_self">About</a>
+                    <li><a href = "Contact.html" target = "_self">Contact</a></li>
+                    <li><a id="search_bar"><input type="text" placeholder="Search"></a></li>
+                    <li><a href="">Account</a></li>
+                    <li style="float:right"><a href="">Basket</a></li>
+                </ul>
+            </nav>
+            <form action="contact_php.php" method="POST" id="contact_form">
+                <h2>Contact</h2>
+
                 <label>Naam
                     <input name="name" type="text" class="contact_form_input">
                 </label>
@@ -26,10 +46,16 @@
                     <input name="subject" type="text" class="contact_form_input">
                 </label>
                 <label>Bericht
-                    <textarea name="message" id="contact_textarea">Bericht......</textarea>
+                    <textarea name="message" id="contact_textarea" placeholder="bericht"></textarea>
                 </label>
-                <button type="submit" value="submit" name="submit" id="submit_button">Submit</button>
+                <button type="submit" value="submit" name="submit" id="submit_button">Verstuur</button>
             </form>
+            <div id="Klantenservice">
+                <h1>Klantenservice</h1>
+                <h3>Telefoonnummer:</h3>
+                <h4>+31 6 12345678</h4>
+                <h3></h3>
+            </div>
         </div>
     </body>
 </html>
