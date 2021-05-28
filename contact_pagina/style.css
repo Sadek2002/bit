@@ -91,10 +91,13 @@ body{
 
 footer {
     background-color: darkslateblue;
-    position: absolute;
     bottom: 0;
     width: 100%;
-    
+    clear: both;
+    position: relative;
+    height: 200px;
+    margin-top: -200px;
+
 }
 #wrapper{
     color: white ;
