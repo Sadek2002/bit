@@ -1,11 +1,11 @@
 <?php
 
 class Database {
-    private $host = "localhost";
-    private $dbname = "bit_academy";
-    private $port = "3306";
-    private $user = "root";
-    private $pass = "alicia573";
+    private $host = "";
+    private $dbname = "";
+    private $port = "";
+    private $user = "";
+    private $pass = "";
 
     public function __construct ($host, $dbname, $port, $user, $pass) {
         $this->host = $host;

@@ -2,7 +2,7 @@
 
 //this way you need to activate de Database.php file
 require_once "Database.php";
-$db = new Database("localhost", "bit_academy", "3306", "root", "alicia573");
+$db = new Database("localhost", "bit_academy", "3306", "root", "");
 $db->checkConnectionToDatabase();
 
 
