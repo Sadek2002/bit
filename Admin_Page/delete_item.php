@@ -36,11 +36,11 @@
 <h1>Delete</h1>
 
 <ul>
-<li><a href="adminpage.html">Home</a></li>
-<li><a href="edit_item.html">Edit</a></li>
-<li><a href="add_item.html">Add</a></li>
-<li><a href="delete_item.html">Delete</a></li>
-<li><a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">E-mails</a></li>
+    <li><a href="adminpage.php">Home</a></li>
+    <li><a href="edit_item.php">Edit</a></li>
+    <li><a href="add_item.php">Add</a></li>
+    <li><a href="delete_item.php">Delete</a></li>
+    <li><a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">E-mails</a></li>
 </ul>
 
 </body>
