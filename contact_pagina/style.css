@@ -92,7 +92,7 @@ body{
 footer {
     background-color: darkslateblue;
     position: absolute;
-    bottom: 0;
+    bottom: -100%;
     width: 100%;
     
 }
