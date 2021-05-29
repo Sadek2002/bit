@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="Productpage.css">
+    <link rel="stylesheet" type="text/css" href="../contact_pagina/style.css">
 
 </head>
 <body>
@@ -22,7 +22,7 @@ $db->checkConnectionToDatabase();
 </header>
 <nav id= "nav">
     <ul>
-        <li><img id="bit-img" src="img/logo.svg"></li>
+        <li><img id="bit-img" src="../img/logo.svg"></li>
         <!--<li style="float: right; padding-right: 30px;" ><a href = "Contact.html" target = "_self">contact</a></li>-->
         <li style = "float: right"><a href = "">basket</a></li>
         <li style = "float: right"><a href = "">acount</a></li>
@@ -41,7 +41,7 @@ $db->checkConnectionToDatabase();
 
 <div class="row">
     <div class="column" >
-        <img  id="product" src="img/appel.jpg" >
+        <img  id="product" src="../img/appel.jpg" >
     </div>
     <div class="column" >
 
