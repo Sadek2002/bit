@@ -25,11 +25,10 @@
 
 }
 
-#menu li a:hover {
+#dropbtn :hover {
     background-color: blue;
 }
-
-li a, .dropbtn {
+.dropbtn {
     display: inline-block;
     color: white;
     text-align: center;
@@ -37,11 +36,11 @@ li a, .dropbtn {
     text-decoration: none;
   }
   
-  li a:hover, .dropdown:hover .dropbtn {
+    #categorieen a:hover, .dropdown:hover .dropbtn {
     background-color: blue;
   }
   
-  li.dropdown {
+  .dropdown {
     display: inline-block;
   }
   
@@ -75,6 +74,14 @@ li a, .dropbtn {
       width: 50%;
 
   }
+  #search_categorieen{
+      margin-top: 30%;
+      padding: 20px;
+
+  }
+#search-content{
+
+}
 /*------------------------pages style---------------------*/
 * {
     box-sizing: border-box;
