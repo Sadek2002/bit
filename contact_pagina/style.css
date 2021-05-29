@@ -1,6 +1,6 @@
 
 
-nav ul {
+#menu ul {
     
     width: 95%;
     list-style-type: none;
@@ -12,11 +12,11 @@ nav ul {
     top: 0;
 }
 
-nav li {
+#menu li {
     float: left;
 
 }
-nav li a {
+#menu li a {
     display: block;
     text-align: center;
     color: white;
@@ -25,7 +25,7 @@ nav li a {
 
 }
 
-nav li a:hover {
+#menu li a:hover {
     background-color: blue;
 }
 

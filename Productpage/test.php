@@ -20,7 +20,7 @@ $db->checkConnectionToDatabase();
 <header>
 
 </header>
-<nav id= "nav">
+<nav id= "menu">
     <ul>
         <li><img id="bit-img" src="../img/logo.svg"></li>
         <!--<li style="float: right; padding-right: 30px;" ><a href = "Contact.html" target = "_self">contact</a></li>-->
@@ -28,7 +28,7 @@ $db->checkConnectionToDatabase();
         <li style = "float: right"><a href = "">acount</a></li>
         <li style = "float: right"><a href = "">search</a></li>
         <li class = "dropdown" style="float: right;">
-            <a href = "javascript:void(0)" class="dropbtn">Filter</a>
+            <a href = "javascript:void(0)" class="dropbtn">Categorie&#235;n</a>
             <div class="dropdown-content">
                 <a href="#">link 1</a>
                 <a href="#">link 2</a>
