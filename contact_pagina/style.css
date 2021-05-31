@@ -1,4 +1,8 @@
+#bit_img{
+    margin: auto;
+    width: 50%;
 
+}
 
 #menu ul {
     
@@ -24,12 +28,15 @@
     text-decoration: none;
 
 }
-
+/*---------------------------------CategorieButton------------------------------------------------*/
+#categorieen{
+    overflow: hidden;
+    float: left;
+}
 #dropbtn :hover {
     background-color: blue;
 }
 .dropbtn {
-    display: inline-block;
     color: white;
     text-align: center;
     padding: 14px 16px;
@@ -41,7 +48,7 @@
   }
   
   .dropdown {
-    display: inline-block;
+    display: block;
   }
   
   .dropdown-content {
@@ -61,27 +68,25 @@
     text-align: left;
   }
   
-  .dropdown-content a:hover {background-color: #f1f1f1;}
-  
-  .dropdown:hover .dropdown-content {
+  .dropdown-content a :hover {
+      background-color: #f1f1f1;
+  }
+
+    #categorieen:hover .dropdown-content {
     display: block;
   }
   #producten{
       margin-top:10%;
   }
-  #bit_img{
-      margin: auto;
-      width: 50%;
 
-  }
   #search_categorieen{
-      margin-top: 30%;
+      margin-top: 20%;
       padding: 20px;
 
   }
-#search-content{
-
-}
+    #search-content{
+        float: right;
+    }
 /*------------------------pages style---------------------*/
 * {
     box-sizing: border-box;
@@ -100,11 +105,12 @@ footer {
     background-color: darkslateblue;
     position: absolute;
     float: inline-end;
-    width: 100%;
-    margin: 0;
+    width: 90%;
+    margin:auto;
 }
 #wrapper{
     color: white ;
+    margin: auto;
 }
 
 /*-------------------Contact page style-----------------------*/
@@ -147,6 +153,7 @@ footer {
     float: right;
     margin-top: 18%;
 }
+/*------------------------------------------------product home page-------------------------*/
 
 #producten li {
     display: inline-block;
