@@ -44,7 +44,7 @@ class Database {
         return $tableArray;
     }
 
-    public function getRecordsFromTableByName ($tableName, $recordName, $recordValue) {
+    public function getRecordsFromTable ($tableName, $recordName, $recordValue) {
         $query = "SELECT * FROM ".$tableName." WHERE ".$recordName." = "."'$recordValue'";
         $records = array();
 
@@ -52,5 +52,34 @@ class Database {
             $records[] = $row;
         }
         return $records;
+    }
+
+
+
+    //delete function
+    public function deleteRecordsFromTable ($tableName, $recordName, $recordValue) {
+        $query = "DELETE FROM ".$tableName." WHERE ".$recordName." = "."'$recordValue'";
+
+        $this->dbh()->query($query);
+    }
+
+
+
+    //insert and update functions
+    //...
+    //functions for products
+    public function insertRecordToProducts ($product_type, $name, $Description, $img_url, $price) {
+        $qeury = "INSERT INTO products (product_type, name, Description, img_url, price)
+                  VALUES ('$product_type', '$name', '$Description', '$img_url', '$price')";
+
+        $this->dbh()->query($qeury);
+    }
+
+
+    //functions for messages
+    public function insertRecordToMessages ($customer_id, $text) {
+        $qeury = "INSERT INTO messages (customer_id, text) VALUES ('$customer_id', '$text')";
+
+        $this->dbh()->query($qeury);
     }
 }
