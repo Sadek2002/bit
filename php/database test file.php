@@ -11,7 +11,7 @@ $db->checkConnectionToDatabase();
 
 
 echo "<pre>";
-print_r($db->getRecordsFromTableByName("products", "price", "1.25"));
+print_r($db->getRecordsFromTable("products", "price", "1.25"));
 echo "</pre>";
 
 

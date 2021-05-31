@@ -44,7 +44,7 @@ class Database {
         return $tableArray;
     }
 
-    public function getRecordsFromTableByName ($tableName, $recordName, $recordValue) {
+    public function getRecordsFromTable ($tableName, $recordName, $recordValue) {
         $query = "SELECT * FROM ".$tableName." WHERE ".$recordName." = "."'$recordValue'";
         $records = array();
 
@@ -61,5 +61,12 @@ class Database {
         $query = "DELETE FROM ".$tableName." WHERE ".$recordName." = "."'$recordValue'";
 
         $this->dbh()->query($query);
+    }
+
+
+
+    //insert and update functions for products
+    public function insertRecordToProducts () {
+
     }
 }
