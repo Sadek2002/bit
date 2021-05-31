@@ -74,4 +74,12 @@ class Database {
 
         $this->dbh()->query($qeury);
     }
+
+
+    //functions for messages
+    public function insertRecordToMessages ($customer_id, $text) {
+        $qeury = "INSERT INTO messages (customer_id, text) VALUES ('$customer_id', '$text')";
+
+        $this->dbh()->query($qeury);
+    }
 }
