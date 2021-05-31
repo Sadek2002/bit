@@ -53,4 +53,13 @@ class Database {
         }
         return $records;
     }
+
+
+
+    //delete function
+    public function deleteRecordsFromTable ($tableName, $recordName, $recordValue) {
+        $query = "DELETE FROM ".$tableName." WHERE ".$recordName." = "."'$recordValue'";
+
+        $this->dbh()->query($query);
+    }
 }

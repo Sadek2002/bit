@@ -6,6 +6,10 @@ $db = new Database("localhost", "bit_academy", "3306", "root", "");
 $db->checkConnectionToDatabase();
 
 
+//delete function
+//$db->deleteRecordsFromTable("products", "Description", "test");
+
+
 echo "<pre>";
 print_r($db->getRecordsFromTableByName("products", "price", "1.25"));
 echo "</pre>";
