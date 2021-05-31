@@ -10,6 +10,10 @@ $db->checkConnectionToDatabase();
 //$db->deleteRecordsFromTable("products", "Description", "test");
 
 
+//insert function
+//$db->insertRecordToProducts("cap", "pet geel", "mooie pet", "img/petten/pet12", 15.00);
+
+
 echo "<pre>";
 print_r($db->getRecordsFromTable("products", "price", "1.25"));
 echo "</pre>";

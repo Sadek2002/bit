@@ -65,8 +65,13 @@ class Database {
 
 
 
-    //insert and update functions for products
-    public function insertRecordToProducts () {
+    //insert and update functions
+    //...
+    //functions for products
+    public function insertRecordToProducts ($product_type, $name, $Description, $img_url, $price) {
+        $qeury = "INSERT INTO products (product_type, name, Description, img_url, price)
+                  VALUES ('$product_type', '$name', '$Description', '$img_url', '$price')";
 
+        $this->dbh()->query($qeury);
     }
 }
