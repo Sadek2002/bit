@@ -25,6 +25,10 @@
         h1 {
             color: white;
         }
+
+        array {
+            color: white;
+        }
     </style>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -38,14 +42,24 @@
         <ul>
             <li><a href="adminpage.php">Home</a></li>
             <li><a href="edit_item.php">Edit</a></li>
-            <li><a href="add_item.php">Add</a></li>
-            <li><a href="delete_item.php">Delete</a></li>
             <li><a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">E-mails</a></li>
         </ul>
-<?php
-        require_once "Database.php";
+
+        <select name="Country" multiple size="5">
+            <option value="USA">USA</option>
+            <option value="Russia">Russia</option>
+            <option value="India">India</option>
+            <option value="Britain">Britain</option>
+        </select>
+
+
+        <?php
+        require_once "../php/Database.php";
             $db = new Database("localhost", "bit_academy", "3306", "root", "");
             $db->checkConnectionToDatabase();
+            echo "<pre>";
+            print_r($db->getTableByName("products"));
+            echo "</pre>";
 ?>
 </body>
 </html>

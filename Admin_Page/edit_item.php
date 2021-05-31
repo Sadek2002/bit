@@ -31,6 +31,19 @@
             margin-left: 150px;
             margin-bottom: 100px;
         }
+
+        input {
+            color: black;
+        }
+
+        p {
+            color: white;
+            font-size: 10px;
+        }
+
+        input {
+            color: white;
+        }
     </style>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -45,8 +58,6 @@
         <ul>
             <li><a href="adminpage.php">Home</a></li>
             <li><a href="edit_item.php">Edit</a></li>
-            <li><a href="add_item.php">Add</a></li>
-            <li><a href="delete_item.php">Delete</a></li>
             <li><a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">E-mails</a></li>
         </ul>
 
@@ -62,6 +73,12 @@
           <option value="">Bit Hoodie Text</option>
           <option value="">Bit Hoodie Logo</option>
          </select>
+
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+            <p id="">Select Image File to Upload:</p>
+            <input type="file" name="file">
+            <input type="submit" name="submit" value="Upload">
+        </form>
 
 </body>
 </html>
