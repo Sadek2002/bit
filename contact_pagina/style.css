@@ -1,6 +1,6 @@
 #bit_img{
     margin: auto;
-    width: 50%;
+    width: 25%;
 
 }
 
@@ -68,8 +68,25 @@ li.dropdown {
     display: block;
 }
 #search{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 60px;
+    transition: 0.5s;
+    box-shadow: 0 0 0 5px #2573ef;
 
-
+}
+#search #icon{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
 }
 /*------------------------pages style---------------------*/
 * {
