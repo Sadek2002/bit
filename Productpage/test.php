@@ -8,11 +8,13 @@
 <body>
 <?php
 require_once "../php/Database.php";
-$db = new Database("localhost", "bit_academy", "3306", "root", "alicia573");
+$db = new Database("localhost", "bit_academy", "3306", "root", "");
 $db->checkConnectionToDatabase();
 
-//print_r($db->getRecordsFromTableByName("products", "product_id", 1));
-
+$product = $db->getRecordsFromTableByName("products", "product_id", 1);
+//echo"<pre>";
+//print_r($product);
+//echo"</pre>";
 ?>
 
 
@@ -45,8 +47,8 @@ $db->checkConnectionToDatabase();
     </div>
     <div class="column" >
 
-        <h1>Product</h1>
-        <p>$Price</p>
+        <h1><?php echo $product[0]['product_type'] ?></h1>
+        <p>$<?php echo $product[0]['price'] ?></p>
         <p id="text">Size</p>
         <select >
             <option value="XS">XS</option>
@@ -63,10 +65,7 @@ $db->checkConnectionToDatabase();
         <input type="submit" id="button" value="Add to Cart">
         <br>
         <br>
-        <article>s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
-            took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-            but also the leap into electronic typesetting, remaining essentially unchanged.
-            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,</article>
+        <article><?php echo $product[0]['Description'] ?></article>
     </div>
 </div>
 
