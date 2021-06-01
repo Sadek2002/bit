@@ -22,13 +22,13 @@
                             <a href="#">link 4</a>
                         </div>
                     </li>
-                    <li style = "float: right"><a href="index.html" target = "_self">Shop</a></li>
-                    <li id="searchbar">
+                    <li style = "float: right"><a href="index.php" target = "_self">Shop</a></li>
+                    <!--<li id="searchbar">
                         <div id="search">
                             <div id="icon"></div>
                             <div id="input"></div>
                         </div>
-                    </li>
+                    </li>-->
                 </ul>
             </nav>
         </header>
