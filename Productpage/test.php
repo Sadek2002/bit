@@ -50,7 +50,7 @@ $product = $db->getRecordsFromTableByName("products", "product_id", 1);
         <h1><?php echo $product[0]['product_type'] ?></h1>
         <p>$<?php echo $product[0]['price'] ?></p>
         <p id="text">Size</p>
-        <select >
+        <select id="size" >
             <option value="XS">XS</option>
             <option value="S">S</option>
             <option value="M">M</option>
