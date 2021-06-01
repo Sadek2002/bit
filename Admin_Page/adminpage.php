@@ -23,20 +23,25 @@
         }
 
         h1 {
-            color: white;
+            color: black;
         }
 
-        array {
-            color: white;
-        }
     </style>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
     <title>admin</title>
 </head>
-<body style="background-color:#000563">
+<script>
+    function createItem(name, description) {
+        console.log()
+    }
+
+</script>
+<body style="background-color:white">
         <h1>Admin Page</h1>
 
         <ul>
@@ -45,16 +50,25 @@
             <li><a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">E-mails</a></li>
         </ul>
 
-        <div class="select-editable">
-            <select onchange="this.nextElementSibling.value=this.value">
-                <option value=""></option>
-                <option value="115x175 mm">115x175 mm</option>
-                <option value="120x160 mm">120x160 mm</option>
-                <option value="120x287 mm">120x287 mm</option>
-            </select>
-            <input type="text" name="format" value=""/>
+        <div class="container">
+        <div class="col-lg-4">
+            <h2>Vertical (basic) form</h2>
+            <form action="" name="form1" method="post">
+                <div class="form-group">
+                    <label for="email">Item name</label>
+                    <input type="text" class="form-control" id="itemname" placeholder="Enter email" name="itemname">
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Item description</label>
+                    <input type="text" class="form-control" id="itemdesc" placeholder="Enter item description" name="itemdesc">
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" name="remember"> Remember me</label>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
         </div>
-        <input style="width: 185px; margin-left: -199px; margin-top: 1px; border: none; float: left;"/>
+        </div>
 
 
         <?php
