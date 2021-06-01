@@ -98,18 +98,19 @@ body{
     background-color: #000563;
     font-family: "Roobert", "Helvetica", "Arial", sans-serif;
 }
-
-
-footer {
-    background-color: darkslateblue;
-    position: absolute;
-    float: inline-end;
-    width: 90%;
-    margin:auto;
+footer{
+    height: 20%;
+    background: #333782;
+    color: white;
+    text-align: center;
+    margin:0;
+    position: static;
 }
+
 #wrapper{
+    margin-top: 10%;
     color: white ;
-    margin: auto;
+    display: initial;
 }
 
 /*-------------------Contact page style-----------------------*/
@@ -153,16 +154,35 @@ footer {
     margin-top: 18%;
 }
 /*------------------------------------------------product home page-------------------------*/
-
-#producten li {
-    display: inline-block;
-    background-color: white;
-    height: 300px;
-    width: 300px;
-    color: black;
+#producten{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 10%;
+    margin-top: 10%;
+    justify-content: center;
+    align-content: flex-start;
+}
+#producten::after{
+    content:'';
+    clear: both;
+    display:table ;
+}
+#items{
+    color: rgb(255 255 255);
+    height: 50%;
+    background-color: rgb(128 128 128);
+    margin: 10px;
+    width: 33.33%;
+    float: left;
+}
+#filter-form{
 
 }
+#filter{
+    float: left;
+    margin-top: 10%;
 
+}
 /*-------------------------------------------product page style---------------------------------------*/
 
 .column {

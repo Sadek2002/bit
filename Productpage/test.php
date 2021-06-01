@@ -11,7 +11,7 @@ require_once "../php/Database.php";
 $db = new Database("localhost", "bit_academy", "3306", "root", "alicia573");
 $db->checkConnectionToDatabase();
 
-//print_r($db->getRecordsFromTableByName("products", "product_id", 1));
+print_r($db->getRecordsFromTableByName("products", "product_id", 1));
 
 ?>
 
