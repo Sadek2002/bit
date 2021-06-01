@@ -45,12 +45,16 @@
             <li><a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">E-mails</a></li>
         </ul>
 
-        <select name="Country" multiple size="5">
-            <option value="USA">USA</option>
-            <option value="Russia">Russia</option>
-            <option value="India">India</option>
-            <option value="Britain">Britain</option>
-        </select>
+        <div class="select-editable">
+            <select onchange="this.nextElementSibling.value=this.value">
+                <option value=""></option>
+                <option value="115x175 mm">115x175 mm</option>
+                <option value="120x160 mm">120x160 mm</option>
+                <option value="120x287 mm">120x287 mm</option>
+            </select>
+            <input type="text" name="format" value=""/>
+        </div>
+        <input style="width: 185px; margin-left: -199px; margin-top: 1px; border: none; float: left;"/>
 
 
         <?php
