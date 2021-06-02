@@ -31,9 +31,11 @@
             </nav>
         </header>
         <div id="wrapper">
-            <div id="filter">
+            <div id="filter-container">
                 <form id="filter-form" method="post" action="">
-                    <select id="price-filter">
+                    <h3 id="filter-tag">Filter</h3>
+                    <h4>Prijs:</h4>
+                    <select class="filter-content" id="price-filter">
                         <option value="">Prijs&nbsp;</option>
                         <option value="1">&#8364;&nbsp;10 - &#8364;20</option>
                         <option value="2">&#8364;&nbsp;21 - &#8364;30</option>
@@ -41,7 +43,8 @@
                         <option value="4">&#8364;&nbsp;51 - &#8364;75</option>
                         <option value="5">&#8364;&nbsp;76 - &#8364;100</option>
                     </select>
-                    <select id="price-filter">
+                    <h4>Kleur:</h4>
+                    <select class="filter-content" id="color-filter">
                         <option value="">Kleur&nbsp;</option>
                         <option value="1">Zwart</option>
                         <option value="2">Rood</option>
@@ -49,7 +52,7 @@
                         <option value="4">Wit</option>
                         <option value="5">Bruin</option>
                     </select>
-                    <button id="button-">Button</button>
+                    <button id="button-filter">Button</button>
                 </form>
             </div>
             <div id="producten">
@@ -60,7 +63,8 @@
                 foreach ($db->getTableByName("products") as $row) {
                     echo "<div id='items'>";
                     echo "<img alt='' id 'image-product' src='".$row['img_url']."'>";
-                    echo '<h3 id="nametag">'.$row['name'].'</h3>'."<br>";
+                    echo"<img src='img/test-img.jpg' id='test-img'>";
+                    echo '<h3 id="name-tag">'.$row['name'].'</h3>'."<br>";
                     echo '<h4 id="price-tag">&#8364;'.$row['price'].'</h4>';
                     echo "</div>";
 
