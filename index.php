@@ -64,9 +64,11 @@
                     echo "<div id='items'>";
                     echo "<img alt='' id 'image-product' src='".$row['img_url']."'>";
                     echo"<img src='img/test-img.jpg' id='test-img'>";
+                    echo $row['id'];
                     echo '<h3 id="name-tag">'.$row['name'].'</h3>'."<br>";
                     echo '<h4 id="price-tag">&#8364;'.$row['price'].'</h4>';
                     echo "</div>";
+                    echo '<a href="Productpage/test.php">'. product_id=$row['id'].'</a>';
 
                     echo "<br>";
                 }
