@@ -65,9 +65,18 @@ class Database {
 
 
 
-    //insert and update functions
+    //update function
+    public function updateRecordsFromTable ($tableName, $columnName, $newColumnValue, $searchColumn, $searchColumnValue) {
+        $query = "UPDATE $tableName SET $columnName = '$newColumnValue' WHERE $searchColumn = '$searchColumnValue'";
+
+        $this->dbh()->query($query);
+    }
+
+
+
+    //insert functions
     //...
-    //functions for products
+    //function for products
     public function insertRecordToProducts ($product_type, $name, $Description, $img_url, $price) {
         $qeury = "INSERT INTO products (product_type, name, Description, img_url, price)
                   VALUES ('$product_type', '$name', '$Description', '$img_url', '$price')";
@@ -76,7 +85,7 @@ class Database {
     }
 
 
-    //functions for messages
+    //function for messages
     public function insertRecordToMessages ($customer_id, $text) {
         $qeury = "INSERT INTO messages (customer_id, text) VALUES ('$customer_id', '$text')";
 
