@@ -1,3 +1,7 @@
+<?php
+include "connection.php";
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -30,6 +34,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 </head>
     <title>admin</title>
@@ -55,29 +61,39 @@
             <form action="" name="form1" method="post">
                 <div class="form-group">
                     <label for="email">Item name</label>
-                    <input type="text" class="form-control" id="itemname" placeholder="Enter email" name="itemname">
+                    <input type="text" class="form-control" id="product_id" placeholder="Enter email" name="product_id">
                 </div>
                 <div class="form-group">
                     <label for="pwd">Item description</label>
-                    <input type="text" class="form-control" id="itemdesc" placeholder="Enter item description" name="itemdesc">
+                    <input type="text" class="form-control" id="Description" placeholder="Enter item description" name="Description">
                 </div>
                 <div class="checkbox">
                     <label><input type="checkbox" name="remember"> Remember me</label>
                 </div>
-                <button type="submit" class="btn btn-default">Submit</button>
+                <button type="submit" name="insert" class="btn btn-default">Insert</button>
+                <button type="submit" name="update" class="btn btn-default">Update</button>
+                <button type="submit" name="delete" class="btn btn-default">Delete</button>
             </form>
         </div>
         </div>
 
+        <div class="col-lg-12">
+
+        </div>
 
         <?php
-        require_once "../php/Database.php";
-            $db = new Database("localhost", "bit_academy", "3306", "root", "");
-            $db->checkConnectionToDatabase();
-            echo "<pre>";
-            print_r($db->getTableByName("products"));
-            $db->insertRecordToProducts("cap", "t", "t", "t", "10.00");
-            echo "</pre>";
+        if (isset($_POST["insert"]))
+        {
+            mysqli_query($link,"insert into tablel values($db->c('$_POST[product_id]', 't', 't', 't', '10.00')");
+        }
+        //Database Test
+        #require_once "../php/Database.php";
+        #    $db = new Database("localhost", "bit_academy", "3306", "root", "");
+        #    $db->checkConnectionToDatabase();
+        #    echo "<pre>";
+        #    print_r($db->getTableByName("products"));
+        #    $db->c("cap", "t", "t", "t", "10.00");
+        #    echo "</pre>";
 ?>
 </body>
 </html>
