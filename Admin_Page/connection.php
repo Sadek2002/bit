@@ -1,5 +1,9 @@
 <?php
-require_once "../php/Database.php";
-    $link=mysqli_connect("localhost","root","") or die(mysqli_error($link));
-    mysqli_select_db($link,"bit_academy") or die(mysqli_error($link));
+$connection = mysqli_connect("localhost","root","");
+$db = mysqli_select_db($connection,'bit_academy');
+
+if(isset($_POST['insert']))
+{
+    $id = $_POST['id'];
+}
 ?>
