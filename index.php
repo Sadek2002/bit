@@ -79,12 +79,12 @@
             <div id="producten">
                 <?php
                 require_once "php/Database.php";
-                $db = new Database("localhost", "bit_academy", "3306", "root", "alicia573");
+                $db = new Database("localhost", "bit_academy", "3306", "root", "");
 
                 foreach ($db->getTableByName("products") as $row) {
                     echo "<div id='items'>";
                     echo "<img alt='' id='test-img' src='".$row['img_url']."'>";
-                    echo $row['id'];
+                    //echo $row['id'];
                     echo '<h3 id="name-tag">'.$row['name'].'</h3>'."<br>";
                     echo '<h4 id="price-tag">&#8364;'.$row['price'].'</h4>';
                     echo "</div>";
