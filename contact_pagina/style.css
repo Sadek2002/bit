@@ -126,7 +126,7 @@ body{
     margin:0;
 }
 footer{
-    height: 20%;
+    height: 100px;
     background: #333782;
     color: white;
     text-align: center;
@@ -274,23 +274,25 @@ footer{
     clear: both;
 }
 
-h1{
-    color: white;
-    font-size: 50px;
+h2{
+    color: black;
+    font-size: 40px;
 }
 p{
-    color: white;
-    font-size: 30px;
+    color: black;
+    font-size: 25px;
 }
 select#size{
     background-color: white;
     width: 20%;
     font-size: 20px;
+    border-radius: 6px;
 }
 input#quantity{
     background-color: white;
     width: 20%;
     font-size: 25px;
+    border-radius: 6px;
 }
 p#text{
     margin-bottom: 0;
@@ -302,11 +304,14 @@ p#tekst{
 }
 #button{
     font-size: 30px;
+    border-radius: 8px;
+    background-color: #000563;
+    color: white;
 }
 article{
     font-family: "Roobert", "Helvetica", "Arial", sans-serif;
-    color: white;
+    color:black;
 }
-img#product{
-
+#content{
+    height: 500px;
 }

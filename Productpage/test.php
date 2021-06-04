@@ -8,7 +8,7 @@
 <body>
 <?php
 require_once "../php/Database.php";
-$db = new Database("localhost", "bit_academy", "3306", "root", "alicia573");
+$db = new Database("localhost", "bit_academy", "3306", "root", "");
 $db->checkConnectionToDatabase();
 
 $product = $db->getRecordsFromTableByName("products", "product_id", 1);
@@ -39,14 +39,14 @@ $product = $db->getRecordsFromTableByName("products", "product_id", 1);
 
 </header>
 
-
+<div id="content" style="background-color:white">
 <div class="row">
     <div class="column" >
         <img  id="product" src="../img/appel.jpg" >
     </div>
     <div class="column" >
 
-        <h1><?php echo $product[0]['product_type'] ?></h1>
+        <h2><?php echo $product[0]['product_type'] ?></h2>
         <p>$<?php echo $product[0]['price'] ?></p>
         <p id="text">Size</p>
         <select id="size" >
@@ -66,7 +66,11 @@ $product = $db->getRecordsFromTableByName("products", "product_id", 1);
         <br>
         <article><?php echo $product[0]['Description'] ?></article>
     </div>
-</div>
 
+</div>
+</div>
+<footer>
+    <a>contact</a>
+</footer>
 </body>
 </html>
