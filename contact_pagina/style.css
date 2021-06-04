@@ -18,6 +18,11 @@ nav ul {
 
 nav li {
     float: left;
+    font-family: "Roobert", "Helvetica", "Arial", sans-serif;
+    font-size: 1.333rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: rgb(255 255 255);
 
 }
 nav li a {
@@ -29,9 +34,7 @@ nav li a {
 
 }
 
-nav li a:hover {
-    background-color: blue;
-}
+
 
 li a, .dropbtn {
     display: inline-block;
@@ -42,7 +45,7 @@ li a, .dropbtn {
 }
 
 li a:hover, .dropdown:hover .dropbtn {
-    background-color: blue;
+    color: rgb(23 162 184);
 }
 
 li.dropdown {
@@ -52,10 +55,12 @@ li.dropdown {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: blue;
+    background-color: white;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    border-radius: 5px;
+
 }
 
 .dropdown-content a {
@@ -220,26 +225,33 @@ footer{
     flex-direction: row;
     align-content: center;
     align-items: baseline;
+    padding: 15px;
+
 }
 
 #filter-container{
-    float: top;
-    width: 100%;
+    width: 80%;
     margin: 5%;
+    background: white;
+    color: black;
 }
 
 .filter-content{
     width: 50%;
     height: 30px;
     font-size: 15px;
-    font-family: "Roobert", "Helvetica", "Arial", sans-serif
-
+    font-family: "Roobert", "Helvetica", "Arial", sans-serif;
+    border-radius: 10px;
 }
 #filter-tag{
 
 }
 #test-img{
     width: 200px;
+}
+#button-filter, #filter-container {
+    border-radius: 10px;
+
 }
 #button-filter{
     margin-top: 20px;
