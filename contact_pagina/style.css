@@ -192,10 +192,13 @@ footer{
 /*------------------------------------------------product home page-------------------------*/
 #producten{
     display: flex;
-    flex-wrap: wrap;
-    margin-right: 10%;
     margin-top: 10%;
-    align-content: flex-start;
+    align-content: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin: 5%;
 }
 #producten::after{
     content:'';
@@ -212,16 +215,17 @@ footer{
 #filter-form{
     margin-top: 10%;
     display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: center;
+    flex-direction: row;
+    align-content: center;
+    align-items: baseline;
 }
 
 #filter-container{
-    float: left;
-    margin-top: 10%;
-    margin-left: 5%;
-    width: 30%;
+    float: top;
+    width: 100%;
+    margin: 5%;
 }
 
 .filter-content{

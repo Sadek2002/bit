@@ -37,8 +37,7 @@
         <div id="wrapper">
             <div id="filter-container">
                 <form id="filter-form" method="post" action="">
-                    <h3 id="filter-tag">Filter</h3>
-                    <h4>Price</h4>
+                    <h3 id="filter-tag">Filter: </h3><br>
                     <select class="filter-content" id="price-filter">
                         <option value="">Prijs&nbsp;</option>
                         <option value="1">&#8364;&nbsp;10 - &#8364;20</option>
@@ -47,7 +46,6 @@
                         <option value="4">&#8364;&nbsp;51 - &#8364;75</option>
                         <option value="5">&#8364;&nbsp;76 - &#8364;100</option>
                     </select>
-                    <h4>Color</h4>
                     <select class="filter-content" id="color-filter">
                         <option value="">Kleur&nbsp;</option>
                         <option value="1">Zwart</option>
@@ -56,7 +54,6 @@
                         <option value="4">Wit</option>
                         <option value="5">Bruin</option>
                     </select>
-                    <h4>Size</h4>
                     <select class="filter-content" id="size-filter">
                         <option value="">Size&nbsp;</option>
                         <option value="1">S</option>
@@ -65,13 +62,13 @@
                         <option value="4">XL</option>
                         <option value="5">XXL</option>
                     </select>
-                    <select>
-                        <option value="">Maat&nbsp;</option>
-                        <option value="1">S</option>
-                        <option value="2">M</option>
-                        <option value="3">L</option>
-                        <option value="4">XL</option>
-                        <option value="5">XXL</option>
+
+                    <select class="filter-content">
+                        <option value="">Product&nbsp;</option>
+                        <option value="1">T-shirt</option>
+                        <option value="2">Sweatshirt</option>
+                        <option value="3">Cap</option>
+                        <option value="4">Mask</option>
                     </select>
                     <button id="button-filter">Button</button>
                 </form>
@@ -84,7 +81,7 @@
                 foreach ($db->getTableByName("products") as $row) {
                     echo "<div id='items'>";
                     echo "<img alt='' id='test-img' src='".$row['img_url']."'>";
-                    echo $row['id'];
+                    //echo $row['id'];
                     echo '<h3 id="name-tag">'.$row['name'].'</h3>'."<br>";
                     echo '<h4 id="price-tag">&#8364;'.$row['price'].'</h4>';
                     echo "</div>";
