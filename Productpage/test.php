@@ -12,9 +12,9 @@ $db = new Database("localhost", "bit_academy", "3306", "root", "");
 $db->checkConnectionToDatabase();
 
 $product = $db->getRecordsFromTableByName("products", "product_id", 1);
-echo"<pre>";
-print_r($product);
-echo"</pre>";
+//echo"<pre>";
+//print_r($product);
+//echo"</pre>";
 ?>
 
 

@@ -106,7 +106,8 @@ footer{
     color: white;
     text-align: center;
     margin:0;
-    position: static;
+    position: relative;
+    clear:both;
 }
 
 #wrapper{
