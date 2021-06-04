@@ -8,7 +8,7 @@
 <body>
 <?php
 require_once "../php/Database.php";
-$db = new Database("localhost", "bit_academy", "3306", "root", "");
+$db = new Database("localhost", "bit_academy", "3306", "root", "alicia573");
 $db->checkConnectionToDatabase();
 
 $product = $db->getRecordsFromTableByName("products", "product_id", 1);

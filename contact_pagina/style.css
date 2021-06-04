@@ -1,17 +1,19 @@
-#bit_img{
+#bit-img{
     margin: auto;
-    width: 25%;
+    width: 11.25rem;
+    position: absolute;
 
 }
 #menu{
     font-size: 1.333rem;
+    margin: 5%;
+    margin-right: 10%;
 }
 nav ul {
     list-style-type: none;
-    margin: 0;
-    padding: 20px;
     overflow: hidden;
-    background-color: #000563;
+    background-color: rgb(0 5 99);
+}
 }
 
 nav li {
@@ -90,6 +92,28 @@ li.dropdown {
     justify-content: center ;
     align-items: center;
 }
+.slideshow {
+
+    box-sizing:border-box;
+    position:absolute;
+}
+
+.slideshow img {
+    position: absolute;
+    animation: slideshow 10s infinite;
+
+}
+
+@keyframes slideshow {
+    25%{opacity:1;
+    }
+    45%{
+        opacity:2;
+    }
+}
+
+.slideshow img:nth-child(4){animation-delay:0s;}
+.slideshow img:nth-child(3){animation-delay:5s;}
 /*------------------------pages style---------------------*/
 * {
     box-sizing: border-box;
@@ -99,6 +123,7 @@ li.dropdown {
 body{
     background-color: #000563;
     font-family: "Roobert", "Helvetica", "Arial", sans-serif;
+    margin:0;
 }
 footer{
     height: 20%;
@@ -113,7 +138,9 @@ footer{
 #wrapper{
     margin-top: 10%;
     color: white ;
-    display: initial;
+    display: block;
+    margin: 5%;
+
 }
 
 /*-------------------Contact page style-----------------------*/
@@ -153,8 +180,14 @@ footer{
 }
 
 #Klantenservice{
+    padding-right: 100px;
     float: right;
     margin-top: 18%;
+    color: white;
+}
+#image{
+    width: 40%;
+    margin-top: 210px;
 }
 /*------------------------------------------------product home page-------------------------*/
 #producten{
@@ -162,7 +195,6 @@ footer{
     flex-wrap: wrap;
     margin-right: 10%;
     margin-top: 10%;
-    justify-content: center;
     align-content: flex-start;
 }
 #producten::after{
@@ -173,7 +205,7 @@ footer{
 #items{
     color: rgb(255 255 255);
     height: 50%;
-    background-color: rgb(128 128 128);
+    background-color: white;
     margin: 10px;
     float: left;
 }
@@ -211,7 +243,15 @@ footer{
     height: 30px;
 }
 #price-tag, #name-tag{
-    padding:20px;
+    padding: 20px 10px 0px 20px;
+
+    color: black;
+}
+#name-tag{
+    padding: 20px 10px 20px 20px;
+}
+#price-tag{
+    margin-top: -50px;
 }
 /*-------------------------------------------product page style---------------------------------------*/
 
