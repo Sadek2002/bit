@@ -57,10 +57,6 @@
             <h2>Updating Database by PHP</h2>
             <form action="" name="form1" method="post">
                 <div class="form-group">
-                    <label for="Product ID">Product ID</label>
-                    <input type="text" class="form-control" id="product_id" placeholder="Enter product id" name="product_id">
-                </div>
-                <div class="form-group">
                     <label for="Product Type">Product Type</label>
                     <input type="text" class="form-control" id="product_type" placeholder="Enter product type" name="product_type">
                 </div>
@@ -80,13 +76,8 @@
                     <label for="Price">Price</label>
                     <input type="text" class="form-control" id="price" placeholder="Enter item price" name="price">
                 </div>
-                <div class="checkbox">
-                    <label><input type="checkbox" name="remember"> Remember me</label>
-                </div>
                 <button type="submit" name="update" class="btn btn-default">Update</button>
                 <button type="submit" name="create" class="btn btn-default">Create</button>
-                <button type="submit" name="delete" class="btn btn-default">Delete</button>
-                <button type="submit" onClick="window.location.reload();" name="refresh" class="btn btn-default">Refresh</button>
             </form>
         </div>
         </div>
@@ -157,8 +148,7 @@
         if (isset($_POST['create']))
         {
             $p_id = $_POST['product_id'];
-            $db->insertRecordToProducts(product_type,name,Description,img_url,url);
-            VALUES ('$product_type', '$name', '$Description', '$img_url', '$price');
+            $db->insertRecordToProducts($_POST['product_type'], $_POST['name'], $_POST['Description'], $_POST['img_url'], $_POST['price']);
         ?>
         <script type="text/javascript">
             window.location.href=window.location.href;
