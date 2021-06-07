@@ -11,7 +11,7 @@ require_once "../php/Database.php";
 $db = new Database("localhost", "bit_academy", "3306", "root", "");
 $db->checkConnectionToDatabase();
 
-$product = $db->getRecordsFromTableByName("products", "product_id", 1);
+$product = $db->getRecordsFromTableByName("products", "product_id", 3);
 //echo"<pre>";
 //print_r($product);
 //echo"</pre>";
@@ -42,7 +42,7 @@ $product = $db->getRecordsFromTableByName("products", "product_id", 1);
 <div id="content" style="background-color:white">
 <div class="row">
     <div class="column" >
-        <img  id="product" src="../img/appel.jpg" >
+        <?php echo "<img alt='' src='".$product[0]['img_url']."'>"?>
     </div>
     <div class="column" >
 
