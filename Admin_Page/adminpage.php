@@ -86,34 +86,105 @@
                 <button type="submit" name="update" class="btn btn-default">Update</button>
                 <button type="submit" name="create" class="btn btn-default">Create</button>
                 <button type="submit" name="delete" class="btn btn-default">Delete</button>
+                <button type="submit" onClick="window.location.reload();" name="refresh" class="btn btn-default">Refresh</button>
             </form>
         </div>
         </div>
 
         <div class="col-lg-12">
-
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Product Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>img_url</th>
+                    <th>Price</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
         </div>
+                </tr>
+                </thead>
+                <tbody>
+        <?php
+        require_once '../php/Database.php';
+        $db = new Database("localhost", "bit_academy", "3306", "root", "");
+        $db->checkConnectionToDatabase();
+
+        foreach ($db->getTableByName("products") as $row)
+        {
+            echo "<tr>";
+            echo "<td>"; echo $row["product_id"]; echo "</td>";
+            echo "<td>"; echo $row["product_type"]; echo "</td>";
+            echo "<td>"; echo $row["name"]; echo "</td>";
+            echo "<td>"; echo $row["Description"]; echo "</td>";
+            echo "<td>"; echo $row["img_url"]; echo "</td>";
+            echo "<td>"; echo $row["price"]; echo "</td>";
+            echo "<td>"; ?> <a href="edit.php?id=<?php echo $row["product_id"]; ?>"<button type="button" class="btn btn-success">Edit</button></a> <?php echo "</td>";
+            echo "<td>"; ?> <a href="delete.php?id=<?php echo $row["product_id"]; ?>"<button type="button" class="btn btn-danger">Delete</button></a> <?php echo "</td>";
+        }
+        ?>
+                </tbody>
+            </table>
 
         <?php
-
-        $connection = mysqli_connect("localhost","root","");
-        $db = mysqli_select_db($connection,'bit_academy');
-
         if(isset($_POST['update']))
         {
-            $product_id = $_POST['product_id'];
+            $p_id = $_POST['product_id'];
 
-            $query = "UPDATE products SET product_id='$_POST[product_id]', product_type='$_POST[product_type]', name='$_POST[name]', Description='$_POST[Description]', img_url='$_POST[img_url]', price='$_POST[price]' WHERE product_id = '$_POST[product_id]'";
-            $query_run = mysqli_query($connection, $query);
-            if ($query_run)
-            {
-                 echo '<script type="text/javascript"> alert("Data Updated")</script>';
-            }
-            else
-            {
-                echo '<script type="text/javascript"> alert("Data Not Updated")</script>';
-            }
+            $db->updateRecordsFromTable("products", "product_type", $_POST['product_type'], "product_id", $p_id);
+            $db->updateRecordsFromTable("products", "name", $_POST['name'], "product_id", $p_id);
+            $db->updateRecordsFromTable("products", "Description", $_POST['Description'], "product_id", $p_id);
+            $db->updateRecordsFromTable("products", "img_url", $_POST['img_url'], "product_id", $p_id);
+            $db->updateRecordsFromTable("products", "price", $_POST['price'], "product_id", $p_id);
+        ?>
+        <script type="text/javascript">
+            window.location.href=window.location.href;
+        </script>
+        <?php
         }
+        if (isset($_POST['delete']))
+        {
+            $p_id = $_POST['product_id'];
+            $db->deleteRecordsFromTable("products", 'product_id', $p_id);
+            ?>
+            <script type="text/javascript">
+                window.location.href=window.location.href;
+            </script>
+            <?php
+        }
+        if (isset($_POST['create']))
+        {
+            $p_id = $_POST['product_id'];
+            $db->insertRecordToProducts(product_type,name,Description,img_url,url);
+            VALUES ('$product_type', '$name', '$Description', '$img_url', '$price');
+        ?>
+        <script type="text/javascript">
+            window.location.href=window.location.href;
+        </script>
+        <?php
+        }
+        ?>
+
+<!--        $connection = mysqli_connect("localhost","root","");-->
+<!--        $db = mysqli_select_db($connection,'bit_academy');-->
+<!---->
+<!--        if(isset($_POST['update']))-->
+<!--        {-->
+<!--            $product_id = $_POST['product_id'];-->
+<!---->
+<!--            $query = "UPDATE products SET product_id='$_POST[product_id]', product_type='$_POST[product_type]', name='$_POST[name]', Description='$_POST[Description]', img_url='$_POST[img_url]', price='$_POST[price]' WHERE product_id = '$_POST[product_id]'";-->
+<!--            $query_run = mysqli_query($connection, $query);-->
+<!--            if ($query_run)-->
+<!--            {-->
+<!--                 echo '<script type="text/javascript"> alert("Data Updated")</script>';-->
+<!--            }-->
+<!--            else-->
+<!--            {-->
+<!--                echo '<script type="text/javascript"> alert("Data Not Updated")</script>';-->
+<!--            }-->
+<!--        }-->
 
         //Database Test
         #require_once "../php/Database.php";
