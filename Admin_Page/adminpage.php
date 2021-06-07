@@ -166,34 +166,5 @@
         <?php
         }
         ?>
-
-<!--        $connection = mysqli_connect("localhost","root","");-->
-<!--        $db = mysqli_select_db($connection,'bit_academy');-->
-<!---->
-<!--        if(isset($_POST['update']))-->
-<!--        {-->
-<!--            $product_id = $_POST['product_id'];-->
-<!---->
-<!--            $query = "UPDATE products SET product_id='$_POST[product_id]', product_type='$_POST[product_type]', name='$_POST[name]', Description='$_POST[Description]', img_url='$_POST[img_url]', price='$_POST[price]' WHERE product_id = '$_POST[product_id]'";-->
-<!--            $query_run = mysqli_query($connection, $query);-->
-<!--            if ($query_run)-->
-<!--            {-->
-<!--                 echo '<script type="text/javascript"> alert("Data Updated")</script>';-->
-<!--            }-->
-<!--            else-->
-<!--            {-->
-<!--                echo '<script type="text/javascript"> alert("Data Not Updated")</script>';-->
-<!--            }-->
-<!--        }-->
-
-        //Database Test
-        #require_once "../php/Database.php";
-        #    $db = new Database("localhost", "bit_academy", "3306", "root", "");
-        #    $db->checkConnectionToDatabase();
-        #    echo "<pre>";
-        #    print_r($db->getTableByName("products"));
-        #    $db->c("cap", "t", "t", "t", "10.00");
-        #    echo "</pre>";
-?>
 </body>
 </html>
