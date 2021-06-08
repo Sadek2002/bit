@@ -35,7 +35,7 @@ class Database {
 
     //get functions
     public function getTableByName ($tableName) {
-        $query = "SELECT * FROM ".$tableName;
+        $query = "SELECT * FROM $tableName";
         $tableArray = array();
 
         foreach ($this->dbh()->query($query) as $row) {
@@ -44,13 +44,51 @@ class Database {
         return $tableArray;
     }
 
-    public function getRecordsFromTableByName ($tableName, $recordName, $recordValue) {
-        $query = "SELECT * FROM ".$tableName." WHERE ".$recordName." = "."'$recordValue'";
+    public function getRecordsFromTable ($tableName, $columnName, $columnValue) {
+        $query = "SELECT * FROM $tableName WHERE $columnName = '$columnValue'";
         $records = array();
 
         foreach ($this->dbh()->query($query) as $row) {
             $records[] = $row;
         }
         return $records;
+    }
+
+
+
+    //delete function
+    public function deleteRecordsFromTable ($tableName, $columnName, $columnValue) {
+        $query = "DELETE FROM $tableName WHERE $columnName = '$columnValue'";
+
+        $this->dbh()->query($query);
+    }
+
+
+
+    //update function
+    public function updateRecordsFromTable ($tableName, $columnName, $newColumnValue, $searchColumn, $searchColumnValue) {
+        $query = "UPDATE $tableName SET $columnName = '$newColumnValue' WHERE $searchColumn = '$searchColumnValue'";
+
+        $this->dbh()->query($query);
+    }
+
+
+
+    //insert functions
+    //...
+    //function for products
+    public function insertRecordToProducts ($product_type, $name, $description, $img_url, $color, $price) {
+        $qeury = "INSERT INTO products (product_type, name, description, img_url, color, price)
+                  VALUES ('$product_type', '$name', '$description', '$img_url', '$color', '$price')";
+
+        $this->dbh()->query($qeury);
+    }
+
+
+    //function for messages
+    public function insertRecordToMessages ($customer_id, $text) {
+        $qeury = "INSERT INTO messages (customer_id, text) VALUES ('$customer_id', '$text')";
+
+        $this->dbh()->query($qeury);
     }
 }
