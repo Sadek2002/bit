@@ -47,7 +47,7 @@
                     //echo $row['id'];
                     echo '<h3 id="name-tag">'.$row['name'].'</h3>'."<br>";
                     echo '<h4 id="price-tag">&#8364;'.$row['price'].'</h4>';  
-                    echo '<a href="Productpage/test.php">add to cart'. $row['product_id'].'</a>';
+                    echo "<a href='Productpage/test.php?id=".$row['product_id']."'>"."go"."</a>";
                     echo "</div>";
                     echo "<br>";
                 }

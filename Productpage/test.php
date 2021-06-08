@@ -11,7 +11,7 @@ require_once "../php/Database.php";
 $db = new Database("localhost", "bit_academy", "3306", "root", "");
 $db->checkConnectionToDatabase();
 
-$product = $db->getRecordsFromTableByName("products", "product_id", 3);
+$product = $db->getRecordsFromTableByName("products", "product_id", $_GET['id']);
 //echo"<pre>";
 //print_r($product);
 //echo"</pre>";
@@ -46,7 +46,7 @@ $product = $db->getRecordsFromTableByName("products", "product_id", 3);
     </div>
     <div class="column" >
 
-        <h2 id="productname"><?php echo $product[0]['product_type'] ?></h2>
+        <h2 id="productname"><?php echo $product[0]['name'] ?></h2>
         <p>$<?php echo $product[0]['price'] ?></p>
         <p id="text">Size</p>
         <select id="size" >
