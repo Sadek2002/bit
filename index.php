@@ -55,9 +55,10 @@
                 ?>
             </div>
         </div>
-     <footer>
-         <a>contact</a>
-     </footer>
+     
     </div>
+    <footer>
+        <a>contact</a>
+    </footer>
     </body>
 </html> 
