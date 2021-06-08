@@ -22,8 +22,8 @@ $product = $db->getRecordsFromTableByName("products", "product_id", 3);
     <nav id= "menu">
         <ul>
             <li><img id="bit-img" src="../img/logo.svg"></li>
+            <li style = "float: right" ><a href=""><img src="../img/Cart.png"></a></li>
             <!--<li style="float: right; padding-right: 30px;" ><a href = "Contact.html" target = "_self">contact</a></li>-->
-            <li style = "float: right"><a href = "">basket</a></li>
             <li style = "float: right"><a href = "">acount</a></li>
             <li style = "float: right"><a href = "">search</a></li>
             <li class = "dropdown" style="float: right;">

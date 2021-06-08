@@ -4,12 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="../contact_pagina/style.css">
-    <style>
-        #checkout{
-            padding-left: 105px;
-            color: white;
-        }
-    </style>
+
 </head>
 <body>
 <header>
@@ -33,11 +28,21 @@
 </header>
 <h2 id="checkout">Checkout</h2>
 <section class="details">
-<p>Billing Details</p>
-
+<p id="Billingp">Billing Details</p>
+<div id="produktinfo">
+<p>Product info</p>
+</div>
+    <div id="produktinfo">
+        <p>Product info</p>
+    </div>
+    <div id="produktinfo">
+        <p>Product info</p>
+    </div>
 </section>
 <section class="Info">
-
+<div id="overzicht">
+    <p>Payment method</p>
+</div>
 </section>
 </body>
 </html>
