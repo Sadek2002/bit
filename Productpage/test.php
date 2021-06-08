@@ -11,7 +11,7 @@ require_once "../php/Database.php";
 $db = new Database("localhost", "bit_academy", "3306", "root", "");
 $db->checkConnectionToDatabase();
 
-$product = $db->getRecordsFromTableByName("products", "product_id", $_GET['id']);
+$product = $db->getRecordsFromTable("products", "product_id", $_GET['id']);
 //echo"<pre>";
 //print_r($product);
 //echo"</pre>";
@@ -33,7 +33,7 @@ $product = $db->getRecordsFromTableByName("products", "product_id", $_GET['id'])
                     <a href="#">link 2</a>
                 </div>
             </li>
-            <li style = "float: right"><a href="index.html" target = "_self">Shop</a></li>
+            <li style = "float: right"><a href="../index.php" target = "_self">Shop</a></li>
         </ul>
     </nav>
 
