@@ -286,7 +286,7 @@ footer{
     clear: both;
 }
 
-h2{
+#productname{
     color: black;
     font-size: 40px;
 }
@@ -326,4 +326,9 @@ article{
 }
 #content{
     height: 500px;
+}
+/*-------------------------------------------product page style---------------------------------------*/
+section.details,section.info{
+    width: 50%;
+    float: left;
 }
