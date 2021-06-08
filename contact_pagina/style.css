@@ -141,10 +141,11 @@ footer{
 }
 
 #wrapper{
-    margin-top: 10%;
+    display: grid;
+    
     color: white ;
     display: block;
-    margin: 5%;
+   
 
 }
 

@@ -35,44 +35,7 @@
             </div>-->
         </header>
         <div id="wrapper">
-            <div id="filter-container">
-                <form id="filter-form" method="post" action="">
-                    <h3 id="filter-tag">Filter: </h3><br>
-                    <select class="filter-content" id="price-filter">
-                        <option value="">Prijs&nbsp;</option>
-                        <option value="1">&#8364;&nbsp;10 - &#8364;20</option>
-                        <option value="2">&#8364;&nbsp;21 - &#8364;30</option>
-                        <option value="3">&#8364&nbsp;31 - &#8364;50</option>
-                        <option value="4">&#8364;&nbsp;51 - &#8364;75</option>
-                        <option value="5">&#8364;&nbsp;76 - &#8364;100</option>
-                    </select>
-                    <select class="filter-content" id="color-filter">
-                        <option value="">Kleur&nbsp;</option>
-                        <option value="1">Zwart</option>
-                        <option value="2">Rood</option>
-                        <option value="3">Blauw</option>
-                        <option value="4">Wit</option>
-                        <option value="5">Bruin</option>
-                    </select>
-                    <select class="filter-content" id="size-filter">
-                        <option value="">Size&nbsp;</option>
-                        <option value="1">S</option>
-                        <option value="2">M</option>
-                        <option value="3">L</option>
-                        <option value="4">XL</option>
-                        <option value="5">XXL</option>
-                    </select>
-
-                    <select class="filter-content">
-                        <option value="">Product&nbsp;</option>
-                        <option value="1">T-shirt</option>
-                        <option value="2">Sweatshirt</option>
-                        <option value="3">Cap</option>
-                        <option value="4">Mask</option>
-                    </select>
-                    <button id="button-filter">Button</button>
-                </form>
-            </div>
+            
             <div id="producten">
                 <?php
                 require_once "php/Database.php";
@@ -83,10 +46,9 @@
                     echo "<img alt='' id='test-img' src='".$row['img_url']."'>";
                     //echo $row['id'];
                     echo '<h3 id="name-tag">'.$row['name'].'</h3>'."<br>";
-                    echo '<h4 id="price-tag">&#8364;'.$row['price'].'</h4>';
+                    echo '<h4 id="price-tag">&#8364;'.$row['price'].'</h4>';  
+                    echo '<a href="Productpage/test.php">add to cart'. $row['product_id'].'</a>';
                     echo "</div>";
-                    echo '<a href="Productpage/test.php">hey'. $row['product_id'].'</a>';
-
                     echo "<br>";
                 }
 
@@ -98,4 +60,4 @@
      </footer>
     </div>
     </body>
-</html>
+</html> 
