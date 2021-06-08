@@ -46,7 +46,7 @@ $product = $db->getRecordsFromTableByName("products", "product_id", 3);
     </div>
     <div class="column" >
 
-        <h2><?php echo $product[0]['product_type'] ?></h2>
+        <h2 id="productname"><?php echo $product[0]['product_type'] ?></h2>
         <p>$<?php echo $product[0]['price'] ?></p>
         <p id="text">Size</p>
         <select id="size" >
