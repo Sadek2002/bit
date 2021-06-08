@@ -85,6 +85,14 @@ class Database {
     }
 
 
+    //function for products_has_sizes
+    public function insertRecordToProductsHasSizes ($product_id, $size) {
+        $qeury = "INSERT INTO products_has_sizes (product_id, size) VALUES ('$product_id', '$size')";
+
+        $this->dbh()->query($qeury);
+    }
+
+
     //function for messages
     public function insertRecordToMessages ($customer_id, $text) {
         $qeury = "INSERT INTO messages (customer_id, text) VALUES ('$customer_id', '$text')";
