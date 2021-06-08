@@ -43,11 +43,11 @@
 
                 foreach ($db->getTableByName("products") as $row) {
                     echo "<div id='items'>";
-                    echo "<img alt='' id='test-img' src='".$row['img_url']."'>";
+                    echo "<a href='Productpage/test.php?id=".$row['product_id']."'>"."<img alt='' id='test-img' src='".$row['img_url']."'>"."</a>";
                     //echo $row['id'];
                     echo '<h3 id="name-tag">'.$row['name'].'</h3>'."<br>";
                     echo '<h4 id="price-tag">&#8364;'.$row['price'].'</h4>';  
-                    echo "<a href='Productpage/test.php?id=".$row['product_id']."'>"."go"."</a>";
+                    
                     echo "</div>";
                     echo "<br>";
                 }
