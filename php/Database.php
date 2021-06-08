@@ -35,7 +35,7 @@ class Database {
 
     //get functions
     public function getTableByName ($tableName) {
-        $query = "SELECT * FROM ".$tableName;
+        $query = "SELECT * FROM $tableName";
         $tableArray = array();
 
         foreach ($this->dbh()->query($query) as $row) {
@@ -44,8 +44,8 @@ class Database {
         return $tableArray;
     }
 
-    public function getRecordsFromTable ($tableName, $recordName, $recordValue) {
-        $query = "SELECT * FROM ".$tableName." WHERE ".$recordName." = "."'$recordValue'";
+    public function getRecordsFromTable ($tableName, $columnName, $columnValue) {
+        $query = "SELECT * FROM $tableName WHERE $columnName = '$columnValue'";
         $records = array();
 
         foreach ($this->dbh()->query($query) as $row) {
@@ -57,8 +57,8 @@ class Database {
 
 
     //delete function
-    public function deleteRecordsFromTable ($tableName, $recordName, $recordValue) {
-        $query = "DELETE FROM ".$tableName." WHERE ".$recordName." = "."'$recordValue'";
+    public function deleteRecordsFromTable ($tableName, $columnName, $columnValue) {
+        $query = "DELETE FROM $tableName WHERE $columnName = '$columnValue'";
 
         $this->dbh()->query($query);
     }
@@ -77,9 +77,9 @@ class Database {
     //insert functions
     //...
     //function for products
-    public function insertRecordToProducts ($product_type, $name, $Description, $img_url, $price) {
-        $qeury = "INSERT INTO products (product_type, name, Description, img_url, price)
-                  VALUES ('$product_type', '$name', '$Description', '$img_url', '$price')";
+    public function insertRecordToProducts ($product_type, $name, $description, $img_url, $color, $price) {
+        $qeury = "INSERT INTO products (product_type, name, description, img_url, color, price)
+                  VALUES ('$product_type', '$name', '$description', '$img_url', '$color', '$price')";
 
         $this->dbh()->query($qeury);
     }
