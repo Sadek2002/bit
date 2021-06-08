@@ -356,11 +356,11 @@ section.details{
     background-color: white;
     border-radius: 8px;
     padding-left: 20px;
-    width: 600px;
+    width: 500px;
     float: right;
-    height: 500px;
+    height: 600px;
 }
 section.Info{
-    padding-right: 150px;
+    padding-right: 100px;
     padding-top: 75px;
 }
