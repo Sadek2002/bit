@@ -66,7 +66,7 @@
                 </div>
                 <div class="form-group">
                     <label for="pwd">Item description</label>
-                    <input type="text" class="form-control" id="Description" placeholder="Enter item description" name="Description">
+                    <input type="text" class="form-control" id="description" placeholder="Enter item description" name="description">
                 </div>
                 <div class="form-group">
                     <label for="Image URL">Image URL</label>
@@ -76,7 +76,22 @@
                     <label for="Price">Price</label>
                     <input type="text" class="form-control" id="price" placeholder="Enter item price" name="price">
                 </div>
-                <button type="submit" name="update" class="btn btn-default">Update</button>
+                <div class="form-group">
+                    <label for="Size">Size</label><br>
+                    <input type="checkbox" id="S" name="S" value="S">
+                    <label for="S">S</label><br>
+                    <input type="checkbox" id="M" name="M" value="M">
+                    <label for="M">M</label><br>
+                    <input type="checkbox" id="L" name="L" value="L">
+                    <label for="L">L</label><br>
+                </div>
+                <div class="form-group">
+                    <select name="colors" id="colors">
+                        <option value="">Blue</option>
+                        <option value="">Green</option>
+                        <option value="">Red</option>
+                    </select>
+                </div>
                 <button type="submit" name="create" class="btn btn-default">Create</button>
             </form>
         </div>
@@ -92,6 +107,8 @@
                     <th>Description</th>
                     <th>img_url</th>
                     <th>Price</th>
+                    <th>Colors</th>
+                    <th>Sizez</th>
                     <th>Edit</th>
                     <th>Delete</th>
         </div>
@@ -109,9 +126,17 @@
             echo "<td>"; echo $row["product_id"]; echo "</td>";
             echo "<td>"; echo $row["product_type"]; echo "</td>";
             echo "<td>"; echo $row["name"]; echo "</td>";
-            echo "<td>"; echo $row["Description"]; echo "</td>";
+            echo "<td>"; echo $row["description"]; echo "</td>";
             echo "<td>"; echo $row["img_url"]; echo "</td>";
             echo "<td>"; echo $row["price"]; echo "</td>";
+            echo "<td>"; echo $row["color"]; echo "</td>";
+            //sizes 
+            echo "<td>";
+            foreach ($db->getRecordsFromTable("products_has_sizes", "product_id", $row['product_id']) as $size) {
+                echo $size['size']." ";
+            }
+            echo "</td>";
+
             echo "<td>"; ?> <a href="edit.php?id=<?php echo $row["product_id"]; ?>"<button type="button" class="btn btn-success">Edit</button></a> <?php echo "</td>";
             echo "<td>"; ?> <a href="delete.php?id=<?php echo $row["product_id"]; ?>"<button type="button" class="btn btn-danger">Delete</button></a> <?php echo "</td>";
         }
@@ -119,36 +144,11 @@
                 </tbody>
             </table>
 
-        <?php
-        if(isset($_POST['update']))
-        {
-            $p_id = $_POST['product_id'];
-
-            $db->updateRecordsFromTable("products", "product_type", $_POST['product_type'], "product_id", $p_id);
-            $db->updateRecordsFromTable("products", "name", $_POST['name'], "product_id", $p_id);
-            $db->updateRecordsFromTable("products", "Description", $_POST['Description'], "product_id", $p_id);
-            $db->updateRecordsFromTable("products", "img_url", $_POST['img_url'], "product_id", $p_id);
-            $db->updateRecordsFromTable("products", "price", $_POST['price'], "product_id", $p_id);
-        ?>
-        <script type="text/javascript">
-            window.location.href=window.location.href;
-        </script>
-        <?php
-        }
-        if (isset($_POST['delete']))
-        {
-            $p_id = $_POST['product_id'];
-            $db->deleteRecordsFromTable("products", 'product_id', $p_id);
-            ?>
-            <script type="text/javascript">
-                window.location.href=window.location.href;
-            </script>
             <?php
-        }
         if (isset($_POST['create']))
         {
             $p_id = $_POST['product_id'];
-            $db->insertRecordToProducts($_POST['product_type'], $_POST['name'], $_POST['Description'], $_POST['img_url'], $_POST['price']);
+            $db->insertRecordToProducts($_POST['product_type'], $_POST['name'], $_POST['description'], $_POST['img_url'], $_POST['price'], $_POST['color']);
         ?>
         <script type="text/javascript">
             window.location.href=window.location.href;
