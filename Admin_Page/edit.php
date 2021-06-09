@@ -75,11 +75,15 @@ $product =$db->getRecordsFromTable("products", 'product_id', $id);
         console.log()
     }
 </script>
-<body style="background-color:white">
-
+<link rel="stylesheet" href="AdminStyle.css">
+<header style="margin-left: 30px">
+    <img src="../img/logo.svg">
+</header>
+<body style="background-color:#000563">
+<font color="white">
 <div class="container">
     <div class="col-lg-4">
-        <h2>Updating Database by PHP</h2>
+        <h2>Edit Product</h2>
         <form action="" name="form1" method="post">
             <div class="form-group">
                 <label for="Product Type">Product Type</label>
@@ -106,6 +110,7 @@ $product =$db->getRecordsFromTable("products", 'product_id', $id);
                     <option value="blue" id="color">Blue</option>
                     <option value="green" id="color">Green</option>
                     <option value="white" id="color">White</option>
+                    <option value="black" id="color">Black</option>
                 </select>
             </div>
             <button type="submit" name="update" class="btn btn-default">Update</button>
@@ -116,5 +121,6 @@ $product =$db->getRecordsFromTable("products", 'product_id', $id);
 </tr>
 </thead>
 <tbody>
+</font>
 </body>
 </html>

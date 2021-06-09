@@ -1,83 +1,13 @@
 <!doctype html>
 <html lang="en">
-<head >
-    <style>
-
-        header {
-            background-color: #000563;
-            color: white;
-        }
-
-        header h1 {
-            margin: 0;
-        }
-
-        html, body {
-            margin: 0;
-            padding: 0;
-        }
-
-        li a:hover {
-            background-color: blue;
-            color: white;
-        }
-
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: black;
-        }
-
-        li {
-            float: left;
-        }
-
-        li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        li a:hover {
-            background-color: #333;
-        }
-
-        .menu-border {
-            border: 2px solid #ffffff;
-        }
-
-        .text  {
-            font-size: 30px;
-            font-weight: bold;
-        }
-        
-        .edit {
-            max-height: 100px;
-            max-width: 350px;
-            padding-left: 10px;
-        }
-
-        .buttons {
-            max-height: 50px;
-            max-width: 70px;
-            padding-left: 10px;
-        }
-
-        .everything {
-            padding-left: 30%;
-        }
-
-    </style>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
+<link rel="stylesheet" href="AdminStyle.css">
 <title>admin</title>
 </head>
 <header style="margin-left: 30px">

@@ -1,65 +1,6 @@
 <!doctype html>
 <html lang="en">
 <head >
-    <style>
-
-        header {
-            background-color: #000563;
-            color: white;
-        }
-
-        header h1 {
-            margin: 0;
-        }
-
-        html, body {
-            margin: 0;
-            padding: 0;
-        }
-
-        li a:hover {
-            background-color: blue;
-            color: white;
-        }
-
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: black;
-        }
-
-        li {
-            float: left;
-        }
-
-        li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        li a:hover {
-            background-color: #333;
-        }
-
-        .menu-border {
-            border: 2px solid #ffffff;
-        }
-
-        .colors {
-            color: black;
-            padding-bottom: 20px;
-        }
-
-        .button {
-            padding-bottom: 20px;
-        }
-
-    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -68,6 +9,7 @@
 </head>
     <title>admin</title>
 </head>
+<link rel="stylesheet" href="AdminStyle.css">
 <header style="margin-left: 30px">
     <img src="../img/logo.svg">
 </header>
