@@ -54,6 +54,22 @@
             font-size: 30px;
             font-weight: bold;
         }
+        
+        .edit {
+            max-height: 100px;
+            max-width: 350px;
+            padding-left: 10px;
+        }
+
+        .buttons {
+            max-height: 50px;
+            max-width: 70px;
+            padding-left: 10px;
+        }
+
+        .everything {
+            padding-left: 30%;
+        }
 
     </style>
     <meta charset="UTF-8">
@@ -75,16 +91,73 @@
 <body style="background-color: #000563" >
 <font color="white">
     <ul class="menu-border">
-        <li><a class="active" href="adminpage.php">Home</a></li>
-        <li><a href="edit.php">Edit</a></li>
-        <li><a href="https://mail.google.com/mail/u/0/#inbox">Mail</a></li>
+        <li><a class="active" href="adminhome.php">Home</a></li>
+        <li><a href="adminpage.php">Edit</a></li>
+        <li><a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">Mail</a></li>
     </ul>
 
+    <div class="everything">
+        <h1 class="text">Create Function</h1>
 
-    <h1 class="text">Create Function</h1>
-    <p>Type in the product type</p>
-    <p>Listed types: mouth mask, cap and t-shirt</p>
-    <img src="../img/p" alt="">
+        <p>Type the product type</p>
+        <img class="edit" src="../img/p_type.PNG" alt="">
+        <p>Listed types: mouth mask, cap and t-shirt</p>
+
+        <p>Type the product name</p>
+        <img class="edit" src="../img/p_name.PNG" alt="">
+
+        <p>Type the product description</p>
+        <img class="edit" src="../img/p_desc.PNG" alt="">
+
+        <p>Insert product image</p>
+        <img class="edit" src="../img/p_img.PNG" alt="">
+
+        <p>Insert the price you want your product to sell at</p>
+        <img class="edit" src="../img/p_price.PNG" alt="">
+
+        <p>Select the size/sizes your product has (if it has no size dont select anything!)</p>
+        <img class="edit" src="../img/p_sizes.PNG" alt="">
+
+        <p>Click on the white box to select the color your product is</p>
+        <img class="edit" src="../img/p_colors.PNG" alt="">
+
+        <p>Click on the create button to save changes!</p>
+        <img class="buttons" src="../img/p_create.PNG" alt="">
+
+        <h1 class="text">Edit Function</h1>
+
+        <p>Type the product type</p>
+        <img class="edit" src="../img/p_type.PNG" alt="">
+        <p>Listed types: mouth mask, cap and t-shirt</p>
+
+        <p>Type the product name</p>
+        <img class="edit" src="../img/p_name.PNG" alt="">
+
+        <p>Type the product description</p>
+        <img class="edit" src="../img/p_desc.PNG" alt="">
+
+        <p>Insert product image</p>
+        <img class="edit" src="../img/p_img.PNG" alt="">
+
+        <p>Insert the price you want your product to sell at</p>
+        <img class="edit" src="../img/p_price.PNG" alt="">
+
+        <p>Select the size/sizes your product has (if it has no size dont select anything!)</p>
+        <img class="edit" src="../img/p_sizes.PNG" alt="">
+
+        <p>Click on the white box to select the color your product is</p>
+        <img class="edit" src="../img/p_colors.PNG" alt="">
+
+        <p>Click on the update button to save changes!</p>
+        <img class="buttons" src="../img/update.PNG" alt="">
+        
+        <h1 class="text">Delete Function</h1>
+
+        <p>Click on the delete button</p>
+        <img class="buttons" src="../img/delete.PNG" alt="">
+        <p>Careful it will delete the item instantly!</p>
+    </div>
+
 
 
 </font>

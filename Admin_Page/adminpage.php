@@ -50,6 +50,15 @@
             border: 2px solid #ffffff;
         }
 
+        .colors {
+            color: black;
+            padding-bottom: 20px;
+        }
+
+        .button {
+            padding-bottom: 20px;
+        }
+
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -72,7 +81,7 @@
         <ul class="menu-border">
             <li><a class="active" href="adminhome.php">Home</a></li>
             <li><a href="adminpage.php">Edit</a></li>
-            <li><a href="https://mail.google.com/mail/u/0/#inbox">Mail</a></li>
+            <li><a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">Mail</a></li>
         </ul>
 
         <div class="container" style="margin-left: 0px">
@@ -108,14 +117,17 @@
                     <input type="checkbox" id="sizes" name="sizes">
                     <label for="Large">L</label><br>
                 </div>
-                <div class="form-group">
+                <div class="colors">
                     <select name="colors">
                         <option value="blue" id="color">Blue</option>
                         <option value="green" id="color">Green</option>
                         <option value="white" id="color">White</option>
                     </select>
                 </div>
+                <div class="button">
                 <button type="submit" name="create" class="btn btn-default">Create</button>
+                </div>
+
             </form>
         </div>
         </div>
@@ -171,7 +183,7 @@
         if (isset($_POST['create']))
         {
             $p_id = $_POST['product_id'];
-            $db->insertRecordToProducts($_POST['product_type'], $_POST['name'], $_POST['description'], $_POST['img_url'], $_POST['price'], $_POST['color']);
+            $db->insertRecordToProducts($_POST['product_type'], $_POST['name'], $_POST['description'], $_POST['img_url'], $_POST['color'], $_POST['price']);
             $db->insertRecordToProductsHasSizes($_POST['product_id'], $_POST['sizes']);
         ?>
         <script type="text/javascript">
