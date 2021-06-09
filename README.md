@@ -26,7 +26,7 @@ Features:
 Will do:
 - Product, account and contact page
 - A manager for the admin
-- Search bar
+- Filter for product's
 - Functional Database: to save the data on the site
 - Add to Cart: order page
 
@@ -37,7 +37,7 @@ Won't do:
 
 Might do:
 - Responsive website: a site that can be used on phone, tablet and computer
-- Filter for product's
+- Search bar
 
 # Milestones
 We will work on this project for 6 week's.
