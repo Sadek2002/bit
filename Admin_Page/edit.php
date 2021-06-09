@@ -69,7 +69,7 @@ $product =$db->getRecordsFromTable("products", 'product_id', $id);
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 </head>
-<title>admin</title>
+<title>Edit</title>
 </head>
 <script>
     function createItem(name, description) {

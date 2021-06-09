@@ -1,17 +1,25 @@
-
-
 <!doctype html>
 <html lang="en">
-<head>
+<head >
     <style>
+
+        header {
+            background-color: #000563;
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
 
         li a:hover {
             background-color: blue;
             color: white;
-        }
-
-        h1 {
-            color: black;
         }
 
         ul {
@@ -19,7 +27,7 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
-            background-color: #333;
+            background-color: black;
         }
 
         li {
@@ -35,7 +43,11 @@
         }
 
         li a:hover {
-            background-color: #111;
+            background-color: #333;
+        }
+
+        .menu-border {
+            border: 2px solid #ffffff;
         }
 
     </style>
@@ -47,21 +59,25 @@
 </head>
     <title>admin</title>
 </head>
+<header style="margin-left: 30px">
+    <img src="../img/logo.svg">
+</header>
 <script>
     function createItem(name, description) {
         console.log()
     }
 </script>
-<body style="background-color:white">
-        <ul>
-            <li><a class="active" href="adminpage.php">Home</a></li>
-            <li><a href="edit.php">Edit</a></li>
+<body style="background-color: #000563" >
+<font color="white">
+        <ul class="menu-border">
+            <li><a class="active" href="adminhome.php">Home</a></li>
+            <li><a href="adminpage.php">Edit</a></li>
             <li><a href="https://mail.google.com/mail/u/0/#inbox">Mail</a></li>
         </ul>
 
-        <div class="container">
+        <div class="container" style="margin-left: 0px">
         <div class="col-lg-4">
-            <h2>Updating Database by PHP</h2>
+            <h2>Create Product</h2>
             <form action="" name="form1" method="post">
                 <div class="form-group">
                     <label for="Product Type">Product Type</label>
@@ -107,7 +123,7 @@
         <div class="col-lg-12">
             <table class="table table-bordered">
                 <thead>
-                <tr>
+                <tr bgcolor="black">
                     <th>#</th>
                     <th>Product Type</th>
                     <th>Name</th>
@@ -129,7 +145,7 @@
 
         foreach ($db->getTableByName("products") as $row)
         {
-            echo "<tr>";
+            echo "<tr bgcolor='#333'>";
             echo "<td>"; echo $row["product_id"]; echo "</td>";
             echo "<td>"; echo $row["product_type"]; echo "</td>";
             echo "<td>"; echo $row["name"]; echo "</td>";
@@ -164,5 +180,6 @@
         <?php
         }
         ?>
+</font>
 </body>
 </html>
