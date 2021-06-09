@@ -77,7 +77,7 @@
                     <input type="text" class="form-control" id="price" placeholder="Enter item price" name="price">
                 </div>
                 <div class="form-group">
-                    <label for="Size">Size</label><br>
+                    <label for="Size">Sizes</label><br>
                     <input type="checkbox" id="S" name="S" value="S">
                     <label for="S">S</label><br>
                     <input type="checkbox" id="M" name="M" value="M">
@@ -86,10 +86,10 @@
                     <label for="L">L</label><br>
                 </div>
                 <div class="form-group">
-                    <select name="colors" id="colors">
-                        <option value="">Blue</option>
-                        <option value="">Green</option>
-                        <option value="">Red</option>
+                    <select name="colors">
+                        <option value="blue" id="colors">Blue</option>
+                        <option value="green" id="colors">Green</option>
+                        <option value="white" id="colors">White</option>
                     </select>
                 </div>
                 <button type="submit" name="create" class="btn btn-default">Create</button>
@@ -108,7 +108,7 @@
                     <th>img_url</th>
                     <th>Price</th>
                     <th>Colors</th>
-                    <th>Sizez</th>
+                    <th>Sizes</th>
                     <th>Edit</th>
                     <th>Delete</th>
         </div>
