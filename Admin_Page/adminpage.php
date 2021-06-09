@@ -118,7 +118,7 @@
                     <label for="Large">L</label><br>
                 </div>
                 <div class="colors">
-                    <select name="colors">
+                    <select name="color">
                         <option value="blue" id="color">Blue</option>
                         <option value="green" id="color">Green</option>
                         <option value="white" id="color">White</option>
@@ -127,7 +127,6 @@
                 <div class="button">
                 <button type="submit" name="create" class="btn btn-default">Create</button>
                 </div>
-
             </form>
         </div>
         </div>

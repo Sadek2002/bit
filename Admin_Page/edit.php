@@ -19,8 +19,7 @@ $product =$db->getRecordsFromTable("products", 'product_id', $id);
             $db->updateRecordsFromTable("products", "description", $_POST['description'], "product_id", $id);
             $db->updateRecordsFromTable("products", "img_url", $_POST['img_url'], "product_id", $id);
             $db->updateRecordsFromTable("products", "price", $_POST['price'], "product_id", $id);
-            $db->updateRecordsFromTable("products", "colors", $_POST['colors'], "product_id", $id);
-            $db->updateRecordsFromTable("products", "colors", $_POST['colors'], "product_id", $id)
+            $db->updateRecordsFromTable("products", "color", $_POST['color'], "product_id", $id);
 
 
 
@@ -102,11 +101,11 @@ $product =$db->getRecordsFromTable("products", 'product_id', $id);
                 <label for="Price">Price</label>
                 <input type="text" class="form-control" id="price" placeholder="Enter item price" name="price" value="<?php echo $product[0]['price']; ?>">
             </div>
-            <div class="form-group">
-                <select name="colors">
-                    <option value="blue" id="colors"> value="<?php echo $product[0]['img_url']; ?>"</option>
-                    <option value="green" id="colors">green</option>
-                    <option value="white" id="colors">white</option>
+            <div class="colors">
+                <select name="color">
+                    <option value="blue" id="color">Blue</option>
+                    <option value="green" id="color">Green</option>
+                    <option value="white" id="color">White</option>
                 </select>
             </div>
             <button type="submit" name="update" class="btn btn-default">Update</button>
