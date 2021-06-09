@@ -7,11 +7,11 @@ $db->checkConnectionToDatabase();
 
 
 //delete function
-//$db->deleteRecordsFromTable("products", "Description", "test");
+//$db->deleteRecordsFromTable("products", "description", "test");
 
 
 //insert function
-//$db->insertRecordToProducts("cap", "pet geel", "mooie pet", "img/petten/pet12", 15.00);
+//$db->insertRecordToProducts("cap", "pet geel", "mooie pet", "img/petten/pet12", "green", 15.00);
 //$db->insertRecordToMessages("3", "Dit werkt echt goed!");
 
 

@@ -67,13 +67,13 @@ CREATE TABLE IF NOT EXISTS `bit_academy`.`customers` (
                                                          `first_name` VARCHAR(45) NOT NULL,
     `middle_initial` VARCHAR(45) NULL,
     `last_name` VARCHAR(45) NOT NULL,
-    `adress` VARCHAR(45) NOT NULL,
+    `address` VARCHAR(45) NOT NULL,
     `address_nr` VARCHAR(10) NOT NULL,
     `postal_code` VARCHAR(7) NOT NULL,
     `place_name` VARCHAR(45) NOT NULL,
     `telephone_nr` VARCHAR(25) NULL,
     `email` VARCHAR(100) NOT NULL,
-    `passwoord` VARCHAR(45) NOT NULL,
+    `password` VARCHAR(45) NOT NULL,
     PRIMARY KEY (`customer_id`))
     ENGINE = InnoDB;
 
@@ -85,7 +85,7 @@ CREATE TABLE IF NOT EXISTS `bit_academy`.`admins` (
                                                       `admin_id` INT NOT NULL AUTO_INCREMENT,
                                                       `name` VARCHAR(45) NOT NULL,
     `username` VARCHAR(45) NOT NULL,
-    `passwoord` VARCHAR(45) NOT NULL,
+    `password` VARCHAR(45) NOT NULL,
     PRIMARY KEY (`admin_id`))
     ENGINE = InnoDB;
 
@@ -96,8 +96,8 @@ CREATE TABLE IF NOT EXISTS `bit_academy`.`admins` (
 CREATE TABLE IF NOT EXISTS `bit_academy`.`guests` (
                                                       `guest_id` INT NOT NULL AUTO_INCREMENT,
                                                       `email` VARCHAR(100) NOT NULL,
-    `adress` VARCHAR(45) NOT NULL,
-    `adress_nr` VARCHAR(10) NOT NULL,
+    `address` VARCHAR(45) NOT NULL,
+    `address_nr` VARCHAR(10) NOT NULL,
     `postal_code` VARCHAR(7) NOT NULL,
     `place_name` VARCHAR(45) NOT NULL,
     PRIMARY KEY (`guest_id`))
@@ -110,19 +110,19 @@ CREATE TABLE IF NOT EXISTS `bit_academy`.`guests` (
 CREATE TABLE IF NOT EXISTS `bit_academy`.`orders` (
                                                       `order_id` INT NOT NULL AUTO_INCREMENT,
                                                       `customer_id` INT NULL,
-                                                      `geust_id` INT NULL,
+                                                      `guest_id` INT NULL,
                                                       `date` DATE NOT NULL,
                                                       `time` TIME NOT NULL,
                                                       PRIMARY KEY (`order_id`),
     INDEX `fk_orders_customers1_idx` (`customer_id` ASC),
-    INDEX `fk_orders_guests1_idx` (`geust_id` ASC),
+    INDEX `fk_orders_guests1_idx` (`guest_id` ASC),
     CONSTRAINT `fk_orders_customers1`
     FOREIGN KEY (`customer_id`)
     REFERENCES `bit_academy`.`customers` (`customer_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
     CONSTRAINT `fk_orders_guests1`
-    FOREIGN KEY (`geust_id`)
+    FOREIGN KEY (`guest_id`)
     REFERENCES `bit_academy`.`guests` (`guest_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
@@ -158,7 +158,7 @@ CREATE TABLE IF NOT EXISTS `bit_academy`.`order_has_products` (
 CREATE TABLE IF NOT EXISTS `bit_academy`.`messages` (
                                                         `message_id` INT NOT NULL AUTO_INCREMENT,
                                                         `customer_id` INT NULL,
-                                                        `geust_id` INT NULL,
+                                                        `guest_id` INT NULL,
                                                         `order_id` INT NULL,
                                                         `subject` VARCHAR(45) NOT NULL,
     `text` VARCHAR(1000) NOT NULL,
@@ -167,7 +167,7 @@ CREATE TABLE IF NOT EXISTS `bit_academy`.`messages` (
     PRIMARY KEY (`message_id`),
     INDEX `fk_messages_customers1_idx` (`customer_id` ASC),
     INDEX `fk_messages_orders1_idx` (`order_id` ASC),
-    INDEX `fk_messages_guests1_idx` (`geust_id` ASC),
+    INDEX `fk_messages_guests1_idx` (`guest_id` ASC),
     CONSTRAINT `fk_messages_customers1`
     FOREIGN KEY (`customer_id`)
     REFERENCES `bit_academy`.`customers` (`customer_id`)
@@ -179,7 +179,7 @@ CREATE TABLE IF NOT EXISTS `bit_academy`.`messages` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
     CONSTRAINT `fk_messages_guests1`
-    FOREIGN KEY (`geust_id`)
+    FOREIGN KEY (`guest_id`)
     REFERENCES `bit_academy`.`guests` (`guest_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
@@ -279,9 +279,9 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `bit_academy`;
-INSERT INTO `bit_academy`.`customers` (`customer_id`, `first_name`, `middle_initial`, `last_name`, `adress`, `address_nr`, `postal_code`, `place_name`, `telephone_nr`, `email`, `passwoord`) VALUES (DEFAULT, 'jan', NULL, 'janjo', 'janstraat', '12', '2020 DS', 'Lelystad', NULL, 'jan@test.com', 'jan');
-INSERT INTO `bit_academy`.`customers` (`customer_id`, `first_name`, `middle_initial`, `last_name`, `adress`, `address_nr`, `postal_code`, `place_name`, `telephone_nr`, `email`, `passwoord`) VALUES (DEFAULT, 'ben', NULL, 'vogel', 'merelstraat', 's-23', '1026 ES', 'Almere', '0645469001', 'ben@test.com', 'ben');
-INSERT INTO `bit_academy`.`customers` (`customer_id`, `first_name`, `middle_initial`, `last_name`, `adress`, `address_nr`, `postal_code`, `place_name`, `telephone_nr`, `email`, `passwoord`) VALUES (DEFAULT, 'lisa', 'van de', 'berg', 'bergweg', '5a', '0231 BA', 'Zwolle', NULL, 'lisa@test.com', 'lisa');
+INSERT INTO `bit_academy`.`customers` (`customer_id`, `first_name`, `middle_initial`, `last_name`, `address`, `address_nr`, `postal_code`, `place_name`, `telephone_nr`, `email`, `password`) VALUES (DEFAULT, 'jan', NULL, 'janjo', 'janstraat', '12', '2020 DS', 'Lelystad', NULL, 'jan@test.com', 'jan');
+INSERT INTO `bit_academy`.`customers` (`customer_id`, `first_name`, `middle_initial`, `last_name`, `address`, `address_nr`, `postal_code`, `place_name`, `telephone_nr`, `email`, `password`) VALUES (DEFAULT, 'ben', NULL, 'vogel', 'merelstraat', 's-23', '1026 ES', 'Almere', '0645469001', 'ben@test.com', 'ben');
+INSERT INTO `bit_academy`.`customers` (`customer_id`, `first_name`, `middle_initial`, `last_name`, `address`, `address_nr`, `postal_code`, `place_name`, `telephone_nr`, `email`, `password`) VALUES (DEFAULT, 'lisa', 'van de', 'berg', 'bergweg', '5a', '0231 BA', 'Zwolle', NULL, 'lisa@test.com', 'lisa');
 
 COMMIT;
 
@@ -291,8 +291,8 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `bit_academy`;
-INSERT INTO `bit_academy`.`admins` (`admin_id`, `name`, `username`, `passwoord`) VALUES (DEFAULT, 'hans', 'hans123', 'hans');
-INSERT INTO `bit_academy`.`admins` (`admin_id`, `name`, `username`, `passwoord`) VALUES (DEFAULT, 'bert', 'bert01', 'bert');
+INSERT INTO `bit_academy`.`admins` (`admin_id`, `name`, `username`, `password`) VALUES (DEFAULT, 'hans', 'hans123', 'hans');
+INSERT INTO `bit_academy`.`admins` (`admin_id`, `name`, `username`, `password`) VALUES (DEFAULT, 'bert', 'bert01', 'bert');
 
 COMMIT;
 
@@ -302,9 +302,9 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `bit_academy`;
-INSERT INTO `bit_academy`.`guests` (`guest_id`, `email`, `adress`, `adress_nr`, `postal_code`, `place_name`) VALUES (DEFAULT, 'hans@test.com', 'bosweg', '24', '9330 BW', 'Lelystad');
-INSERT INTO `bit_academy`.`guests` (`guest_id`, `email`, `adress`, `adress_nr`, `postal_code`, `place_name`) VALUES (DEFAULT, 'ernie@test.com', 'dwergweg', 'c34', '6538 DW', 'Amsterdam');
-INSERT INTO `bit_academy`.`guests` (`guest_id`, `email`, `adress`, `adress_nr`, `postal_code`, `place_name`) VALUES (DEFAULT, 'larsvdberg@test.com', 'geluidstraat', 'a1', '1530 GS', 'Groningen');
+INSERT INTO `bit_academy`.`guests` (`guest_id`, `email`, `address`, `address_nr`, `postal_code`, `place_name`) VALUES (DEFAULT, 'hans@test.com', 'bosweg', '24', '9330 BW', 'Lelystad');
+INSERT INTO `bit_academy`.`guests` (`guest_id`, `email`, `address`, `address_nr`, `postal_code`, `place_name`) VALUES (DEFAULT, 'ernie@test.com', 'dwergweg', 'c34', '6538 DW', 'Amsterdam');
+INSERT INTO `bit_academy`.`guests` (`guest_id`, `email`, `address`, `address_nr`, `postal_code`, `place_name`) VALUES (DEFAULT, 'larsvdberg@test.com', 'geluidstraat', 'a1', '1530 GS', 'Groningen');
 
 COMMIT;
 
@@ -314,14 +314,14 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `bit_academy`;
-INSERT INTO `bit_academy`.`orders` (`order_id`, `customer_id`, `geust_id`, `date`, `time`) VALUES (DEFAULT, 1, NULL, '2021-01-12', '11:40:22');
-INSERT INTO `bit_academy`.`orders` (`order_id`, `customer_id`, `geust_id`, `date`, `time`) VALUES (DEFAULT, 2, NULL, '2021-03-02', '12:12:01');
-INSERT INTO `bit_academy`.`orders` (`order_id`, `customer_id`, `geust_id`, `date`, `time`) VALUES (DEFAULT, 2, NULL, '2021-03-10', '03:10:53');
-INSERT INTO `bit_academy`.`orders` (`order_id`, `customer_id`, `geust_id`, `date`, `time`) VALUES (DEFAULT, 3, NULL, '2021-04-15', '22:30:13');
-INSERT INTO `bit_academy`.`orders` (`order_id`, `customer_id`, `geust_id`, `date`, `time`) VALUES (DEFAULT, 1, NULL, '2021-04-15', '22:31:19');
-INSERT INTO `bit_academy`.`orders` (`order_id`, `customer_id`, `geust_id`, `date`, `time`) VALUES (DEFAULT, NULL, 1, '2021-04-16', '07:31:01');
-INSERT INTO `bit_academy`.`orders` (`order_id`, `customer_id`, `geust_id`, `date`, `time`) VALUES (DEFAULT, NULL, 2, '2021-04-18', '12:45:34');
-INSERT INTO `bit_academy`.`orders` (`order_id`, `customer_id`, `geust_id`, `date`, `time`) VALUES (DEFAULT, NULL, 3, '2021-04-21', '11:55:57');
+INSERT INTO `bit_academy`.`orders` (`order_id`, `customer_id`, `guest_id`, `date`, `time`) VALUES (DEFAULT, 1, NULL, '2021-01-12', '11:40:22');
+INSERT INTO `bit_academy`.`orders` (`order_id`, `customer_id`, `guest_id`, `date`, `time`) VALUES (DEFAULT, 2, NULL, '2021-03-02', '12:12:01');
+INSERT INTO `bit_academy`.`orders` (`order_id`, `customer_id`, `guest_id`, `date`, `time`) VALUES (DEFAULT, 2, NULL, '2021-03-10', '03:10:53');
+INSERT INTO `bit_academy`.`orders` (`order_id`, `customer_id`, `guest_id`, `date`, `time`) VALUES (DEFAULT, 3, NULL, '2021-04-15', '22:30:13');
+INSERT INTO `bit_academy`.`orders` (`order_id`, `customer_id`, `guest_id`, `date`, `time`) VALUES (DEFAULT, 1, NULL, '2021-04-15', '22:31:19');
+INSERT INTO `bit_academy`.`orders` (`order_id`, `customer_id`, `guest_id`, `date`, `time`) VALUES (DEFAULT, NULL, 1, '2021-04-16', '07:31:01');
+INSERT INTO `bit_academy`.`orders` (`order_id`, `customer_id`, `guest_id`, `date`, `time`) VALUES (DEFAULT, NULL, 2, '2021-04-18', '12:45:34');
+INSERT INTO `bit_academy`.`orders` (`order_id`, `customer_id`, `guest_id`, `date`, `time`) VALUES (DEFAULT, NULL, 3, '2021-04-21', '11:55:57');
 
 COMMIT;
 
@@ -353,11 +353,11 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `bit_academy`;
-INSERT INTO `bit_academy`.`messages` (`message_id`, `customer_id`, `geust_id`, `order_id`, `subject`, `text`, `read`, `handled`) VALUES (DEFAULT, 2, NULL, 2, 'niet goed', 'Dit is een slecht product', DEFAULT, DEFAULT);
-INSERT INTO `bit_academy`.`messages` (`message_id`, `customer_id`, `geust_id`, `order_id`, `subject`, `text`, `read`, `handled`) VALUES (DEFAULT, 1, NULL, NULL, 'test', 'test test', DEFAULT, DEFAULT);
-INSERT INTO `bit_academy`.`messages` (`message_id`, `customer_id`, `geust_id`, `order_id`, `subject`, `text`, `read`, `handled`) VALUES (DEFAULT, 2, NULL, NULL, 'werkt niet', 'De website werkt niet', DEFAULT, DEFAULT);
-INSERT INTO `bit_academy`.`messages` (`message_id`, `customer_id`, `geust_id`, `order_id`, `subject`, `text`, `read`, `handled`) VALUES (DEFAULT, 3, NULL, 3, 'mooie producten', 'deze producten zijn super', DEFAULT, DEFAULT);
-INSERT INTO `bit_academy`.`messages` (`message_id`, `customer_id`, `geust_id`, `order_id`, `subject`, `text`, `read`, `handled`) VALUES (DEFAULT, NULL, 1, 6, 'the cap is not green', 'the cap that i orderd is not green but dark green', DEFAULT, DEFAULT);
+INSERT INTO `bit_academy`.`messages` (`message_id`, `customer_id`, `guest_id`, `order_id`, `subject`, `text`, `read`, `handled`) VALUES (DEFAULT, 2, NULL, 2, 'niet goed', 'Dit is een slecht product', DEFAULT, DEFAULT);
+INSERT INTO `bit_academy`.`messages` (`message_id`, `customer_id`, `guest_id`, `order_id`, `subject`, `text`, `read`, `handled`) VALUES (DEFAULT, 1, NULL, NULL, 'test', 'test test', DEFAULT, DEFAULT);
+INSERT INTO `bit_academy`.`messages` (`message_id`, `customer_id`, `guest_id`, `order_id`, `subject`, `text`, `read`, `handled`) VALUES (DEFAULT, 2, NULL, NULL, 'werkt niet', 'De website werkt niet', DEFAULT, DEFAULT);
+INSERT INTO `bit_academy`.`messages` (`message_id`, `customer_id`, `guest_id`, `order_id`, `subject`, `text`, `read`, `handled`) VALUES (DEFAULT, 3, NULL, 3, 'mooie producten', 'deze producten zijn super', DEFAULT, DEFAULT);
+INSERT INTO `bit_academy`.`messages` (`message_id`, `customer_id`, `guest_id`, `order_id`, `subject`, `text`, `read`, `handled`) VALUES (DEFAULT, NULL, 1, 6, 'the cap is not green', 'the cap that i orderd is not green but dark green', DEFAULT, DEFAULT);
 
 COMMIT;
 
