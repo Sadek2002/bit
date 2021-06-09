@@ -20,6 +20,7 @@ $product =$db->getRecordsFromTable("products", 'product_id', $id);
             $db->updateRecordsFromTable("products", "img_url", $_POST['img_url'], "product_id", $id);
             $db->updateRecordsFromTable("products", "price", $_POST['price'], "product_id", $id);
             $db->updateRecordsFromTable("products", "colors", $_POST['colors'], "product_id", $id);
+            $db->updateRecordsFromTable("products", "colors", $_POST['colors'], "product_id", $id)
 
 
 

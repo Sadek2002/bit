@@ -4,20 +4,6 @@
 <html lang="en">
 <head>
     <style>
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            width: 100px;
-            background-color: black;
-        }
-
-        li a {
-            display: block;
-            color: white;
-            padding: 8px 16px;
-            text-decoration: none;
-        }
 
         li a:hover {
             background-color: blue;
@@ -28,13 +14,36 @@
             color: black;
         }
 
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
 </head>
     <title>admin</title>
 </head>
@@ -44,12 +53,10 @@
     }
 </script>
 <body style="background-color:white">
-        <h1>Admin Page</h1>
-
         <ul>
-            <li><a href="adminpage.php">Home</a></li>
-            <li><a href="edit_item.php">Edit</a></li>
-            <li><a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">E-mails</a></li>
+            <li><a class="active" href="adminpage.php">Home</a></li>
+            <li><a href="edit.php">Edit</a></li>
+            <li><a href="https://mail.google.com/mail/u/0/#inbox">Mail</a></li>
         </ul>
 
         <div class="container">
@@ -78,18 +85,18 @@
                 </div>
                 <div class="form-group">
                     <label for="Size">Sizes</label><br>
-                    <input type="checkbox" id="S" name="S" value="S">
-                    <label for="S">S</label><br>
-                    <input type="checkbox" id="M" name="M" value="M">
-                    <label for="M">M</label><br>
-                    <input type="checkbox" id="L" name="L" value="L">
-                    <label for="L">L</label><br>
+                    <input type="checkbox" id="sizes" name="sizes">
+                    <label for="Small">S</label><br>
+                    <input type="checkbox" id="sizes" name="sizes">
+                    <label for="Medium">M</label><br>
+                    <input type="checkbox" id="sizes" name="sizes">
+                    <label for="Large">L</label><br>
                 </div>
                 <div class="form-group">
                     <select name="colors">
-                        <option value="blue" id="colors">Blue</option>
-                        <option value="green" id="colors">Green</option>
-                        <option value="white" id="colors">White</option>
+                        <option value="blue" id="color">Blue</option>
+                        <option value="green" id="color">Green</option>
+                        <option value="white" id="color">White</option>
                     </select>
                 </div>
                 <button type="submit" name="create" class="btn btn-default">Create</button>
@@ -149,6 +156,7 @@
         {
             $p_id = $_POST['product_id'];
             $db->insertRecordToProducts($_POST['product_type'], $_POST['name'], $_POST['description'], $_POST['img_url'], $_POST['price'], $_POST['color']);
+            $db->insertRecordToProductsHasSizes($_POST['product_id'], $_POST['sizes']);
         ?>
         <script type="text/javascript">
             window.location.href=window.location.href;
