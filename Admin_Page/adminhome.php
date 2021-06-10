@@ -80,15 +80,12 @@
 
         <p>Click on the update button to save changes!</p>
         <img class="buttons" src="../img/update.PNG" alt="">
-        
-        <h1 class="text">Delete Function</h1>
 
+        <h1 class="text">Delete Function</h1>
         <p>Click on the delete button</p>
         <img class="buttons" src="../img/delete.PNG" alt="">
         <p>Careful it will delete the item instantly!</p>
-    </div>
-
-
+            </div>
 
 </font>
 </body>
