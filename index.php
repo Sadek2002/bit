@@ -21,12 +21,6 @@
                         </div>
                     </li>
                     <li style = "float: right"><a href="index.php" target = "_self">Home</a></li>
-                    <!--<li id="searchbar">
-                        <div id="search">
-                            <div id="icon"></div>
-                            <div id="input"></div>
-                        </div>
-                    </li>-->
                 </ul>
             </nav>
             <!--<div class="slideshow">
