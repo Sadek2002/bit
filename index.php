@@ -1,12 +1,7 @@
 <html> 
     <head>
         <title>Bit Merch Shop</title>
-<<<<<<< Updated upstream
         <link rel="stylesheet" href="style.css">
-=======
-        <link rel="stylesheet" href="contact_pagina/style.css">
-        
->>>>>>> Stashed changes
     </head>
     <body>
         <header>
