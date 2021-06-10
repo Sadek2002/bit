@@ -8,7 +8,7 @@
 <body>
 <?php
 require_once "../php/Database.php";
-$db = new Database("localhost", "bit_academy", "3306", "root", "alicia573");
+$db = new Database("localhost", "bit_academy", "3306", "root", "");
 $db->checkConnectionToDatabase();
 
 $product = $db->getRecordsFromTable("products", "product_id", $_GET['id']);
@@ -25,7 +25,7 @@ $product = $db->getRecordsFromTable("products", "product_id", $_GET['id']);
             <li style = "float: right" ><a href=""><img src="../img/Cart.png"></a></li>
             <!--<li style="float: right; padding-right: 30px;" ><a href = "Contact.html" target = "_self">contact</a></li>-->
             <li style = "float: right"><a href = "">acount</a></li>
-            <li style = "float: right"><a href = "">search</a></li>
+            <li style = "float: right"><a href = "">Contact</a></li>
             <li class = "dropdown" style="float: right;">
                 <a href = "javascript:void(0)" class="dropbtn">Categorie&#235;n</a>
                 <div class="dropdown-content">
