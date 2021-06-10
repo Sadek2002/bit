@@ -290,7 +290,6 @@ body{
 
 }
 
-
 .row:after {
     content: "";
     display: table;
@@ -336,8 +335,10 @@ article{
     color:black;
 }
 #content{
-    height: 500px;
+    height: 600px;
+    margin-bottom: 50px;
 }
+
 /*-------------------------------------------cart page style---------------------------------------*/
 #cart{
     margin: -20px;
@@ -376,5 +377,6 @@ section.Info{
     padding-top: 75px;
 }
 #product {
-    width: 300px;
+    width: 500px;
+    border-radius: 5px;
 }
