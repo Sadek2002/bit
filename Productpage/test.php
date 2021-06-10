@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../contact_pagina/style.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
 
 </head>
 <body>
@@ -25,7 +25,7 @@ $product = $db->getRecordsFromTable("products", "product_id", $_GET['id']);
             <li style = "float: right" ><a href=""><img src="../img/Cart.png"></a></li>
             <!--<li style="float: right; padding-right: 30px;" ><a href = "Contact.html" target = "_self">contact</a></li>-->
             <li style = "float: right"><a href = "">acount</a></li>
-            <li style = "float: right"><a href = "">search</a></li>
+            <li style = "float: right"><a href = "">Contact</a></li>
             <li class = "dropdown" style="float: right;">
                 <a href = "javascript:void(0)" class="dropbtn">Categorie&#235;n</a>
                 <div class="dropdown-content">
