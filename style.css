@@ -1,7 +1,7 @@
 
 #menu{
     font-size: 1.333rem;
-    margin: 5%;
+    margin: 30px;
     margin-right: 10%;
 }
 nav ul {
@@ -112,16 +112,7 @@ body{
     font-family: "Roobert", "Helvetica", "Arial", sans-serif;
     margin:0;
 }
-footer{
-    height: 20%;
-    background: rgb(51 55 130);
-    color: rgb(255 255 255);
-    text-align: center;
-    margin: 0;
-    position: static;
-    position: relative;
-    clear:both;
-}
+
 
 #wrapper{
     display: block;
