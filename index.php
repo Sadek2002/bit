@@ -9,7 +9,7 @@
             <nav id= "menu">
                 <ul>
                     <li><img src="img/logo.svg" id="bit-img"></li>
-                    <li style = "float: right" ><a href="Cartpage/Cart.php"><img src="img/Cart.png"></a></li>
+                    <li style = "float: right" ><a href="Cartpage/Cart.php"><img src="img/Cart.png" id="cart"></a></li>
                     <li style = "float: right"><a href = "">Account</a></li>
                     <li style = "float: right"><a href = "contact_pagina/Contact.html">Contact</a></li>
                     <li class = "dropdown" style="float: right;">
@@ -34,7 +34,7 @@
             <div id="producten">
                 <?php
                 require_once "php/Database.php";
-                $db = new Database("localhost", "bit_academy", "3306", "root", "");
+                $db = new Database("localhost", "bit_academy", "3306", "root", "root");
 
                 foreach ($db->getTableByName("products") as $row) {
                     echo "<div id='items'>";

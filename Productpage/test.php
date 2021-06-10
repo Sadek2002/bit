@@ -22,7 +22,7 @@ $product = $db->getRecordsFromTable("products", "product_id", $_GET['id']);
     <nav id= "menu">
         <ul>
             <li><img id="bit-img" src="../img/logo.svg"></li>
-            <li style = "float: right" ><a href="../Cartpage/Cart.php"><img src="../img/Cart.png"></a></li>
+            <li style = "float: right" ><a href="../Cartpage/Cart.php"><img src="../img/Cart.png" id="cart"></a></li>
             <!--<li style="float: right; padding-right: 30px;" ><a href = "Contact.html" target = "_self">contact</a></li>-->
             <li style = "float: right"><a href = "">Account</a></li>
             <li style = "float: right"><a href = "../contact_pagina/Contact.html">Contact</a></li>
