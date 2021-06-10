@@ -1,14 +1,14 @@
 <html> 
     <head>
         <title>Bit Merch Shop</title>
-        <link rel="stylesheet" href="contact_pagina/style.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <header>
             <nav id= "menu">
                 <ul>
                     <li><img src="img/logo.svg" id="bit-img"></li>
-                    <li style = "float: right" ><a href=""><img src="img/Cart.png"></a></li>
+                    <li style = "float: right" ><a href="Cartpage/Cart.php"><img src="img/Cart.png"></a></li>
                     <li style = "float: right"><a href = "">Account</a></li>
                     <li style = "float: right"><a href = "contact_pagina/Contact.html">Contact</a></li>
                     <li class = "dropdown" style="float: right;">
@@ -21,12 +21,6 @@
                         </div>
                     </li>
                     <li style = "float: right"><a href="index.php" target = "_self">Home</a></li>
-                    <!--<li id="searchbar">
-                        <div id="search">
-                            <div id="icon"></div>
-                            <div id="input"></div>
-                        </div>
-                    </li>-->
                 </ul>
             </nav>
             <!--<div class="slideshow">
@@ -39,7 +33,7 @@
             <div id="producten">
                 <?php
                 require_once "php/Database.php";
-                $db = new Database("localhost", "bit_academy", "3306", "root", "alicia573");
+                $db = new Database("localhost", "bit_academy", "3306", "root", "");
 
                 foreach ($db->getTableByName("products") as $row) {
                     echo "<div id='items'>";
