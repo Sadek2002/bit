@@ -29,10 +29,10 @@
 </header>
 <h2 id="checkout">Checkout</h2>
 <section class="details">
-<p id="Billing">Billing Details</p>
-<div id="produktinfo">
-<p>Product info</p>
-</div>
+    <p id="Billing">Billing Details</p>
+    <div id="produktinfo">
+    <p>Product info</p>
+    </div>
     <div id="produktinfo">
         <p>Product info</p>
     </div>
@@ -41,9 +41,9 @@
     </div>
 </section>
 <section class="Info">
-<div id="overzicht">
-    <p>Payment method</p>
-</div>
+    <div id="overzicht">
+        <p>Payment method</p>
+    </div>
 </section>
 </body>
 </html>
