@@ -69,8 +69,5 @@ $product = $db->getRecordsFromTable("products", "product_id", $_GET['id']);
 
 </div>
 </div>
-<footer>
-    <a>contact</a>
-</footer>
 </body>
 </html>
