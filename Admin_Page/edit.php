@@ -87,7 +87,7 @@ $product =$db->getRecordsFromTable("products", 'product_id', $id);
         <form action="" name="form1" method="post">
             <div class="form-group">
                 <label for="Product Type">Product Type</label>
-                <input type="text" class="form-control" id="product_type" placeholder="Enter product type" name="product_type" value="<?php echo $product[0]['product_type']; ?>">
+                <input type="text" class="form-control" id="product_type" placeholder="Supported types: mouth mask, cap, t-shirt and sweater" name="product_type" value="<?php echo $product[0]['product_type']; ?>">
             </div>
             <div class="form-group">
                 <label for="Item Name">Item Name</label>

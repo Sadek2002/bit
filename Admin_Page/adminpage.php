@@ -1,4 +1,11 @@
 <!doctype html>
+
+<?php
+    require_once '../php/Database.php';
+    $db = new Database("localhost", "bit_academy", "3306", "root", "");
+    $db->checkConnectionToDatabase();
+?>
+
 <html lang="en">
 <head >
     <meta charset="UTF-8">
@@ -32,7 +39,7 @@
             <form action="" name="form1" method="post">
                 <div class="form-group">
                     <label for="Product Type">Product Type</label>
-                    <input type="text" class="form-control" id="product_type" placeholder="Enter product type" name="product_type">
+                    <input type="text" class="form-control" id="product_type" placeholder="Supported: mouth mask, cap, t-shirt and sweater" name="product_type">
                 </div>
                 <div class="form-group">
                     <label for="Item Name">Item Name</label>
@@ -61,9 +68,11 @@
                 </div>
                 <div class="colors">
                     <select name="color">
-                        <option value="blue" id="color">Blue</option>
-                        <option value="green" id="color">Green</option>
-                        <option value="white" id="color">White</option>
+                        <?php
+                            foreach ($db->getTableByName("colors") as $row) {
+                                echo "<option value='".$row['color']."' id='color'>".$row['color']."</option>";
+                            }
+                        ?>
                     </select>
                 </div>
                 <div class="button">
@@ -92,9 +101,6 @@
                 </thead>
                 <tbody>
         <?php
-        require_once '../php/Database.php';
-        $db = new Database("localhost", "bit_academy", "3306", "root", "");
-        $db->checkConnectionToDatabase();
 
         foreach ($db->getTableByName("products") as $row)
         {
