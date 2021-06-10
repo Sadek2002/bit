@@ -390,5 +390,8 @@ INSERT INTO `bit_academy`.`products_has_sizes` (`product_id`, `size`) VALUES (2,
 INSERT INTO `bit_academy`.`products_has_sizes` (`product_id`, `size`) VALUES (3, 'L');
 INSERT INTO `bit_academy`.`products_has_sizes` (`product_id`, `size`) VALUES (3, 'XL');
 
+
+
+
 COMMIT;
 

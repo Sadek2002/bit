@@ -1,12 +1,7 @@
-#bit-img{
-    margin: auto;
-    width: 11.25rem;
-    position: absolute;
 
-}
 #menu{
     font-size: 1.333rem;
-    margin: 5%;
+    margin: 30px;
     margin-right: 10%;
 }
 nav ul {
@@ -26,15 +21,22 @@ nav li {
 
 }
 nav li a {
-    display: block;
+    display: inline-block;
     text-align: center;
     color: white;
     padding: 14px 16px;
     text-decoration: none;
 
+
+
 }
 
+nav li img {
+    display: inline-block;
+    text-align: center;
+    padding: 14px 16px;
 
+}
 
 li a, .dropbtn {
     display: inline-block;
@@ -110,21 +112,13 @@ body{
     font-family: "Roobert", "Helvetica", "Arial", sans-serif;
     margin:0;
 }
-footer{
-    height: 20%;
-    background: rgb(51 55 130);
-    color: rgb(255 255 255);
-    text-align: center;
-    margin: 0;
-    position: static;
-    position: relative;
-    clear:both;
-}
+
 
 #wrapper{
     display: block;
-    margin: 5%;
+    margin:20px;
     color: white ;
+    padding: 10px;
 
 
 }
@@ -207,14 +201,16 @@ footer{
 
 /*------------------------------------------------product home page-------------------------*/
 #producten{
+ 
     display: flex;
-    margin-top: 10%;
+  ;
     align-content: center;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content:center;
     align-items: stretch;
     flex-wrap: wrap;
-    margin: 5%;
+    margin: 20px;
+    
     
 }
 #producten::after{
@@ -225,9 +221,9 @@ footer{
 #items{
     color: rgb(255 255 255);
     height: 50%;
-    background-color: white;
+    background-color: turquoise;
     margin: 20px;
-    float: left;
+    
 }
 #filter-form{
     margin-top: 10%;
@@ -272,8 +268,9 @@ footer{
 }
 #price-tag, #name-tag{
     padding: 20px 10px 0px 20px;
+    text-align: center;
 
-    color: black;
+    color: white;
 }
 #name-tag{
     padding: 20px 10px 20px 20px;
