@@ -33,7 +33,7 @@ $product = $db->getRecordsFromTable("products", "product_id", $_GET['id']);
                     <a href="#">link 2</a>
                 </div>
             </li>
-            <li style = "float: right"><a href="../index.php" target = "_self">Shop</a></li>
+            <li style = "float: right"><a href="../index.php" target = "_self">Home</a></li>
         </ul>
     </nav>
 
