@@ -170,10 +170,10 @@ body{
     margin-top: 210px;
 }
 #image{
-    width: 30%;
+    width: 600px;
     position: absolute;
     display: inline-block;
-    margin: 2%;
+    margin-left: 50px;
 }
 .contacts{
     position: relative;
@@ -221,8 +221,9 @@ body{
 #items{
     color: rgb(255 255 255);
     height: 50%;
-    background-color: turquoise;
+    background-color: white;
     margin: 20px;
+    border-radius: 15px;
     
 }
 #filter-form{
@@ -256,6 +257,8 @@ body{
 }
 #test-img{
     width: 200px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 #button-filter, #filter-container {
     border-radius: 10px;
@@ -269,8 +272,7 @@ body{
 #price-tag, #name-tag{
     padding: 20px 10px 0px 20px;
     text-align: center;
-
-    color: white;
+    color: black;
 }
 #name-tag{
     padding: 20px 10px 20px 20px;
@@ -337,6 +339,9 @@ article{
     height: 500px;
 }
 /*-------------------------------------------cart page style---------------------------------------*/
+#cart{
+    margin: -20px;
+}
 section.details{
     width: 50%;
     float: left;
