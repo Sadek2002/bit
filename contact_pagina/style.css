@@ -111,21 +111,21 @@ body{
     margin:0;
 }
 footer{
-    height: 50px;
-    width: 100%;
-    background: #333782;
-    color: white;
-    bottom: 0;
-    margin:0;
+    height: 20%;
+    background: rgb(51 55 130);
+    color: rgb(255 255 255);
+    text-align: center;
+    margin: 0;
+    position: static;
+    position: relative;
     clear:both;
 }
 
 #wrapper{
-   
-    
-    color: white ;
     display: block;
-   
+    margin: 5%;
+    color: white ;
+
 
 }
 
@@ -171,9 +171,15 @@ footer{
     margin-top: 18%;
     color: white;
 }
-#image{
+#image2{
     width: 40%;
     margin-top: 210px;
+}
+#image{
+    width: 30%;
+    position: absolute;
+    display: inline-block;
+    margin: 2%;
 }
 .contacts{
     position: relative;
@@ -197,8 +203,8 @@ footer{
     align-items: stretch;
     flex-wrap: nowrap;
 }
-}
-}
+
+
 /*------------------------------------------------product home page-------------------------*/
 #producten{
     display: flex;
