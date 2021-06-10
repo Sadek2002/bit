@@ -42,7 +42,11 @@ $product = $db->getRecordsFromTable("products", "product_id", $_GET['id']);
 <div id="content" style="background-color:white">
 <div class="row">
     <div class="column" >
+<<<<<<< Updated upstream
         <?php echo "<img alt='' id='product' src='../".$product[0]['img_url']."'>"?>
+=======
+        <?php echo "<img alt='' src='../".$product[0]['img_url']."'>"?>
+>>>>>>> Stashed changes
     </div>
     <div class="column" >
 
