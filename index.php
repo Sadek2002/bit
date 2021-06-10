@@ -1,7 +1,7 @@
 <html> 
     <head>
         <title>Bit Merch Shop</title>
-        <link rel="stylesheet" href="contact_pagina/style.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <header>

@@ -2,13 +2,13 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../contact_pagina/style.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
 
 </head>
 <body>
 <?php
 require_once "../php/Database.php";
-$db = new Database("localhost", "bit_academy", "3306", "root", "");
+$db = new Database("localhost", "bit_academy", "3306", "root", "alicia573");
 $db->checkConnectionToDatabase();
 
 $product = $db->getRecordsFromTable("products", "product_id", $_GET['id']);
