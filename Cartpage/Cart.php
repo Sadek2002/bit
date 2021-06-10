@@ -10,25 +10,26 @@
 <header>
     <nav id= "menu">
         <ul>
-            <li><img id="bit-img" src="../img/logo.svg"></li>
-            <!--<li style="float: right; padding-right: 30px;" ><a href = "Contact.html" target = "_self">contact</a></li>-->
-            <li style = "float: right"><a href = "">basket</a></li>
-            <li style = "float: right"><a href = "">acount</a></li>
-            <li style = "float: right"><a href = "">search</a></li>
+            <li><img src="../img/logo.svg" id="bit-img"></li>
+            <li style = "float: right" ><a href="Cart.php"><img src="../img/Cart.png"></a></li>
+            <li style = "float: right"><a href = "">Account</a></li>
+            <li style = "float: right"><a href = "../contact_pagina/Contact.html">Contact</a></li>
             <li class = "dropdown" style="float: right;">
-                <a href = "javascript:void(0)" class="dropbtn">Categorie&#235;n</a>
+                <a href = "javascript:void(0)" class="dropbtn">Categorie</a>
                 <div class="dropdown-content">
                     <a href="#">link 1</a>
                     <a href="#">link 2</a>
+                    <a href="#">link 3</a>
+                    <a href="#">link 4</a>
                 </div>
             </li>
-            <li style = "float: right"><a href="index.html" target = "_self">Shop</a></li>
+            <li style = "float: right"><a href="../index.php" target = "_self">Home</a></li>
         </ul>
     </nav>
 </header>
 <h2 id="checkout">Checkout</h2>
 <section class="details">
-<p id="Billingp">Billing Details</p>
+<p id="Billing">Billing Details</p>
 <div id="produktinfo">
 <p>Product info</p>
 </div>

@@ -8,7 +8,7 @@
             <nav id= "menu">
                 <ul>
                     <li><img src="img/logo.svg" id="bit-img"></li>
-                    <li style = "float: right" ><a href=""><img src="img/Cart.png"></a></li>
+                    <li style = "float: right" ><a href="Cartpage/Cart.php"><img src="img/Cart.png"></a></li>
                     <li style = "float: right"><a href = "">Account</a></li>
                     <li style = "float: right"><a href = "contact_pagina/Contact.html">Contact</a></li>
                     <li class = "dropdown" style="float: right;">
