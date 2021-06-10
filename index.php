@@ -1,14 +1,19 @@
 <html> 
     <head>
         <title>Bit Merch Shop</title>
+<<<<<<< Updated upstream
         <link rel="stylesheet" href="style.css">
+=======
+        <link rel="stylesheet" href="contact_pagina/style.css">
+        
+>>>>>>> Stashed changes
     </head>
     <body>
         <header>
             <nav id= "menu">
                 <ul>
                     <li><img src="img/logo.svg" id="bit-img"></li>
-                    <li style = "float: right" ><a href=""><img src="img/Cart.png"></a></li>
+                    <li style = "float: right" ><a href="Cartpage/Cart.php"><img src="img/Cart.png"></a></li>
                     <li style = "float: right"><a href = "">Account</a></li>
                     <li style = "float: right"><a href = "contact_pagina/Contact.html">Contact</a></li>
                     <li class = "dropdown" style="float: right;">
@@ -33,7 +38,7 @@
             <div id="producten">
                 <?php
                 require_once "php/Database.php";
-                $db = new Database("localhost", "bit_academy", "3306", "root", "alicia573");
+                $db = new Database("localhost", "bit_academy", "3306", "root", "");
 
                 foreach ($db->getTableByName("products") as $row) {
                     echo "<div id='items'>";

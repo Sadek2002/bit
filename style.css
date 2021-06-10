@@ -1,9 +1,4 @@
-#bit-img{
-    margin: auto;
-    width: 11.25rem;
-    position: absolute;
 
-}
 #menu{
     font-size: 1.333rem;
     margin: 5%;
@@ -32,9 +27,15 @@ nav li a {
     padding: 14px 16px;
     text-decoration: none;
 
+
+
 }
 
-
+nav li img {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+}
 
 li a, .dropbtn {
     display: inline-block;
