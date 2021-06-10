@@ -22,12 +22,12 @@ $product = $db->getRecordsFromTable("products", "product_id", $_GET['id']);
     <nav id= "menu">
         <ul>
             <li><img id="bit-img" src="../img/logo.svg"></li>
-            <li style = "float: right" ><a href=""><img src="../img/Cart.png"></a></li>
+            <li style = "float: right" ><a href="../Cartpage/Cart.php"><img src="../img/Cart.png"></a></li>
             <!--<li style="float: right; padding-right: 30px;" ><a href = "Contact.html" target = "_self">contact</a></li>-->
-            <li style = "float: right"><a href = "">acount</a></li>
-            <li style = "float: right"><a href = "">Contact</a></li>
+            <li style = "float: right"><a href = "">Account</a></li>
+            <li style = "float: right"><a href = "../contact_pagina/Contact.html">Contact</a></li>
             <li class = "dropdown" style="float: right;">
-                <a href = "javascript:void(0)" class="dropbtn">Categorie&#235;n</a>
+                <a href = "javascript:void(0)" class="dropbtn">Category</a>
                 <div class="dropdown-content">
                     <a href="#">link 1</a>
                     <a href="#">link 2</a>
@@ -42,11 +42,7 @@ $product = $db->getRecordsFromTable("products", "product_id", $_GET['id']);
 <div id="content" style="background-color:white">
 <div class="row">
     <div class="column" >
-<<<<<<< Updated upstream
         <?php echo "<img alt='' id='product' src='../".$product[0]['img_url']."'>"?>
-=======
-        <?php echo "<img alt='' src='../".$product[0]['img_url']."'>"?>
->>>>>>> Stashed changes
     </div>
     <div class="column" >
 
