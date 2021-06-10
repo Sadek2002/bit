@@ -11,5 +11,4 @@ $db->deleteRecordsFromTable("products", 'product_id', $id);
 
 <script type="text/javascript">
     window.location="adminpage.php";
-
 </script>
