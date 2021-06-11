@@ -29,8 +29,10 @@ $product = $db->getRecordsFromTable("products", "product_id", $_GET['id']);
             <li class = "dropdown" style="float: right;">
                 <a href = "javascript:void(0)" class="dropbtn">Category</a>
                 <div class="dropdown-content">
-                    <a href="#">link 1</a>
-                    <a href="#">link 2</a>
+                    <a href="#">Sweater</a>
+                    <a href="#">Sweatshirts</a>
+                    <a href="#">Masks</a>
+                    <a href="#">T-shirts</a>
                 </div>
             </li>
             <li style = "float: right"><a href="../index.php" target = "_self">Home</a></li>
