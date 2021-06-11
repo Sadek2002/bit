@@ -10,7 +10,7 @@
 <header>
     <nav id= "menu">
         <ul>
-            <li><a href="../index.php"><img src="../img/logo.svg" id="bit-img"></a></li>
+            <li><img src="../img/logo.svg" id="bit-img"></li>
             <li style = "float: right" ><a href="Cart.php"><img src="../img/Cart.png"></a></li>
             <li style = "float: right"><a href = "">Account</a></li>
             <li style = "float: right"><a href = "../contact_pagina/Contact.html">Contact</a></li>
