@@ -34,7 +34,7 @@
             <div id="producten">
                 <?php
                 require_once "php/Database.php";
-                $db = new Database("localhost", "bit_academy", "3306", "root", "root");
+                $db = new Database("localhost", "bit_academy", "3306", "root", "");
 
                 foreach ($db->getTableByName("products") as $row) {
                     echo "<div id='items'>";
