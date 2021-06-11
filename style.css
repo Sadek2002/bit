@@ -221,7 +221,7 @@ body{
 #items{
     color: rgb(255 255 255);
     height: 50%;
-    background-color: white;
+    background-color: #57BE8E;
     margin: 20px;
     border-radius: 15px;
     
@@ -259,6 +259,7 @@ body{
     width: 200px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+    margin:2px;
 }
 #button-filter, #filter-container {
     border-radius: 10px;
@@ -272,7 +273,7 @@ body{
 #price-tag, #name-tag{
     padding: 20px 10px 0px 20px;
     text-align: center;
-    color: black;
+    color: white;
 }
 #name-tag{
     padding: 20px 10px 20px 20px;
