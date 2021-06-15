@@ -15,6 +15,9 @@ $product = $db->getRecordsFromTable("products", "product_id", $_GET['id']);
 //echo"<pre>";
 //print_r($product);
 //echo"</pre>";
+if($product[0][$_GET['in_stock']] === 0){
+    $message='not available';
+}
 ?>
 
 
@@ -37,6 +40,7 @@ $product = $db->getRecordsFromTable("products", "product_id", $_GET['id']);
                         $id = $row['product_type'];
                         echo'<a href="../index.php?product_type='.$id.'">'.$id.'</a>';
                     }
+
                     ?>
                 </div>
             </li>
@@ -66,11 +70,14 @@ $product = $db->getRecordsFromTable("products", "product_id", $_GET['id']);
         <br>
         <p id="tekst">Quantity</p>
 
-        <input type="number" id="quantity" name="quantity">
-        <br><br><br>
+        <input type="number" id="quantity" name="quantity" max="10">
+        <p id="in_stock">There are <?php echo $product[0]['in_stock']?> in stock</p>
+        <br>
         <input type="submit" id="button" value="Add to Cart">
         <br>
         <br>
+        <div id="line"></div>
+        <p>Productbeschrijving</p>
         <article><?php echo $product[0]['description'] ?></article>
     </div>
 
