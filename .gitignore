@@ -1,4 +1,2 @@
 .idea*
-.idea/dataSources.local.xml
-*.xml
-*.xml
+.idea/workspace.xml
