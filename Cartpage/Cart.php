@@ -42,7 +42,21 @@
 </section>
 <section class="Info">
     <div id="overzicht">
-        <p>Payment method</p>
+        <form>
+            <div id="user">
+                <p id="name">First Name &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; Last Name</p>
+            <input type="text" name="First name" id="First name">
+               <input type="text" name="Last name" id="Last name">
+                <p id="email">Email Adress</p>
+            <input type="text" name="e-mail adress" id="e-mail adress">
+           </div>
+            <div id="adress">
+            <input type="text" name="streetname" id="streetname">
+            <input type="text" name="housenumber" id="housenumber">
+            <input type="text" name="postcode" id="postcode">
+            <input type="text" name="City" id="City">
+        </div>
+        </form>
     </div>
 </section>
 </body>
