@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="554e3221-1ad2-4288-95b8-5dd192fc38fa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact_pagina/Contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact_pagina/Contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact_pagina/client_contact.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact_pagina/guest_contact.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact_pagina/uploadMessage.php" beforeDir="false" afterPath="$PROJECT_DIR$/contact_pagina/uploadMessage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Productpage/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/Productpage/test.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact_pagina/Contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/contact_pagina/Contact.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
