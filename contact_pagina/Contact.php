@@ -14,13 +14,13 @@
             <li class = "dropdown" style="float: right;">
                 <a href = "javascript:void(0)" class="dropbtn">Category</a>
                 <div class="dropdown-content">
-                    <a href="index.php">All</a>
+                    <a href="../index.php">All</a>
                     <?php
-                            require_once "php/Database.php";
-                            $db = new Database("localhost", "bit_academy", "3306", "root", "");
+                            require_once "../php/Database.php";
+                            $db = new Database("localhost", "bit_academy", "3306", "root", "root");
                             foreach ($db->getTableByName("product_types") as $row) {
                     $id = $row['product_type'];
-                    echo'<a href="index.php?product_type='.$id.'">'.$id.'</a>';
+                    echo'<a href="../index.php?product_type='.$id.'">'.$id.'</a>';
                     }
                     ?>
                 </div>
@@ -31,7 +31,7 @@
 </header>
 <div id="wrapper">
 
-    <form action="uploadMessage.php" method="POST" id="contact_form">
+    <form method="POST" id="contact_form">
         <h2 style="color: white">Guest Contact Form</h2>
 
         <label>Name
