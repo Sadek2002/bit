@@ -239,9 +239,11 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `bit_academy`;
-INSERT INTO `bit_academy`.`product_types` (`product_type`) VALUES ('mouth mask');
+INSERT INTO `bit_academy`.`product_types` (`product_type`) VALUES ('mask');
 INSERT INTO `bit_academy`.`product_types` (`product_type`) VALUES ('t-shirt');
 INSERT INTO `bit_academy`.`product_types` (`product_type`) VALUES ('cap');
+INSERT INTO `bit_academy`.`product_types` (`product_type`) VALUES ('sweatshirt');
+INSERT INTO `bit_academy`.`product_types` (`product_type`) VALUES ('sweater');
 
 COMMIT;
 
@@ -387,6 +389,9 @@ INSERT INTO `bit_academy`.`products_has_sizes` (`product_id`, `size`) VALUES (2,
 INSERT INTO `bit_academy`.`products_has_sizes` (`product_id`, `size`) VALUES (2, 'L');
 INSERT INTO `bit_academy`.`products_has_sizes` (`product_id`, `size`) VALUES (3, 'L');
 INSERT INTO `bit_academy`.`products_has_sizes` (`product_id`, `size`) VALUES (3, 'XL');
+
+
+
 
 COMMIT;
 
