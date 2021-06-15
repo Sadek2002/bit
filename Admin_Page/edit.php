@@ -9,15 +9,42 @@ $product =$db->getRecordsFromTable("products", 'product_id', $id);
 
 ?>
 <?php
-if(isset($_POST['update']))
-{
+if (isset($_POST['update'])) {
+$file = $_FILES['file'];
+
+$fileName = $_FILES['file']['name'];
+$fileTmpName = $_FILES['file']['tmp_name'];
+$fileSize = $_FILES['file']['size'];
+$fileError = $_FILES['file']['error'];
+$fileType = $_FILES['file']['type'];
+
+$fileExt = explode('.', $fileName);
+$fileActualExt = strtolower(end($fileExt));
+
+$allowed = array('jpg', 'jpeg', 'png');
+
+if (in_array($fileActualExt, $allowed)) {
+if ($fileError === 0) {
+if ($fileSize < 1000000) {
+$fileNameNew = uniqid('', true).".".$fileActualExt;
+$fileDestination = '../img/'.$fileNameNew;
+move_uploaded_file($fileTmpName, $fileDestination);
+} else {
+echo "Your file is too big!";
+}
+} else {
+echo "There was an error uploading your file!";
+}
+} else {
+echo "You cannot upload files of this type!";
+}
     $id=$_GET["id"];
 
-
+    $img_url = "img/".$fileNameNew;
     $db->updateRecordsFromTable("products", "product_type", $_POST['product_type'], "product_id", $id);
     $db->updateRecordsFromTable("products", "name", $_POST['name'], "product_id", $id);
     $db->updateRecordsFromTable("products", "description", $_POST['description'], "product_id", $id);
-    $db->updateRecordsFromTable("products", "img_url", $_POST['img_url'], "product_id", $id);
+    $db->updateRecordsFromTable("products", "img_url", $img_url, "product_id", $id);
     $db->updateRecordsFromTable("products", "price", $_POST['price'], "product_id", $id);
     $db->updateRecordsFromTable("products", "color", $_POST['color'], "product_id", $id);
 
@@ -85,28 +112,36 @@ if(isset($_POST['update']))
         <div class="col-lg-4">
             <h2>Edit Product</h2>
             <form action="" name="form1" method="post" enctype="multipart/form-data">
-                <div class="form-group">
+                <img src="<?php echo "../".$product[0]["img_url"];?>" height="100" width="100">
+                <div>
                     <label for="Product Type">Product Type</label>
-                    <input type="text" class="form-control" id="product_type" placeholder="Supported types: mouth mask, cap, t-shirt and sweater" name="product_type" value="<?php echo $product[0]['product_type']; ?>">
                 </div>
+                <div class="colors">
+                    <select name="product_type">
+                        <?php
+                        foreach ($db->getTableByName("product_types") as $row) {
+                            echo "<option value='".$row['product_type']."' id='product_type'>".$row['product_type']."</option>";
+                        }
+                        ?>
+
+                    </select>
                 <div class="form-group">
                     <label for="Item Name">Item Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="Enter product name" name="name" value="<?php echo $product[0]['name']; ?>">
+                    <input type="text" required class="form-control" id="name" placeholder="Enter product name" name="name" value="<?php echo $product[0]['name']; ?>">
                 </div>
                 <div class="form-group">
                     <label for="pwd">Item description</label>
-                    <input type="text" class="form-control" id="description" placeholder="Enter item description" name="description" value="<?php echo $product[0]['description']; ?>">
+                    <input type="text" required class="form-control" id="description" placeholder="Enter item description" name="description" value="<?php echo $product[0]['description']; ?>">
                 </div>
                 <div class="form-group">
-                    <label for="Image URL">Image URL</label>
-                    <input type="file" class="form-control" name="f1" value="<?php echo $product[0]['img_url']; ?>">
+                    <input type="file" name="file" required>
                 </div>
                 <div class="form-group">
                     <label for="Price">Price</label>
-                    <input type="text" class="form-control" id="price" placeholder="Enter item price" name="price" value="<?php echo $product[0]['price']; ?>">
+                    <input type="text" required class="form-control" id="price" placeholder="Enter item price" name="price" value="<?php echo $product[0]['price']; ?>">
                 </div>
                 <div class="colors">
-                    <select name="color">
+                    <select name="color" required>
                         <option value="blue" id="color">Blue</option>
                         <option value="green" id="color">Green</option>
                         <option value="white" id="color">White</option>
@@ -117,7 +152,6 @@ if(isset($_POST['update']))
             </form>
         </div>
     </div>
-
     </tr>
     </thead>
     <tbody>

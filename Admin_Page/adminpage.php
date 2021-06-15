@@ -19,6 +19,11 @@ $db->checkConnectionToDatabase();
 <link rel="stylesheet" href="AdminStyle.css">
 <header style="margin-left: 30px">
     <img src="../img/logo.svg">
+    <style>
+        img.images{
+            width: 50px;
+        }
+    </style>
 </header>
 <script>
     function createItem(name, description) {
@@ -36,7 +41,7 @@ $db->checkConnectionToDatabase();
     <div class="container" style="margin-left: 0px">
         <div class="col-lg-4">
             <h2>Create Product</h2>
-            <form action="" name="form1" method="post" enctype="multipart/form-data">
+            <form action="" name="form1" method="POST" enctype="multipart/form-data">
                 <div>
                     <label for="Product Type">Product Type</label>
                 </div>
@@ -57,9 +62,9 @@ $db->checkConnectionToDatabase();
                     <label for="pwd">Item description</label>
                     <input type="text" class="form-control" id="description" placeholder="Enter item description" name="description">
                 </div>
-                <label for="Image URL">Image URL</label>
-                <input type="text" class="form-control" id="img_url" placeholder="Enter Image URL" name="img_url">
-
+                <div>
+                    <label for="Images">Product Image</label>
+                </div>
                 <div class="form-group">
                     <input type="file" name="file">
                 </div>
@@ -68,13 +73,18 @@ $db->checkConnectionToDatabase();
                     <input type="text" class="form-control" id="price" placeholder="Enter item price" name="price">
                 </div>
                 <div class="form-group">
-                    <label for="Size">Sizes</label><br>
-                    <input type="checkbox" id="sizes" name="sizes">
+                    <label for="size">Sizes</label><br>
+                    <input type="checkbox" id="sizes" name="size">
                     <label for="Small">S</label><br>
-                    <input type="checkbox" id="sizes" name="sizes">
+                    <input type="checkbox" id="sizes" name="size">
                     <label for="Medium">M</label><br>
-                    <input type="checkbox" id="sizes" name="sizes">
+                    <input type="checkbox" id="sizes" name="size">
                     <label for="Large">L</label><br>
+                </div>
+                <div class="form-group">
+                    <label for="Stock">Stock</label>
+                    <input type="text" class="form-control" id="in_stock" placeholder="Enter stock" name="in_stock">
+
                 </div>
                 <div>
                     <label for="Product Color">Product Color</label>
@@ -107,6 +117,7 @@ $db->checkConnectionToDatabase();
                 <th>Price</th>
                 <th>Colors</th>
                 <th>Sizes</th>
+                <th>In stock</th>
                 <th>Edit</th>
                 <th>Delete</th>
     </div>
@@ -122,14 +133,16 @@ $db->checkConnectionToDatabase();
         echo "<td>"; echo $row["product_type"]; echo "</td>";
         echo "<td>"; echo $row["name"]; echo "</td>";
         echo "<td>"; echo $row["description"]; echo "</td>";
-        echo "<td>"; echo $row["img_url"]; echo "</td>";
+        echo "<td>"; echo "<img class='images' src='../".$row["img_url"]."'>"; echo "</td>";
         echo "<td>"; echo $row["price"]; echo "</td>";
         echo "<td>"; echo $row["color"]; echo "</td>";
+
         //sizes
         echo "<td>";
-        foreach ($db->getRecordsFromTable("products_has_sizes", "product_id", $row['product_id']) as $size) {
+        foreach ($db->getRecordsFromTable("product_has_sizes", "product_id", $row['product_id']) as $size) {
             echo $size['size']." ";
         }
+        echo "<td>"; echo $row["in_stock"]; echo "</td>";
         echo "</td>";
 
         echo "<td>"; ?> <a href="edit.php?id=<?php echo $row["product_id"]; ?>"<button type="button" class="btn btn-success">Edit</button></a> <?php echo "</td>";
@@ -139,50 +152,48 @@ $db->checkConnectionToDatabase();
     </tbody>
     </table>
     <?php
-    if (isset($_POST['submit'])) {
-        $file = $_FILES['file'];
+if (isset($_POST['create'])) {
+    $file = $_FILES['file'];
 
-        $fileName = $_FILES['file']['name'];
-        $fileTmpName = $_FILES['file']['tmp_name'];
-        $fileSize = $_FILES['file']['size'];
-        $fileError = $_FILES['file']['error'];
-        $fileType = $_FILES['file']['type'];
+    $fileName = $_FILES['file']['name'];
+    $fileTmpName = $_FILES['file']['tmp_name'];
+    $fileSize = $_FILES['file']['size'];
+    $fileError = $_FILES['file']['error'];
+    $fileType = $_FILES['file']['type'];
 
-        $fileExt = explode('.', $fileName);
-        $fileActualExt = strtolower(end($fileExt));
+    $fileExt = explode('.', $fileName);
+    $fileActualExt = strtolower(end($fileExt));
 
-        $allowed = array('jpg', 'jpeg', 'png');
+    $allowed = array('jpg', 'jpeg', 'png');
 
-        if (in_array($fileActualExt, $allowed)) {
-            if ($fileError === 0) {
-                if ($fileSize < 1000000) {
-                    $fileNameNew = uniqid('', true).".".$fileActualExt;
-                    $fileDestination = '../img/'.$fileNameNew;
-                    move_uploaded_file($fileTmpName, $fileDestination);
-                    header("Location: adminpage.php?uploadsuccess");
-                } else {
-                    echo "Your file is too big!";
-                }
+    if (in_array($fileActualExt, $allowed)) {
+        if ($fileError === 0) {
+            if ($fileSize < 1000000) {
+                $fileNameNew = uniqid('', true).".".$fileActualExt;
+                $fileDestination = '../img/'.$fileNameNew;
+                move_uploaded_file($fileTmpName, $fileDestination);
             } else {
-                echo "There was an error uploading your file!";
+                echo "Your file is too big!";
             }
         } else {
-            echo "You cannot upload files of this type!";
+            echo "There was an error uploading your file!";
         }
+    } else {
+        echo "You cannot upload files of this type!";
     }
+
+
+    $img_url = "img/".$fileNameNew;
+    $db->insertRecordToProducts($_POST['product_type'], $_POST['name'], $_POST['description'], $img_url, $_POST['color'], $_POST['price'], $_POST['in_stock']);
+    //$db->insertRecordToProductHasSizes($_POST['product_id'], $_POST['size']);
     ?>
+    <script type="text/javascript">
+        window.location.href=window.location.href;
+    </script>
     <?php
-    if (isset($_POST['create']))
-    {
-        $db->insertRecordToProducts($_POST['product_type'], $_POST['name'], $_POST['description'], $_POST['img_url'], $_POST['color'], $_POST['price'], '');
-        $db->insertRecordToProductsHasSizes($_POST['product_id'], $_POST['sizes']);
-        ?>
-<!--        <script type="text/javascript">-->
-<!--            window.location.href=window.location.href;-->
-<!--        </script>-->
-        <?php
-    }
-    ?>
+}
+?>
+
 </font>
 </body>
 </html>

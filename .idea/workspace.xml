@@ -2,11 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="554e3221-1ad2-4288-95b8-5dd192fc38fa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Upload Test/uploads/60c86bd88357d2.95789922.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Upload Test/uploads/60c86d26835d67.39281953.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Upload Test/uploads/60c86d3219f815.34518865.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/60c89cb78529b9.94703577.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/60c8a3f3ab7748.50061350.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact_pagina/Contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact_pagina/Contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact_pagina/client_contact.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact_pagina/guest_contact.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact_pagina/uploadMessage.php" beforeDir="false" afterPath="$PROJECT_DIR$/contact_pagina/uploadMessage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin_Page/AdminStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/Admin_Page/AdminStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin_Page/adminpage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin_Page/adminpage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin_Page/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin_Page/delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin_Page/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin_Page/edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin_Page/image_upload.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cartpage/Cart.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Loginpage/Login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Loginpage/Signup.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Loginpage/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Loginpage/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Productpage/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Productpage/.idea/Bitproject.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Productpage/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Productpage/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Productpage/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Productpage/Productpage.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Productpage/test.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact_pagina/Contact.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact_pagina/uploadMessage.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Cart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/appel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/banner1 (1).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/banner1 (2).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/contact.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/talking 2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +84,19 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\31621\PhpstormProjects\bit\" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
