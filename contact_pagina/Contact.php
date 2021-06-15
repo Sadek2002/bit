@@ -16,11 +16,11 @@
                 <div class="dropdown-content">
                     <a href="../index.php">All</a>
                     <?php
-                            require_once "../php/Database.php";
-                            $db = new Database("localhost", "bit_academy", "3306", "root", "");
-                            foreach ($db->getTableByName("product_types") as $row) {
-                    $id = $row['product_type'];
-                    echo'<a href="../index.php?product_type='.$id.'">'.$id.'</a>';
+                    require_once "../php/Database.php";
+                    $db = new Database("localhost", "bit_academy", "3306", "root", "root");
+                    foreach ($db->getTableByName("product_types") as $row) {
+                        $id = $row['product_type'];
+                        echo'<a href="../index.php?product_type='.$id.'">'.$id.'</a>';
                     }
                     ?>
                 </div>
@@ -30,7 +30,15 @@
     </nav>
 </header>
 <div id="wrapper">
+    <?php
+    if($_POST['submit']) {
+        require_once "php/Database.php";
+        $db = new Database("localhost", "bit_academy", "3306", "root", "root");
+        $text = ['name']['number']['mail']['ordernumber']['subject']['message'];
+        $db->insertRecordToMessages($id, $text);
 
+    }
+    ?>
     <form method="POST" id="contact_form">
         <h2 style="color: white">Guest Contact Form</h2>
 
