@@ -48,19 +48,31 @@
 <section class="Info">
     <div id="overzicht">
         <form>
+            <p>Contact Details</p>
             <div id="user">
-                <p id="name">First Name &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; Last Name</p>
+
+                <p id="name">First Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; Last Name</p>
             <input type="text" name="First name" id="First name">
                <input type="text" name="Last name" id="Last name">
                 <p id="email">Email Adress</p>
             <input type="text" name="e-mail adress" id="e-mail adress">
            </div>
+            <p>Adress</p>
             <div id="adress">
-            <input type="text" name="streetname" id="streetname">
-            <input type="text" name="housenumber" id="housenumber">
-            <input type="text" name="postcode" id="postcode">
-            <input type="text" name="City" id="City">
+            <input type="text" name="streetname" id="streetname" placeholder="Steetname">
+            <input type="text" name="housenumber" id="housenumber" placeholder="House #">
+            <input type="text" name="postcode" id="postcode" placeholder="Postal code">
+            <input type="text" name="City" id="City" placeholder="City">
         </div>
+            <p>Payment </p>
+            <div id="Payment">
+                <input type="text" name="e-mail adress" id="e-mail adress" placeholder="Card Number">
+                <p id="expire">Expire date</p>
+                <input type="month" id="month">
+                <input type="text" id="cvc" placeholder="CVC">
+                <br>
+                <input type="submit" id="pay" value="Pay ">
+            </div>
         </form>
     </div>
 </section>
