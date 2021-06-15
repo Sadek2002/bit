@@ -16,11 +16,11 @@
                 <div class="dropdown-content">
                     <a href="../index.php">All</a>
                     <?php
-                            require_once "../php/Database.php";
-                            $db = new Database("localhost", "bit_academy", "3306", "root", "");
-                            foreach ($db->getTableByName("product_types") as $row) {
-                    $id = $row['product_type'];
-                    echo'<a href="../index.php?product_type='.$id.'">'.$id.'</a>';
+                    require_once "../php/Database.php";
+                    $db = new Database("localhost", "bit_academy", "3306", "root", "");
+                    foreach ($db->getTableByName("product_types") as $row) {
+                        $id = $row['product_type'];
+                        echo'<a href="../index.php?product_type='.$id.'">'.$id.'</a>';
                     }
                     ?>
                 </div>
@@ -31,7 +31,24 @@
 </header>
 <div id="wrapper">
 
-    <form method="POST" id="contact_form">
+    <?php
+    if(empty($_POST['number'])){
+        $_POST['number'] = 'N/A';
+    }
+    if(empty($_POST['ordernumber'])){
+        $_POST['ordernumber'] = '0';
+    }
+    if(isset($_POST['submit'])) {
+        echo '<p id="sentMessage"  style="color: white">It has been sent</p>';
+        require_once "../php/Database.php";
+        $db = new Database("localhost", "bit_academy", "3306", "root", "root");
+        $db->insertRecordToMessages($_POST['mail'],$_POST['number'],$_POST['ordernumber'],
+            $_POST['name'],$_POST['subject'],$_POST['message']);
+
+    }
+
+    ?>
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" id="contact_form">
         <h2 style="color: white">Guest Contact Form</h2>
 
         <label>Name

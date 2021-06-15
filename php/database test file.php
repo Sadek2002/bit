@@ -7,12 +7,12 @@ $db->checkConnectionToDatabase();
 
 
 //delete function
-//$db->deleteRecordsFromTable("products", "Description", "test");
+//$db->deleteRecordsFromTable("products", "description", "test");
 
 
 //insert function
-//$db->insertRecordToProducts("cap", "pet geel", "mooie pet", "img/petten/pet12", 15.00);
-//$db->insertRecordToMessages("3", "Dit werkt echt goed!");
+//$db->insertRecordToProducts("Mask", "test mask", "test", "img/test", "Red", 2.99, 25);
+//$db->insertRecordToMessages("test@2.nl", "", "", "jan de boer 2", "test2", "test test test2");
 
 
 //update function
@@ -20,12 +20,12 @@ $db->checkConnectionToDatabase();
 
 
 echo "<pre>";
-print_r($db->getRecordsFromTable("products", "product_id", "2"));
+print_r($db->getRecordsFromTable("messages", "message_id", "2"));
 echo "</pre>";
 
 
 //this way you can use getTableByName
-foreach ($db->getTableByName("products") as $row) {
+foreach ($db->getTableByName("messages") as $row) {
     foreach ($row as $item => $value) {
         if ($item === "$item") {
             echo $item.": ".$value;

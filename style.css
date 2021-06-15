@@ -170,10 +170,8 @@ body{
     margin-top: 210px;
 }
 #image{
-    width: 600px;
-    position: absolute;
-    display: inline-block;
-    margin-left: 50px;
+    width: 500px;
+    margin-top: 325px;
 }
 .contacts{
     position: relative;
@@ -196,6 +194,14 @@ body{
     flex-direction: column;
     align-items: stretch;
     flex-wrap: nowrap;
+}
+#sentMessage{
+    padding: 12px 20px;
+    margin: 50px;
+    border: 1px solid rgb(204 204 204);
+    border-radius: 4px;
+    box-sizing: border-box;
+    background: rgb(238 89 101);
 }
 
 
