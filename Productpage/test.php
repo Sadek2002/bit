@@ -15,9 +15,7 @@ $product = $db->getRecordsFromTable("products", "product_id", $_GET['id']);
 //echo"<pre>";
 //print_r($product);
 //echo"</pre>";
-if($product[0][$_GET['in_stock']] === 0){
-    $message='not available';
-}
+
 ?>
 
 
