@@ -8,28 +8,28 @@ $id=$_GET["id"];
 $product =$db->getRecordsFromTable("products", 'product_id', $id);
 
 ?>
- <?php
-        if(isset($_POST['update']))
-        {
-            $id=$_GET["id"];
+<?php
+if(isset($_POST['update']))
+{
+    $id=$_GET["id"];
 
 
-            $db->updateRecordsFromTable("products", "product_type", $_POST['product_type'], "product_id", $id);
-            $db->updateRecordsFromTable("products", "name", $_POST['name'], "product_id", $id);
-            $db->updateRecordsFromTable("products", "description", $_POST['description'], "product_id", $id);
-            $db->updateRecordsFromTable("products", "img_url", $_POST['img_url'], "product_id", $id);
-            $db->updateRecordsFromTable("products", "price", $_POST['price'], "product_id", $id);
-            $db->updateRecordsFromTable("products", "color", $_POST['color'], "product_id", $id);
+    $db->updateRecordsFromTable("products", "product_type", $_POST['product_type'], "product_id", $id);
+    $db->updateRecordsFromTable("products", "name", $_POST['name'], "product_id", $id);
+    $db->updateRecordsFromTable("products", "description", $_POST['description'], "product_id", $id);
+    $db->updateRecordsFromTable("products", "img_url", $_POST['img_url'], "product_id", $id);
+    $db->updateRecordsFromTable("products", "price", $_POST['price'], "product_id", $id);
+    $db->updateRecordsFromTable("products", "color", $_POST['color'], "product_id", $id);
 
 
 
-        ?>
-        <script type="text/javascript">
-            window.location.href="adminpage.php";
-        </script>
-        <?php
-        }
-        ?>
+    ?>
+    <script type="text/javascript">
+        window.location.href="adminpage.php";
+    </script>
+    <?php
+}
+?>
 
 
 <!doctype html>
@@ -81,46 +81,46 @@ $product =$db->getRecordsFromTable("products", 'product_id', $id);
 </header>
 <body style="background-color:#000563">
 <font color="white">
-<div class="container">
-    <div class="col-lg-4">
-        <h2>Edit Product</h2>
-        <form action="" name="form1" method="post">
-            <div class="form-group">
-                <label for="Product Type">Product Type</label>
-                <input type="text" class="form-control" id="product_type" placeholder="Supported types: mouth mask, cap, t-shirt and sweater" name="product_type" value="<?php echo $product[0]['product_type']; ?>">
-            </div>
-            <div class="form-group">
-                <label for="Item Name">Item Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter product name" name="name" value="<?php echo $product[0]['name']; ?>">
-            </div>
-            <div class="form-group">
-                <label for="pwd">Item description</label>
-                <input type="text" class="form-control" id="description" placeholder="Enter item description" name="description" value="<?php echo $product[0]['description']; ?>">
-            </div>
-            <div class="form-group">
-                <label for="Image URL">Image URL</label>
-                <input type="text" class="form-control" id="img_url" placeholder="Enter Image URL" name="img_url" value="<?php echo $product[0]['img_url']; ?>">
-            </div>
-            <div class="form-group">
-                <label for="Price">Price</label>
-                <input type="text" class="form-control" id="price" placeholder="Enter item price" name="price" value="<?php echo $product[0]['price']; ?>">
-            </div>
-            <div class="colors">
-                <select name="color">
-                    <option value="blue" id="color">Blue</option>
-                    <option value="green" id="color">Green</option>
-                    <option value="white" id="color">White</option>
-                    <option value="black" id="color">Black</option>
-                </select>
-            </div>
-            <button type="submit" name="update" class="btn btn-default">Update</button>
-        </form>
+    <div class="container">
+        <div class="col-lg-4">
+            <h2>Edit Product</h2>
+            <form action="" name="form1" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="Product Type">Product Type</label>
+                    <input type="text" class="form-control" id="product_type" placeholder="Supported types: mouth mask, cap, t-shirt and sweater" name="product_type" value="<?php echo $product[0]['product_type']; ?>">
+                </div>
+                <div class="form-group">
+                    <label for="Item Name">Item Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter product name" name="name" value="<?php echo $product[0]['name']; ?>">
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Item description</label>
+                    <input type="text" class="form-control" id="description" placeholder="Enter item description" name="description" value="<?php echo $product[0]['description']; ?>">
+                </div>
+                <div class="form-group">
+                    <label for="Image URL">Image URL</label>
+                    <input type="file" class="form-control" name="f1" value="<?php echo $product[0]['img_url']; ?>">
+                </div>
+                <div class="form-group">
+                    <label for="Price">Price</label>
+                    <input type="text" class="form-control" id="price" placeholder="Enter item price" name="price" value="<?php echo $product[0]['price']; ?>">
+                </div>
+                <div class="colors">
+                    <select name="color">
+                        <option value="blue" id="color">Blue</option>
+                        <option value="green" id="color">Green</option>
+                        <option value="white" id="color">White</option>
+                        <option value="black" id="color">Black</option>
+                    </select>
+                </div>
+                <button type="submit" name="update" class="btn btn-default">Update</button>
+            </form>
+        </div>
     </div>
-</div>
 
-</tr>
-</thead>
-<tbody>
+    </tr>
+    </thead>
+    <tbody>
 </font>
 </body>
 </html>
