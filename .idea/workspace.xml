@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="071b22c5-5bd5-4763-a482-9085bfa73cef" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cartpage/Cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/Cartpage/Cart.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
+=======
+    <list default="true" id="554e3221-1ad2-4288-95b8-5dd192fc38fa" name="Default Changelist" comment="" />
+>>>>>>> 52748379c8bab094efde58401eb969ead1734f69
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,6 +50,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -83,7 +88,11 @@
       <updated>1623223635877</updated>
       <workItem from="1623223642344" duration="12754000" />
       <workItem from="1623314223927" duration="4688000" />
+<<<<<<< HEAD
       <workItem from="1623743824469" duration="11687000" />
+=======
+      <workItem from="1623759908659" duration="323000" />
+>>>>>>> 52748379c8bab094efde58401eb969ead1734f69
     </task>
     <servers />
   </component>

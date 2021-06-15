@@ -355,7 +355,7 @@ section.details{
     padding-left: 90px;
 }
 #checkout{
-    padding-left: 105px;
+    padding-left: 90px;
     color: white;
     font-size: 40px;
 }
@@ -367,7 +367,7 @@ section.details{
     width: 600px;
 
 }
-#Billingp{
+#Billing{
     color: white;
 }
 #overzicht{
@@ -460,9 +460,9 @@ section.Info{
 #pay{
     margin-top: 20px;
     width: 300px;
-    height: 30px;
+    height: 35px;
     font-family: "Roobert", "Helvetica", "Arial", sans-serif;
-    font-size: 20px;
+    font-size: 25px;
     background-color: #000563;
     color: white;
     border-radius: 6px;
