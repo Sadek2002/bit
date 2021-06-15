@@ -227,7 +227,7 @@ body{
 #items{
     color: rgb(255 255 255);
     height: 50%;
-    background-color: #57BE8E;
+    background-color: white;
     margin: 20px;
     border-radius: 15px;
 
@@ -279,7 +279,7 @@ body{
 #price-tag, #name-tag{
     padding: 20px 10px 0px 20px;
     text-align: center;
-    color: white;
+    color: black;
 }
 #name-tag{
     padding: 20px 10px 20px 20px;
