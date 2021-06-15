@@ -227,7 +227,7 @@ body{
 #items{
     color: rgb(255 255 255);
     height: 50%;
-    background-color: #57BE8E;
+    background-color: white;
     margin: 20px;
     border-radius: 15px;
 
@@ -279,7 +279,7 @@ body{
 #price-tag, #name-tag{
     padding: 20px 10px 0px 20px;
     text-align: center;
-    color: white;
+    color: black;
 }
 #name-tag{
     padding: 20px 10px 20px 20px;
@@ -401,12 +401,13 @@ section.Info{
 #First\ name{
      border-radius: 6px;
      height: 30px;
-
+    border: solid black 1px;
 
  }
 #Last\ name{
     border-radius: 6px;
     height: 30px;
+    border: solid black 1px;
 
 }
 #e-mail\ adress{
@@ -414,25 +415,30 @@ section.Info{
     height: 30px;
     margin-top: 0px;
     width: 360px;
+    border: solid black 1px;
 }
 #streetname {
     border-radius: 6px;
     height: 30px;
+    border: solid black 1px;
 
 }
 #housenumber{
       border-radius: 6px;
       height: 30px;
+      border: solid black 1px;
 
 }
 #postcode{
     border-radius: 6px;
     height: 30px;
+    border: solid black 1px;
 
 }
 #City{
     border-radius: 6px;
     height: 30px;
+    border: solid black 1px;
 
 }
 #email{
@@ -460,11 +466,15 @@ section.Info{
 #month{
  margin-top: 10px;
  border-radius: 6px;
+    height:30px ;
+    border: solid black 1px;
+
 }
 #cvc{
     border-radius: 6px;
     height: 30px;
     width: 185px;
+    border: solid black 1px;
 }
 #pay{
     margin-top: 20px;
