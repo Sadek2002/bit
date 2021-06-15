@@ -11,7 +11,7 @@
                     <li><img src="img/logo.svg" id="bit-img"></li>
                     <li style = "float: right" ><a href="Cartpage/Cart.php"><img src="img/Cart.png" id="cart"></a></li>
                     <li style = "float: right"><a href = "">Account</a></li>
-                    <li style = "float: right"><a href = "contact_pagina/Contact.html">Contact</a></li>
+                    <li style = "float: right"><a href = "contact_pagina/Contact.php">Contact</a></li>
                     <li class = "dropdown" style="float: right;">
                         <a href = "javascript:void(0)" class="dropbtn">Category</a>
                         <div class="dropdown-content">

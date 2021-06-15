@@ -10,14 +10,19 @@
             <li><img src="../img/logo.svg"></li>
             <li style = "float: right" ><a href="../Cartpage/Cart.php"><img src="../img/Cart.png" id="cart"></a></li>
             <li style = "float: right"><a href = "">Account</a></li>
-            <li style = "float: right"><a href = "Contact.html">Contact</a></li>
+            <li style = "float: right"><a href = "Contact.php">Contact</a></li>
             <li class = "dropdown" style="float: right;">
                 <a href = "javascript:void(0)" class="dropbtn">Category</a>
                 <div class="dropdown-content">
-                    <a href="#">Sweaters</a>
-                    <a href="#">Sweatshirts</a>
-                    <a href="#">Masks</a>
-                    <a href="#">T-shirts</a>
+                    <a href="index.php">All</a>
+                    <?php
+                            require_once "php/Database.php";
+                            $db = new Database("localhost", "bit_academy", "3306", "root", "");
+                            foreach ($db->getTableByName("product_types") as $row) {
+                    $id = $row['product_type'];
+                    echo'<a href="index.php?product_type='.$id.'">'.$id.'</a>';
+                    }
+                    ?>
                 </div>
             </li>
             <li style = "float: right"><a href="../index.php" target = "_self">Home</a></li>
