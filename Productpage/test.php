@@ -70,8 +70,15 @@ if($product[0][$_GET['in_stock']] === 0){
         <br>
         <p id="tekst">Quantity</p>
 
-        <input type="number" id="quantity" name="quantity" max="10">
-        <p id="in_stock">There are <?php echo $product[0]['in_stock']?> in stock</p>
+        <input type="number" id="quantity" name="quantity" max="10" min="1">
+
+        <?php
+            if($product[0]['in_stock'] > 0){
+                echo '<p id="in_stock" style="color: lawngreen; font-weight: bolder">Available</p>';
+            }else{
+                echo '<p id="in_stock" style="color: red; font-weight: bolder">Not available</p>';
+            }
+        ?>
         <br>
         <input type="submit" id="button" value="Add to Cart">
         <br>
