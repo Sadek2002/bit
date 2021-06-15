@@ -18,7 +18,7 @@
                             <a href="index.php">All</a>
                             <?php
                             require_once "php/Database.php";
-                            $db = new Database("localhost", "bit_academy", "3306", "root", "root");
+                            $db = new Database("localhost", "bit_academy", "3306", "root", "");
                             foreach ($db->getTableByName("product_types") as $row) {
                                 $id = $row['product_type'];
                                 echo'<a href="index.php?product_type='.$id.'">'.$id.'</a>';
@@ -39,7 +39,7 @@
             <div id="producten">
                 <?php
                 require_once "php/Database.php";
-                $db = new Database("localhost", "bit_academy", "3306", "root", "root");
+                $db = new Database("localhost", "bit_academy", "3306", "root", "");
 
                 foreach ($db->getTableByName("products") as $row) {
                     if (!isset($_GET['product_type']) || $_GET['product_type'] === $row['product_type']) {
