@@ -403,28 +403,65 @@ section.Info{
 #streetname {
     border-radius: 6px;
     height: 30px;
-    padding-bottom: 20px;
+
 }
 #housenumber{
       border-radius: 6px;
-    height: 30px;
-    padding-bottom: 20px;
+      height: 30px;
+
 }
 #postcode{
     border-radius: 6px;
     height: 30px;
-    padding-bottom: 20px;
+
 }
 #City{
     border-radius: 6px;
     height: 30px;
-    padding-bottom: 20px;
+
 }
 #email{
-
     margin-bottom:0px ;
+    font-size: 20px;
 }
 #name{
     margin-bottom: 0px;
+    font-size: 20px;
 }
+#adress{
+    padding-left:60px;
+}
+#streetname,#housenumber{
+    margin-bottom: 10px;
+}
+#Payment{
+    padding-left:60px;
+}
+#expire{
+    font-size: 15px;
+    margin-bottom: -5px;
+
+}
+#month{
+ margin-top: 10px;
+ border-radius: 6px;
+}
+#cvc{
+    border-radius: 6px;
+    height: 30px;
+    width: 185px;
+}
+#pay{
+    margin-top: 20px;
+    width: 300px;
+    height: 30px;
+    font-family: "Roobert", "Helvetica", "Arial", sans-serif;
+    font-size: 20px;
+    background-color: #000563;
+    color: white;
+    border-radius: 6px;
+    border-color: #000563;
+    margin-left: 30px;
+}
+
 
