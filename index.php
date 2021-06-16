@@ -6,14 +6,14 @@
     </head>
     <body>
     <header>
-            <nav id= "menu">
+            <nav id= "menu" class="topnav">
                 <ul>
                     <li><img src="img/logo.svg" id="bit-img"></li>
                     <li style = "float: right" ><a href="Cartpage/Cart.php"><img src="img/Cart.png" id="cart"></a></li>
                     <li style = "float: right"><a href = "">Account</a></li>
                     <li style = "float: right"><a href = "contact_pagina/Contact.php">Contact</a></li>
                     <li class = "dropdown" style="float: right;">
-                        <a href = "javascript:void(0)" class="dropbtn">Category</a>
+                        <a href = "javascript:void(0)" class="dropbtn" >Category</a>
                         <div class="dropdown-content">
                             <a href="index.php">All</a>
                             <?php
@@ -27,8 +27,22 @@
                         </div>
                     </li>
                     <li style = "float: right"><a href="index.php" target = "_self">Home</a></li>
+                    <li href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </li>
                 </ul>
+
             </nav>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("menu");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
             <!--<div class="slideshow">
                 <img src="img/banner1%20(1).jpg" height="200" width="600">
                 <img src="img/banner1%20(2).jpg" height="200" width="600">
