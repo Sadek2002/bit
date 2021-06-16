@@ -87,7 +87,7 @@ $product = $db->getRecordsFromTable("products", "product_id", $_GET['id']);
         <br>
         <br>
         <div id="line"></div>
-        <p>Productbeschrijving</p>
+        <p>Description</p>
         <article><?php echo $product[0]['description'] ?></article>
     </form>
 

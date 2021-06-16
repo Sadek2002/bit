@@ -325,6 +325,7 @@ input#quantity{
     background-color: white;
     width: 20%;
     font-size: 25px;
+    border: black solid 1px;
     border-radius: 6px;
 }
 p#text{
@@ -338,6 +339,7 @@ p#text{
 #button{
     font-size: 30px;
     border-radius: 8px;
+    border: none;
     background-color: #000563;
     color: white;
 }
@@ -355,6 +357,11 @@ article{
     color: rgb(0 0 0);
     width: 500px;
     border: 1px solid rgb(169 169 169);
+}
+
+#product {
+    width: 400px;
+    border-radius: 10px;
 }
 
 #product_id {
@@ -398,9 +405,7 @@ section.Info{
     padding-right: 75px;
     padding-top: 75px;
 }
-#product {
-    width: 300px;
-}
+
 #user{
     padding-left:60px ;
 }
