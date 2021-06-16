@@ -24,6 +24,7 @@
         <li><a class="active" href="adminhome.php">Home</a></li>
         <li><a href="adminpage.php">Edit</a></li>
         <li><a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">Mail</a></li>
+        <li><a href="messages.php">Messages</a></li>
     </ul>
 
     <div class="everything">

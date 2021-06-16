@@ -10,7 +10,6 @@ $db->deleteRecordsFromTable("products", 'product_id', $id);
 
 $product = $db->getRecordsFromTable("products", "product_id", $id);
 unlink("../".$product['img_url']);
-
 ?>
 
 <script type="text/javascript">
