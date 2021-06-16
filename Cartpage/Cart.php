@@ -4,7 +4,23 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="../style.css">
+    <?php
+        session_start();
 
+        if (isset($_POST['product_id'])) {
+            $newProduct = array();
+
+            foreach ($_POST as $item => $value) {
+                $newProduct[$item] = $value;
+            }
+
+            $_SESSION['product_list'][] = $newProduct;
+        }
+
+        /*echo "<pre>";
+        print_r($_SESSION);
+        echo "</pre>";*/
+    ?>
 </head>
 <body>
 <header>
@@ -35,15 +51,29 @@
 <h2 id="checkout">Checkout</h2>
 <section class="details">
     <p id="Billing">Billing Details</p>
-    <div id="produktinfo">
-    <p>Product info</p>
-    </div>
-    <div id="produktinfo">
-        <p>Product info</p>
-    </div>
-    <div id="produktinfo">
-        <p>Product info</p>
-    </div>
+
+    <?php
+        require_once '../php/Database.php';
+        $db = new Database("localhost", "bit_academy", "3306", "root", "");
+        $db->checkConnectionToDatabase();
+
+
+        //makes the ordered products
+        foreach ($_SESSION['product_list'] as $row) {
+            echo "<div id='produktinfo'>";
+
+            $product = $db->getRecordsFromTable("products", "product_id", $row['product_id']);
+
+            if (isset($row['size'])) {
+                echo $row['size']."<br>";
+            }
+
+            echo $product[0]['price'] * $row['quantity']."<br>";
+            echo "<img src='../".$product[0]['img_url']."'>";
+
+            echo "</div>";
+        }
+    ?>
 </section>
 <section class="Info">
     <div id="overzicht">

@@ -53,7 +53,7 @@ $product = $db->getRecordsFromTable("products", "product_id", $_GET['id']);
     <div class="column" >
         <?php echo "<img alt='' id='product' src='../".$product[0]['img_url']."'>"?>
     </div>
-    <form class="column" action="../Cartpage/Cart.php" method="get">
+    <form class="column" action="../Cartpage/Cart.php" method="post">
 
         <h2 id="productname"><?php echo $product[0]['name'] ?></h2>
         <p>$<?php echo $product[0]['price'] ?></p>
