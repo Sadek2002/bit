@@ -202,13 +202,13 @@ footer{
 #producten{
  
     display: flex;
-  ;
     align-content: center;
     flex-direction: row;
     justify-content:center;
     align-items: stretch;
     flex-wrap: wrap;
-    margin: 20px;
+    margin: auto;
+    width: 1035px;
     
     
 }
