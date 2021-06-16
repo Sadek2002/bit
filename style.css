@@ -378,8 +378,13 @@ section.details{
     border-radius: 8px;
     height: 200px;
     width: 600px;
-
+    margin-bottom: 20px;
 }
+
+#produktinfo img {
+    width: 120px;
+}
+
 #Billing{
     color: white;
 }
