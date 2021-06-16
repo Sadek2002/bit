@@ -171,7 +171,9 @@ body{
 }
 #image{
     width: 500px;
-    margin-top: 325px;
+    padding: 20px;
+    float: right;
+    margin-top: 200px;
 }
 .contacts{
     position: relative;
@@ -194,6 +196,7 @@ body{
     flex-direction: column;
     align-items: stretch;
     flex-wrap: nowrap;
+    position: initial;
 }
 #sentMessage{
     padding: 12px 20px;
@@ -490,3 +493,14 @@ section.Info{
 }
 
 
+/*-------------------------------------responsive style--------------------*/
+
+@media only screen and (max-width:800px) {
+    /* For mobile phones: */
+    #menu {
+
+        width: 100%
+
+    }
+
+}
