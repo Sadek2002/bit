@@ -6,7 +6,7 @@
     </head>
     <body>
     <header>
-            <nav id= "menu" class="topnav">
+            <nav id= "menu">
                 <ul>
                     <li><img src="img/logo.svg" id="bit-img"></li>
                     <li style = "float: right" ><a href="Cartpage/Cart.php"><img src="img/Cart.png" id="cart"></a></li>
@@ -71,6 +71,10 @@
             </div>
         </div>
     </div>
-    
     </body>
+    <footer>
+        <div id="footer-text">
+
+        </div>
+    </footer>
 </html>

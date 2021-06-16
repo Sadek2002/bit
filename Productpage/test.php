@@ -94,4 +94,9 @@ $product = $db->getRecordsFromTable("products", "product_id", $_GET['id']);
 </div>
 </div>
 </body>
+<footer>
+    <div id="footer-text">
+
+    </div>
+</footer>
 </html>

@@ -80,4 +80,9 @@
 </div>
 </div>
 </body>
+<footer>
+    <div id="footer-text">
+
+    </div>
+</footer>
 </html>
