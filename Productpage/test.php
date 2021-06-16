@@ -53,22 +53,27 @@ $product = $db->getRecordsFromTable("products", "product_id", $_GET['id']);
     <div class="column" >
         <?php echo "<img alt='' id='product' src='../".$product[0]['img_url']."'>"?>
     </div>
-    <div class="column" >
+    <form class="column" action="../Cartpage/Cart.php" method="get">
 
         <h2 id="productname"><?php echo $product[0]['name'] ?></h2>
         <p>$<?php echo $product[0]['price'] ?></p>
+
+        <?php if ($db->getRecordsFromTable("product_has_sizes", "product_id", $_GET['id'])) { ?>
         <p id="text">Size</p>
-        <select id="size" >
-            <option value="XS">XS</option>
-            <option value="S">S</option>
-            <option value="M">M</option>
-            <option value="L">L</option>
-            <option value="XL">XL</option>
+        <select name="size" id="size" required>
+            <option value="">None</option>
+            <?php
+                foreach ($db->getRecordsFromTable("product_has_sizes", "product_id", $_GET['id']) as $size) {
+                    echo "<option value='".$size['size']."'>".$size['size']."</option>";
+                }
+            ?>
         </select>
+        <?php } ?>
         <br>
         <p id="tekst">Quantity</p>
 
-        <input type="number" id="quantity" name="quantity" max="10" min="1">
+        <input type="number" id="quantity" name="quantity" max="10" min="1" required>
+        <input type="number" id="product_id" name="product_id" value="<?php echo $_GET['id'] ?>" required>
 
         <?php
             if($product[0]['in_stock'] > 0){
@@ -84,7 +89,7 @@ $product = $db->getRecordsFromTable("products", "product_id", $_GET['id']);
         <div id="line"></div>
         <p>Productbeschrijving</p>
         <article><?php echo $product[0]['description'] ?></article>
-    </div>
+    </form>
 
 </div>
 </div>
