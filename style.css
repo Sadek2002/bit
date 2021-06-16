@@ -271,11 +271,12 @@ footer{
 }
 #price-tag, #name-tag{
     padding: 20px 10px 0px 20px;
-    text-align: center;
+    text-align: initial;
     color: black;
 }
 #name-tag{
     padding: 20px 10px 20px 20px;
+    
 }
 #price-tag{
     margin-top: -50px;
