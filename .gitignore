@@ -2,3 +2,4 @@
 .idea/dataSources.local.xml
 *.xml
 *.xml
+.xml*
