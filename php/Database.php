@@ -94,7 +94,7 @@ class Database {
 
     //function for product_has_sizes
     public function insertRecordToProductHasSizes ($product_id, $size) {
-        $qeury = "INSERT INTO products_has_sizes (product_id, size) VALUES ('$product_id', '$size')";
+        $qeury = "INSERT INTO product_has_sizes (product_id, size) VALUES ('$product_id', '$size')";
 
         $this->dbh()->query($qeury);
     }
