@@ -64,12 +64,15 @@
 
             $product = $db->getRecordsFromTable("products", "product_id", $row['product_id']);
 
+
+            echo "<img src='../".$product[0]['img_url']."'>";
+            echo "<p id='price'>".'€'.$product[0]['price'] * $row['quantity']."<br>";"</p>";
+            echo "<br>";
             if (isset($row['size'])) {
-                echo $row['size']."<br>";
+                echo 'Size:'.'   '.$row['size']."<br>";
             }
 
-            echo $product[0]['price'] * $row['quantity']."<br>";
-            echo "<img src='../".$product[0]['img_url']."'>";
+
 
             echo "</div>";
         }

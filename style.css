@@ -382,7 +382,7 @@ section.details{
 }
 
 #produktinfo img {
-    width: 120px;
+    width: 180px;
 }
 
 #Billing{
@@ -499,7 +499,15 @@ section.Info{
 .topnav .icon {
     display: none;
 }
+#price{
+    float: right;
+    text-align: center;
+    padding-right: 300px;
 
+}
+#details{
+
+}
 /*-------------------------------------responsive style--------------------*/
 
 @media only screen and (max-width:860px) {
