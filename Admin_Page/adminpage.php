@@ -185,22 +185,39 @@ if (isset($_POST['create'])) {
         echo "You cannot upload files of this type!";
     }
 
-    $chkbox=$_POST['size'];
-    $chk="";
-    foreach ($chkbox as $chkboxresult) {
-        $chk.=$chkboxresult.",";
-    }
 
     $img_url = "img/".$fileNameNew;
     $db->insertRecordToProducts($_POST['product_type'], $_POST['name'], $_POST['description'], $img_url, $_POST['color'], $_POST['price'], $_POST['in_stock']);
 
-    // insert sizes here
+    $host = 'localhost';
+    $user = 'root';
+    $pass = '';
+    $db = 'bit_academy';
+    try {
+        $conn = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
+        // set the PDO error mode to exception
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $sql = "SELECT LAST_INSERT_ID()";
+        // use exec() because no results are returned
+        //$conn->exec($sql);
+        $latest_id = $conn->exec($sql);
+    } catch(PDOException $e) {
+        echo $e->getMessage();
+    }
+    $conn = null;
 
-    //$db->insertRecordToProductHasSizes($_POST['product_id'], $_POST['size']);
+    echo $latest_id;
+
+    // insert sizes here
+    for ($i = 0; $i < 10; $i++) {
+        if (isset($_POST['size' . $i])) {
+            $db->insertRecordToProductHasSizes($latest_id, $_POST['size' . $i]);
+        }
+    }
     ?>
-    <script type="text/javascript">
-        window.location.href=window.location.href;
-    </script>
+<!--    <script type="text/javascript">-->
+<!--        window.location.href=window.location.href;-->
+<!--    </script>-->
     <?php
 }
 ?>

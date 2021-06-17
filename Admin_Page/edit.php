@@ -50,15 +50,17 @@ echo "You cannot upload files of this type!";
     $db->updateRecordsFromTable("products", "color", $_POST['color'], "product_id", $id);
     $db->updateRecordsFromTable("products", "in_stock", $_POST['in_stock'], "product_id", $id);
 
-    $db->insertRecordToProductHasSizes($id, $_POST['size']);
+    //$db->insertRecordToProductHasSizes($id, $_POST['size']);
 
-
-
-
+    for ($i = 0; $i < 10; $i++) {
+        if (isset($_POST['size'.$i])) {
+            $db->insertRecordToProductHasSizes($id, $_POST['size'.$i]);
+        }
+    }
     ?>
-<!--    <script type="text/javascript">-->
-<!--        window.location.href="adminpage.php";-->
-<!--    </script>-->
+    <script type="text/javascript">
+        window.location.href="adminpage.php";
+    </script>
     <?php
 }
 ?>
