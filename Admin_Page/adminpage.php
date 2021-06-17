@@ -190,15 +190,15 @@ if (isset($_POST['create'])) {
 
     // insert sizes here
     for ($i = 0; $i < 10; $i++) {
-        //if (isset($_POST['size' . $i])) {
+        if (isset($_POST['size' . $i])) {
             $db->insertRecordToProductHasSizes($lastId, $_POST['size' . $i]);
-        //}
+        }
     }
     echo print_r($_POST);
     ?>
-<!--    <script type="text/javascript">-->
-<!--        window.location.href=window.location.href;-->
-<!--    </script>-->
+    <script type="text/javascript">
+        window.location.href=window.location.href;
+    </script>
     <?php
 }
 ?>

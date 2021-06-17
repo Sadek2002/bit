@@ -2,15 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="554e3221-1ad2-4288-95b8-5dd192fc38fa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/img/60cb347a2c0c09.07356584.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/60cb34bdaee987.42985065.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/60cb34c94729f6.58638322.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/60cb34ed428667.36457386.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/60cb35f5ef9683.86557631.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/60cb366242b5b7.54823047.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/60cb368d05f942.59486551.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/60cb38ca277860.94337632.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/60cb39a75c9014.94220641.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/60cb39c38bcf73.64599270.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/60cb39dce2f8f4.71175662.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/60cb3a3c418a82.10453751.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/60cb4181579e43.77623393.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/60cb41949296c8.80613172.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/60cb45ac864721.09932996.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/60cb45c203c441.82209631.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/60cb46066e78e8.67057016.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/60cb461ceed4d4.82646250.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/60cb462aa69e18.50329557.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Admin_Page/adminpage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin_Page/adminpage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin_Page/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin_Page/edit.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +69,7 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -87,7 +94,7 @@
       <workItem from="1623840972294" duration="880000" />
       <workItem from="1623842736722" duration="5667000" />
       <workItem from="1623871860540" duration="41000" />
-      <workItem from="1623916917616" duration="6068000" />
+      <workItem from="1623916917616" duration="9899000" />
     </task>
     <servers />
   </component>

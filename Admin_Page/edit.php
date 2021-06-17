@@ -5,7 +5,7 @@ $db->checkConnectionToDatabase();
 $id=$_GET["id"];
 
 
-$product =$db->getRecordsFromTable("products", 'product_id', $id);
+$product = $db->getRecordsFromTable("products", 'product_id', $id);
 
 ?>
 <?php
@@ -49,8 +49,7 @@ echo "You cannot upload files of this type!";
     $db->updateRecordsFromTable("products", "price", $_POST['price'], "product_id", $id);
     $db->updateRecordsFromTable("products", "color", $_POST['color'], "product_id", $id);
     $db->updateRecordsFromTable("products", "in_stock", $_POST['in_stock'], "product_id", $id);
-
-    //$db->insertRecordToProductHasSizes($id, $_POST['size']);
+    $db->deleteRecordsFromTable("product_has_sizes", "product_id", $id);
 
     for ($i = 0; $i < 10; $i++) {
         if (isset($_POST['size'.$i])) {
@@ -126,8 +125,14 @@ echo "You cannot upload files of this type!";
                 <div class="colors">
                     <select name="product_type" required>
                         <?php
+
+                        echo "<option value='".$product[0]['product_type']."' id='product_type'>".$product[0]['product_type']."</option>";
+
+
                         foreach ($db->getTableByName("product_types") as $row) {
-                            echo "<option value='".$row['product_type']."' id='product_type'>".$row['product_type']."</option>";
+                            if ($row["product_type"] !== $product[0]['product_type']) {
+                                echo "<option value='".$row['product_type']."' id='product_type'>".$row['product_type']."</option>";
+                            }
                         }
                         ?>
                     </select>
@@ -153,21 +158,13 @@ echo "You cannot upload files of this type!";
                         <?php
                             $i = 0;
                             foreach ($db->getTableByName("sizes") as $row) {
-                                echo "<input type='checkbox' value='".$row['size']."' name='size".$i."'>".$row['size']."<br>";
+                                echo "<input type='checkbox' value='" . $row['size'] . "' name='size" . $i . "'>" . $row['size'] . "<br>";
                                 $i++;
                             }
+
                         ?>
 
                     </div>
-                <div class="colors">
-                    <select name="color">
-                        <?php
-                        foreach ($db->getTableByName("colors") as $row) {
-                            echo "<option value='".$row['color']."' id='color'>".$row['color']."</option>";
-                        }
-                        ?>
-                    </select>
-                </div>
                 <div class="form-group">
                     <label for="Stock">Stock</label>
                     <input type="text" class="form-control" id="in_stock" placeholder="Enter stock" name="in_stock" value="<?php echo $product[0]['in_stock']; ?>" required>
@@ -175,14 +172,20 @@ echo "You cannot upload files of this type!";
                     <div>
                         <label for="Product Color">Product Color</label>
                     </div>
-                    <div class="colors">
-                        <select name="color">
-                            <?php
-                            foreach ($db->getTableByName("colors") as $row) {
-                                echo "<option value='".$row['color']."' id='color'>".$row['color']."</option>";
-                            }
-                            ?>
-                        </select>
+                        <div class="colors">
+                            <select name="color">
+                                <?php
+                                echo "<option value='".$product[0]['color']."' id='color'>".$product[0]['color']."</option>";
+
+
+                                foreach ($db->getTableByName("colors") as $row) {
+                                    if ($row["color"] !== $product[0]['color']) {
+                                        echo "<option value='".$row['color']."' id='color'>".$row['color']."</option>";
+                                    }
+                                }
+                                ?>
+                            </select>
+                        </div>
                 <button type="submit" name="update" class="btn btn-default">Update</button>
             </form>
         </div>
