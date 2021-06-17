@@ -11,7 +11,8 @@ $db->checkConnectionToDatabase();
 
 
 //insert function
-//$db->insertRecordToProducts("Mask", "test mask", "test", "img/test", "Red", 2.99, 25);
+//$lastId = $db->insertRecordToProducts("Mask", "test mask", "test", "img/test", "Red", 2.99, 25);
+//echo $lastId;
 //$db->insertRecordToMessages("test@2.nl", "", "", "jan de boer 2", "test2", "test test test2");
 
 
