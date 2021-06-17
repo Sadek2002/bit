@@ -81,7 +81,14 @@ class Database {
         $qeury = "INSERT INTO products (product_type, name, description, img_url, color, price, in_stock)
                   VALUES ('$product_type', '$name', '$description', '$img_url', '$color', '$price', '$in_stock')";
 
+        $lastRecordQeury = "SELECT * FROM products";
+
         $this->dbh()->query($qeury);
+
+        foreach ($this->dbh()->query($lastRecordQeury) as $row) {
+            $lastInsertedId = $row['product_id'];
+        }
+        return $lastInsertedId;
     }
 
 
