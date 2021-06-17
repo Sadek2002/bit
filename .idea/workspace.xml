@@ -2,28 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="554e3221-1ad2-4288-95b8-5dd192fc38fa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/img/60cb04c5a8c008.28991831.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/60cb0602ad87b9.14662704.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/60cb0612239bf1.14348927.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/60cb0633adad51.65809120.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/60cb090702bd36.53265057.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/60cb09b14a5bf0.79302939.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/60cb09c44f6d91.47065341.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/60cb0a08e520e6.73097524.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/60cb0a21115792.75532861.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/60cb0a9adb2a73.82828386.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/60cb0aa3109f42.55659255.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/60cb0cfe8ba234.43002883.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/60cb0dbc462582.10040131.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/60cb0dca695014.39007372.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/60cb0edd80bba1.99641729.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/60cb0ef0c23bb7.48391142.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/60cb0f58baedf1.54810191.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/60cb0f76401040.98516070.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/60cb0fb4dd0194.56912497.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/60cb347a2c0c09.07356584.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/60cb34bdaee987.42985065.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/60cb34c94729f6.58638322.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/60cb34ed428667.36457386.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/60cb35f5ef9683.86557631.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/60cb366242b5b7.54823047.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/60cb368d05f942.59486551.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Admin_Page/adminpage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin_Page/adminpage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin_Page/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin_Page/edit.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +87,7 @@
       <workItem from="1623840972294" duration="880000" />
       <workItem from="1623842736722" duration="5667000" />
       <workItem from="1623871860540" duration="41000" />
-      <workItem from="1623916917616" duration="4208000" />
+      <workItem from="1623916917616" duration="6068000" />
     </task>
     <servers />
   </component>
