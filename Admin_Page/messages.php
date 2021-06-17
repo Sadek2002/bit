@@ -29,15 +29,12 @@
     <table class="table table-bordered">
         <thead>
         <tr bgcolor="black">
-            <th>#</th>
             <th>E-mail</th>
             <th>Telephone Number</th>
             <th>Order Number</th>
             <th>Name</th>
             <th>Subject</th>
             <th>Text</th>
-            <th>Read</th>
-            <th>Handled</th>
 </div>
 </tr>
 </thead>
@@ -54,18 +51,12 @@ $db->checkConnectionToDatabase();
 foreach ($db->getTableByName("messages") as $row)
 {
     echo "<tr bgcolor='#333'>";
-    echo "<td>"; echo $row["message_id"]; echo "</td>";
     echo "<td>"; echo $row["email"]; echo "</td>";
     echo "<td>"; echo $row["telephone_nr"]; echo "</td>";
     echo "<td>"; echo $row["order_nr"]; echo "</td>";
     echo "<td>"; echo $row["name"]; echo "</td>";
     echo "<td>"; echo $row["subject"]; echo "</td>";
     echo "<td>"; echo $row["text"]; echo "</td>";
-    echo "<td>"; echo $row["read"]; echo "</td>";
-    echo "<td>"; echo $row["handled"]; echo "</td>";
-
-
-
 }
 ?>
 </tbody>

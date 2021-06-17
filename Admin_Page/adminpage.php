@@ -33,7 +33,6 @@ $db->checkConnectionToDatabase();
 <body style="background-color: #000563">
 <font color="white">
     <ul class="menu-border">
-        <li><a class="active" href="adminhome.php">Home</a></li>
         <li><a href="adminpage.php">Edit</a></li>
         <li><a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">Mail</a></li>
         <li><a href="messages.php">Messages</a></li>
@@ -49,6 +48,7 @@ $db->checkConnectionToDatabase();
                 <div class="colors">
                     <select name="product_type" required>
                         <?php
+                        echo "<option value='' id='color'>None</option>";
                         foreach ($db->getTableByName("product_types") as $row) {
                             echo "<option value='".$row['product_type']."' id='product_type'>".$row['product_type']."</option>";
                         }
@@ -95,6 +95,7 @@ $db->checkConnectionToDatabase();
                 <div class="colors">
                     <select name="color" required>
                         <?php
+                        echo "<option value='' id='color'>None</option>";
                         foreach ($db->getTableByName("colors") as $row) {
                             echo "<option value='".$row['color']."' id='color'>".$row['color']."</option>";
                         }

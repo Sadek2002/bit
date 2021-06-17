@@ -4,7 +4,6 @@ $db = new Database("localhost", "bit_academy", "3306", "root", "");
 $db->checkConnectionToDatabase();
 $id=$_GET["id"];
 
-
 $product = $db->getRecordsFromTable("products", 'product_id', $id);
 
 ?>
@@ -40,6 +39,7 @@ echo "You cannot upload files of this type!";
 }
 
     $id=$_GET["id"];
+    unlink("../".$product[0]['img_url']);
 
     $img_url = "img/".$fileNameNew;
     $db->updateRecordsFromTable("products", "product_type", $_POST['product_type'], "product_id", $id);
