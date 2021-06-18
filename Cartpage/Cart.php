@@ -73,7 +73,7 @@
                 echo "<img src='../" . $product[0]['img_url'] . "'>";
                 echo "<div id='info'>";
                 echo "<p id='price'>";
-                echo "<p id='productname'>". $product[0]['name']; echo "</p>";
+                //echo "<p id='productname'>". $product[0]['name']; echo "</p>";
                 echo "<br>";
 
                 if (isset($row['size'])) {

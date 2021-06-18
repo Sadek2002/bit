@@ -132,9 +132,7 @@ footer {
     font-size: 1.333rem;
 
 }
-<<<<<<< HEAD
 
-=======
 #footer-adres{
     margin-right: 100px;
 }
@@ -145,7 +143,7 @@ footer {
 #footer-contact a:hover{
     color:#33c1cf;
 }
->>>>>>> 9ef722854a70253d30f4363e9069dc7f4f9242a5
+
 /*-------------------Contact page style-----------------------*/
 #contact_form{
     font-size: 25px;
@@ -386,7 +384,7 @@ article{
     margin-left: 40px;
     height: 100%;
 }
-}
+
 #in_stock{
     font-size: 18px;
 }
@@ -423,9 +421,9 @@ section.details{
 #produktinfo{
     background-color: white;
     border-radius: 8px;
-    height: 175px;
+    height: 185px;
     width: 600px;
-    margin-bottom: 20px;
+    margin-top: 50px;
 }
 
 #produktinfo img {
@@ -450,7 +448,9 @@ section.Info{
     padding-right: 75px;
     padding-top: 75px;
 }
-
+#overzicht{
+    margin-top: 27px;
+}
 #user{
     padding-left:60px ;
 }
