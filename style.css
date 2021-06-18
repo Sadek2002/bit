@@ -132,6 +132,9 @@ footer {
     font-size: 1.333rem;
 
 }
+<<<<<<< HEAD
+
+=======
 #footer-adres{
     margin-right: 100px;
 }
@@ -142,6 +145,7 @@ footer {
 #footer-contact a:hover{
     color:#33c1cf;
 }
+>>>>>>> 9ef722854a70253d30f4363e9069dc7f4f9242a5
 /*-------------------Contact page style-----------------------*/
 #contact_form{
     font-size: 25px;
@@ -425,13 +429,16 @@ section.details{
 #produktinfo{
     background-color: white;
     border-radius: 8px;
-    height: 200px;
+    height: 175px;
     width: 600px;
     margin-bottom: 20px;
 }
 
 #produktinfo img {
-    width: 180px;
+    width: 185px;
+    border-radius: 8px;
+    float: left;
+
 }
 
 #Billing{
@@ -550,12 +557,28 @@ section.Info{
 }
 #price{
     float: right;
-    text-align: center;
-    padding-right: 300px;
+    padding-right: 220px;
+    margin-top: 15px;
+    font-size: 16px;
 
 }
-#details{
-
+#productname{
+    font-size: 18px;
+    margin: 0;
+}
+#info{
+    padding-left: 200px;
+    padding-top: 15px;
+}
+#totalprice{
+    padding-top: 20px;
+    color: white;
+    font-size: 20px;
+}
+#cartinfo{
+    font-size: 25px;
+    color: white;
+    text-align: center;
 }
 /*-------------------------------------responsive style--------------------*/
 
