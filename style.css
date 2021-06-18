@@ -102,25 +102,42 @@ body{
     padding: 10px;
 }
 
-footer{
+footer {
+    height: 310px;
     width: 100%;
-    bottom:0;
-    background: #333782;
+    bottom: 0;
+    background: rgb(51 55 130);
+    padding: 4.6875rem 306px 2rem;
     float: left;
+    color: rgb(255 255 255);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
 }
 #footer-text{
     display: flex;
-    font-size: 1.333rem;
     font-weight: 500;
     line-height: 1.5;
     color: rgb(255 255 255);
 }
 #footer-content{
-    justify-content: flex-end;
+    justify-content: flex-start;
     margin-top: 0;
-    text-decoration: none;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: space-around;
+    align-items: stretch;
+    font-size: 1.333rem;
 
 }
+#footer-adres{
+    margin-right: 100px;
+}
+#footer-content a{
+    text-decoration: none;
+    color: white;
 }
 /*-------------------Contact page style-----------------------*/
 #contact_form{
