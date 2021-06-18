@@ -103,11 +103,10 @@ body{
 }
 
 footer {
-    height: 310px;
     width: 100%;
     bottom: 0;
     background: rgb(51 55 130);
-    padding: 4.6875rem 306px 2rem;
+    padding:4.6875rem 306px 6rem;
     float: left;
     color: rgb(255 255 255);
     display: flex;
@@ -138,6 +137,9 @@ footer {
 #footer-content a{
     text-decoration: none;
     color: white;
+}
+#footer-contact a:hover{
+    color:#33c1cf;
 }
 /*-------------------Contact page style-----------------------*/
 #contact_form{
