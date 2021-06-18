@@ -306,6 +306,15 @@ footer {
 #price-tag{
     margin-top: -50px;
 }
+#disabled-add-to-cart{
+    background-color: grey;
+    border: 1px;
+    border-radius: 8px;
+    font-size: 30px;
+    width: 160px;
+    padding-left: 4px;
+    color: white;
+}
 /*-------------------------------------------product page style---------------------------------------*/
 
 .column {
