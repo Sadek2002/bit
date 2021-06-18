@@ -107,4 +107,20 @@ class Database {
 
         $this->dbh()->query($qeury);
     }
+
+
+    //function for product_types
+    public function insertRecordToProductTypes ($product_type) {
+        $qeury = "INSERT INTO product_types (product_type) VALUES ('$product_type')";
+
+        $this->dbh()->query($qeury);
+    }
+
+
+    //function for colors
+    public function insertRecordToColors ($color) {
+        $qeury = "INSERT INTO colors (color) VALUES ('$color')";
+
+        $this->dbh()->query($qeury);
+    }
 }
