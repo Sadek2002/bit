@@ -8,7 +8,7 @@
     <header>
             <nav id= "menu">
                 <ul>
-                    <li><img src="img/logo.svg" id="bit-img"></li>
+                    <li><img src="img/logo.svg" id="bit-img" style="float: left"></li>
                     <li style = "float: right" ><a href="Cartpage/Cart.php"><img src="img/Cart.png" id="cart"></a></li>
                     <li style = "float: right"><a href = "">Account</a></li>
                     <li style = "float: right"><a href = "contact_pagina/Contact.php">Contact</a></li>
@@ -73,8 +73,21 @@
     </div>
     </body>
     <footer>
-        <div id="footer-text">
+        <img src="img/logo.svg"  id="bit-img">
+        <div id="footer-content">
+            <div id="footer-adres">
+            <h4>Adres</h4>
+            <a> Amsterdam
+                Science Park 608A
+                1098XH, Amsterdam
+            </a>
+            </div>
+            <div id="footer-contact">
+                <h4>Contact</h4>
+                <a href="mailto:info@bit-academy.nl"> info@bit-academy.nl</a>
+                <a href="tel:020 247 0347">020 247 0347</a>
 
+            </div>
         </div>
     </footer>
 </html>
