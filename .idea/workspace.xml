@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e55a344a-eec0-4b40-a085-ec6f953dd90f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/img/60cc5746a32dc6.46117145.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin_Page/types.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/60cc890e3b4861.34503908.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin_Page/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin_Page/messages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin_Page/AdminStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/Admin_Page/AdminStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin_Page/adminpage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin_Page/adminpage.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

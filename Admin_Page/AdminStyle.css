@@ -69,6 +69,8 @@ li a:hover {
 .colors {
     color: black;
     padding-bottom: 20px;
+    padding-bottom: 5px;
+    padding-top: 5px;
 }
 
 

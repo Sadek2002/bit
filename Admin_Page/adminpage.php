@@ -36,6 +36,7 @@ $db->checkConnectionToDatabase();
         <li><a href="adminpage.php">Edit</a></li>
         <li><a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">Mail</a></li>
         <li><a href="messages.php">Messages</a></li>
+        <li><a href="types.php">Types</a></li>
     </ul>
 
     <div class="container" style="margin-left: 0px">
@@ -60,9 +61,13 @@ $db->checkConnectionToDatabase();
                     <label for="Item Name">Item Name</label>
                     <input type="text" class="form-control" id="name" placeholder="Enter product name" name="name" required>
                 </div>
+<!--                <div class="form-group">-->
+<!--                    <label for="pwd">Item description</label>-->
+<!--                    <input type="text" class="form-control" id="description" placeholder="Enter product description" name="description" maxlength="500" required>-->
+<!--                </div>-->
                 <div class="form-group">
                     <label for="pwd">Item description</label>
-                    <input type="text" class="form-control" id="description" placeholder="Enter product description" name="description" required>
+                    <textarea style="color: black" name="description" id="description" cols="45" rows="5" maxlength="500" required></textarea>
                 </div>
                 <div>
                     <label for="Images">Product Image</label>
