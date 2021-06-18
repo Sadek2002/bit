@@ -419,6 +419,7 @@ section.details{
     width: 50%;
     float: left;
     padding-left: 90px;
+    margin-bottom: 25%;
 }
 #checkout{
     padding-left: 90px;
@@ -431,13 +432,15 @@ section.details{
     border-radius: 8px;
     height: 175px;
     width: 600px;
-    margin-bottom: 20px;
+    margin-top: 50px;
+    margin-bottom: 400px;
 }
 
 #produktinfo img {
     width: 185px;
     border-radius: 8px;
     float: left;
+    height: 100%;
 
 }
 
@@ -451,6 +454,7 @@ section.details{
     width: 550px;
     float: right;
     height: 600px;
+    margin-top: 27px;
 }
 section.Info{
     padding-right: 75px;
