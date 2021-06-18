@@ -132,9 +132,7 @@ footer {
     font-size: 1.333rem;
 
 }
-<<<<<<< HEAD
 
-=======
 #footer-adres{
     margin-right: 100px;
 }
@@ -145,7 +143,7 @@ footer {
 #footer-contact a:hover{
     color:#33c1cf;
 }
->>>>>>> 9ef722854a70253d30f4363e9069dc7f4f9242a5
+
 /*-------------------Contact page style-----------------------*/
 #contact_form{
     font-size: 25px;
@@ -412,7 +410,6 @@ article{
 
 }
 #cart:hover{
-    background: url("img/Cart-hover.png") no-repeat;
     margin: -20px;
 }
 section.details{
@@ -430,10 +427,12 @@ section.details{
 #produktinfo{
     background-color: white;
     border-radius: 8px;
-    height: 175px;
+    height: 200px;
     width: 600px;
-    margin-top: 50px;
-    margin-bottom: 400px;
+    margin-top: 25px;
+}
+#produktinfo p{
+    margin-left: 250px;
 }
 
 #produktinfo img {
@@ -454,7 +453,6 @@ section.details{
     width: 550px;
     float: right;
     height: 600px;
-    margin-top: 27px;
 }
 section.Info{
     padding-right: 75px;
@@ -559,30 +557,17 @@ section.Info{
 .topnav .icon {
     display: none;
 }
-#price{
-    float: right;
-    padding-right: 220px;
-    margin-top: 15px;
-    font-size: 16px;
+#price, #quantity, #size{
+    font-size: 20px;
+    color: dimgray;
+    font-weight: 200;
 
 }
-#productname{
-    font-size: 18px;
-    margin: 0;
-}
-#info{
-    padding-left: 200px;
-    padding-top: 15px;
-}
-#totalprice{
+#productName{
     padding-top: 20px;
-    color: white;
-    font-size: 20px;
 }
-#cartinfo{
-    font-size: 25px;
-    color: white;
-    text-align: center;
+#details{
+
 }
 /*-------------------------------------responsive style--------------------*/
 

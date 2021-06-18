@@ -15,7 +15,6 @@
             }
 
             $_SESSION['product_list'][] = $newProduct;
-            header('location: Cart.php');
         }
 
         /*echo "<pre>";
@@ -60,7 +59,7 @@
 
 
         //makes the ordered products
-        if (isset($_SESSION['product_list'])) {
+        if(isset($_SESSION['product_list'])) {
 
             $totalPrice = 0;
 
@@ -69,35 +68,27 @@
 
                 $product = $db->getRecordsFromTable("products", "product_id", $row['product_id']);
 
-
                 echo "<img src='../" . $product[0]['img_url'] . "'>";
-                echo "<div id='info'>";
-                echo "<p id='price'>";
-                echo "<p id='productname'>". $product[0]['name']; echo "</p>";
-                echo "<br>";
+                echo '<p id="productName">' . $product[0]['name'] . '</p>';
+                echo '<p id="quantity">Quantity: ' . $row['quantity'] . '</p>';
 
                 if (isset($row['size'])) {
-                    echo 'Size:' . '   ' . $row['size'] . "<br>";
+                    echo '<p id="size">Size: ' . $row['size'] . "</p>";
                 }
-                echo "<br>";
-                echo 'QTY: '.$row['quantity'];
-                echo "<br>";
-                echo"<br>";
-                echo '€' . $product[0]['price'] * $row['quantity'] . "<br>";
 
-                echo"</p>";
-                "</div>";
+                echo "<p id='price'>" . '€' . $product[0]['price'] * $row['quantity'] . "<br>"."</p>";
+
                 echo "</div>";
-
                 $calc = $product[0]['price'] * $row['quantity'];
                 $totalPrice += $calc;
             }
-            echo "<div id='totalprice'>";
-            echo '€ '.$totalPrice;
-            echo "</div>";
+
+            echo'<div id="totalprice">';
+            echo'$ '.$totalPrice;
+            echo'</div>';
         }
         else {
-            echo "<p id='cartinfo'>Cart is empty </p>";
+            echo '<p id="empty_log">Cart is empty</p>';
         }
     ?>
 </section>
