@@ -15,6 +15,7 @@
             }
 
             $_SESSION['product_list'][] = $newProduct;
+            header('location: Cart.php');
         }
 
         /*echo "<pre>";
@@ -59,23 +60,44 @@
 
 
         //makes the ordered products
-        foreach ($_SESSION['product_list'] as $row) {
-            echo "<div id='produktinfo'>";
+        if (isset($_SESSION['product_list'])) {
 
-            $product = $db->getRecordsFromTable("products", "product_id", $row['product_id']);
+            $totalPrice = 0;
+
+            foreach ($_SESSION['product_list'] as $row) {
+                echo "<div id='produktinfo'>";
+
+                $product = $db->getRecordsFromTable("products", "product_id", $row['product_id']);
 
 
-            echo "<img src='../".$product[0]['img_url']."'>";
+                echo "<img src='../" . $product[0]['img_url'] . "'>";
+                echo "<div id='info'>";
+                echo "<p id='price'>";
+                echo "<p id='productname'>". $product[0]['name']; echo "</p>";
+                echo "<br>";
 
-            echo "<p id='price'>".'€'.$product[0]['price'] * $row['quantity']."<br>";"</p>";
-            echo "<br>";
-            if (isset($row['size'])) {
-                echo 'Size:'.'   '.$row['size']."<br>";
+                if (isset($row['size'])) {
+                    echo 'Size:' . '   ' . $row['size'] . "<br>";
+                }
+                echo "<br>";
+                echo 'QTY: '.$row['quantity'];
+                echo "<br>";
+                echo"<br>";
+                echo '€' . $product[0]['price'] * $row['quantity'] . "<br>";
+
+                echo"</p>";
+                "</div>";
+                echo "</div>";
+
+                $calc = $product[0]['price'] * $row['quantity'];
+                $totalPrice += $calc;
             }
-
-
-
+            echo "<div id='totalprice'>";
+            echo '€ '.$totalPrice;
             echo "</div>";
+        }
+        else {
+            echo "<p id='cartinfo'>Cart is empty </p>";
         }
     ?>
 </section>
