@@ -66,6 +66,7 @@
 
 
             echo "<img src='../".$product[0]['img_url']."'>";
+
             echo "<p id='price'>".'€'.$product[0]['price'] * $row['quantity']."<br>";"</p>";
             echo "<br>";
             if (isset($row['size'])) {

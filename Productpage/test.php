@@ -83,7 +83,18 @@ $product = $db->getRecordsFromTable("products", "product_id", $_GET['id']);
             }
         ?>
         <br>
-        <input type="submit" id="button" value="Add to Cart">
+        <?php
+        if($product[0]['in_stock'] >= 1){
+             echo '<input type="submit" id="button" value="Add to Cart"> ';
+        }
+        else{
+            echo '<div id="disabled-add-to-cart">';
+            echo 'Add to Cart';
+            echo '</div>';
+        }
+
+
+        ?>
         <br>
         <br>
         <div id="line"></div>
