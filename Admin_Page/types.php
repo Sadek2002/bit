@@ -9,11 +9,11 @@ $db->checkConnectionToDatabase();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="AdminStyle.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>admin</title>
-    <link rel="stylesheet" href="AdminStyle.css">
 </head>
 
 <header style="margin-left: 30px">
@@ -40,9 +40,10 @@ $db->checkConnectionToDatabase();
             <li><a href="types.php">Types</a></li>
         </ul>
 
-        <div class="container" style="margin-left: 0px">
-            <div class="col-lg-4">
+        <div class="container" style="margin-left: 0px; float: left; width: 50%">
+            <div class="col-lg-4" style="width: 100%">
                 <h2>Create Type</h2>
+                <p style="color: red">Be aware that you can't delete a type that is being used by a product!</p>
                 <form action="" name="form1" method="POST">
                     <div class="form-group">
                         <label for="Type">Type</label>
@@ -65,7 +66,7 @@ $db->checkConnectionToDatabase();
                                 foreach ($db->getTableByName("product_types") as $row) {
                                     echo "<tr bgcolor='#333'>";
                                     echo "<td>"; echo $row["product_type"]; echo "</td>";
-                                    echo "<td>"; ?> <a href="delete.php?id=<?php echo $row["product_type"]; ?>"<button type="button" class="btn btn-danger">Delete</button></a> <?php echo "</td>";
+                                    echo "<td>"; ?> <a href="delete_types.php?type=<?php echo $row["product_type"]; ?>"<button type="button" class="btn btn-danger">Delete</button></a> <?php echo "</td>";
                                 }
                             ?>
                         </thead>
@@ -75,9 +76,10 @@ $db->checkConnectionToDatabase();
         </div>
 
 
-        <div class="container" style="margin-left: 0px">
-            <div class="col-lg-4">
+        <div class="container" style="margin-left: 0px; float: left; width: 50%">
+            <div class="col-lg-4" style="width: 100%">
                 <h2>Create Color</h2>
+                <p style="color: red">Be aware that you can't delete a color that is being used by a product!</p>
                 <form action="" name="form1" method="POST">
                     <div class="form-group">
                         <label for="Color">Color</label>
@@ -100,7 +102,7 @@ $db->checkConnectionToDatabase();
                                 foreach ($db->getTableByName("colors") as $row) {
                                     echo "<tr bgcolor='#333'>";
                                     echo "<td>"; echo $row["color"]; echo "</td>";
-                                    echo "<td>"; ?> <a href="delete.php?id=<?php echo $row["color"]; ?>"<button type="button" class="btn btn-danger">Delete</button></a> <?php echo "</td>";
+                                    echo "<td>"; ?> <a href="delete_types.php?color=<?php echo $row["color"]; ?>"<button type="button" class="btn btn-danger">Delete</button></a> <?php echo "</td>";
                                 }
                             ?>
                         </thead>
