@@ -102,26 +102,50 @@ body{
     padding: 10px;
 }
 
-footer{
+footer {
+    height: 220px;
     width: 100%;
-    bottom:0;
-    background: #333782;
+    bottom: 0;
+    background: rgb(51 55 130);
+    padding:4.6875rem 306px 6rem;
     float: left;
+    color: rgb(255 255 255);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
 }
 #footer-text{
     display: flex;
-    font-size: 1.333rem;
     font-weight: 500;
     line-height: 1.5;
     color: rgb(255 255 255);
 }
 #footer-content{
-    justify-content: flex-end;
+    justify-content: flex-start;
     margin-top: 0;
-    text-decoration: none;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: space-around;
+    align-items: stretch;
+    font-size: 1.333rem;
 
 }
+<<<<<<< HEAD
 
+=======
+#footer-adres{
+    margin-right: 100px;
+}
+#footer-content a{
+    text-decoration: none;
+    color: white;
+}
+#footer-contact a:hover{
+    color:#33c1cf;
+}
+>>>>>>> 9ef722854a70253d30f4363e9069dc7f4f9242a5
 /*-------------------Contact page style-----------------------*/
 #contact_form{
     font-size: 25px;
@@ -304,7 +328,7 @@ footer{
     float: left;
     width: 50%;
     padding: 50px;
-    height: 300px;
+    height: 100%;
 
 }
 
@@ -356,7 +380,12 @@ article{
     color:black;
 }
 #content{
-    height: 700px;
+    border-radius: 10px;
+    margin-right: 40px;
+    margin-bottom: 212px;
+    margin-left: 40px;
+    height: 100%;
+}
 }
 #in_stock{
     font-size: 18px;
