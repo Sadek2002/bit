@@ -102,37 +102,27 @@ body{
     padding: 10px;
 }
 
-footer {
-    height: 220px;
+footer{
     width: 100%;
-    bottom: 0;
-    background: rgb(51 55 130);
-    padding:4.6875rem 306px 6rem;
+    bottom:0;
+    background: #333782;
     float: left;
-    color: rgb(255 255 255);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
 }
 #footer-text{
     display: flex;
+    font-size: 1.333rem;
     font-weight: 500;
     line-height: 1.5;
     color: rgb(255 255 255);
 }
 #footer-content{
-    justify-content: flex-start;
+    justify-content: flex-end;
     margin-top: 0;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    align-content: space-around;
-    align-items: stretch;
-    font-size: 1.333rem;
+    text-decoration: none;
 
 }
 
+<<<<<<< HEAD
 #footer-adres{
     margin-right: 100px;
 }
@@ -144,6 +134,8 @@ footer {
     color:#33c1cf;
 }
 
+=======
+>>>>>>> parent of e693167 (update)
 /*-------------------Contact page style-----------------------*/
 #contact_form{
     font-size: 25px;
@@ -326,7 +318,7 @@ footer {
     float: left;
     width: 50%;
     padding: 50px;
-    height: 100%;
+    height: 300px;
 
 }
 
@@ -378,6 +370,7 @@ article{
     color:black;
 }
 #content{
+<<<<<<< HEAD
     border-radius: 10px;
     margin-right: 40px;
     margin-bottom: 212px;
@@ -385,6 +378,10 @@ article{
     height: 100%;
 }
 
+=======
+    height: 700px;
+}
+>>>>>>> parent of e693167 (update)
 #in_stock{
     font-size: 18px;
 }

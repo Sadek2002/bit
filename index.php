@@ -77,15 +77,15 @@
         <div id="footer-content">
             <div id="footer-adres">
             <h4>Adres</h4>
-            <a> Amsterdam<br>
-                Science Park 608A<br>
-                1098XH, Amsterdam<br>
+            <a> Amsterdam
+                Science Park 608A
+                1098XH, Amsterdam
             </a>
             </div>
             <div id="footer-contact">
                 <h4>Contact</h4>
-                <a href="mailto:info@bit-academy.nl"  style="text-decoration: none"> info@bit-academy.nl</a><br>
-                <a href="tel:020 247 0347" style="text-decoration: none">020 247 0347</a>
+                <a href="mailto:info@bit-academy.nl"> info@bit-academy.nl</a>
+                <a href="tel:020 247 0347">020 247 0347</a>
 
             </div>
         </div>
