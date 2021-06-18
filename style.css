@@ -382,7 +382,7 @@ article{
     margin-left: 40px;
     height: 100%;
 }
-}
+
 #in_stock{
     font-size: 18px;
 }
@@ -403,6 +403,12 @@ article{
 
 /*-------------------------------------------cart page style---------------------------------------*/
 #cart{
+    margin: -20px;
+    background: url("img/Cart.png") no-repeat;
+
+}
+#cart:hover{
+    background: url("img/Cart-hover.png") no-repeat;
     margin: -20px;
 }
 section.details{
