@@ -1,0 +1,558 @@
+
+#menu{
+    font-size: 1.333rem;
+    margin: 30px;
+    margin-right: 10%;
+    overflow: hidden;
+}
+nav ul {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: rgb(0 5 99);
+
+}
+
+nav li {
+    float: left;
+    font-family: "Roobert", "Helvetica", "Arial", sans-serif;
+    font-size: 1.333rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: rgb(255 255 255);
+
+}
+nav li a {
+    display: inline-block;
+    text-align: center;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+
+
+
+}
+
+nav li img {
+    display: inline-block;
+    text-align: center;
+    padding: 14px 16px;
+
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    color: rgb(23 162 184);
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+/*------------------------pages style---------------------*/
+* {
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: #000563;
+    font-family: "Roobert", "Helvetica", "Arial", sans-serif;
+    margin:0;
+}
+
+
+#wrapper{
+    display: block;
+    margin:20px;
+    color: white ;
+    padding: 10px;
+}
+
+footer{
+    width: 100%;
+    bottom:0;
+    background: #333782;
+    height: 100px;
+    float: left;
+}
+#footer-text{
+
+}
+/*-------------------Contact page style-----------------------*/
+#contact_form{
+    font-size: 25px;
+    text-align: left;
+    padding: 20px;
+    color: white;
+    float: left;
+    margin: auto;
+    width: 35%;
+    margin-top: 50px;
+    margin-left: 10%;
+}
+.contact_form_input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+}
+
+#submit_button{
+    height: 10%;
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+#contact_textarea{
+    width: 100%;
+    height: 20%;
+    font-family: "Roobert", "Helvetica", "Arial", sans-serif;
+}
+
+#Klantenservice{
+    padding-right: 100px;
+    float: right;
+    margin-top: 18%;
+    color: white;
+}
+#image2{
+    width: 40%;
+    margin-top: 210px;
+}
+#image{
+    width: 500px;
+    padding: 20px;
+    float: right;
+    margin-top: 200px;
+    margin-right: 10%;
+}
+.contacts{
+    position: relative;
+    text-decoration: none;
+    color: rgb(0 0 0);
+    background: rgb(255 255 255);
+    padding: 50px;
+    margin-bottom: 20px;
+}
+
+#contacts-forms{
+    font-size: 25px;
+    text-align: left;
+    color: rgb(255 255 255);
+    float: left;
+    margin: auto;
+    margin-top: 50px;
+    margin-left: 28%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    position: initial;
+}
+#sentMessage{
+    padding: 12px 20px;
+    margin: 50px;
+    border: 1px solid rgb(204 204 204);
+    border-radius: 4px;
+    box-sizing: border-box;
+    background: rgb(238 89 101);
+}
+
+
+/*------------------------------------------------product home page-------------------------*/
+#producten{
+ 
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    justify-content:center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 1035px;
+    
+    
+}
+#producten::after{
+    content:'';
+    clear: both;
+    display:table ;
+}
+#items{
+    color: rgb(255 255 255);
+    background-color: white;
+    margin: 20px;
+    border-radius: 15px;
+
+}
+#filter-form{
+    margin-top: 10%;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: row;
+    align-content: center;
+    align-items: baseline;
+    padding: 15px;
+
+}
+
+#filter-container{
+    width: 80%;
+    margin: 5%;
+    background: white;
+    color: black;
+}
+
+.filter-content{
+    width: 50%;
+    height: 30px;
+    font-size: 15px;
+    font-family: "Roobert", "Helvetica", "Arial", sans-serif;
+    border-radius: 10px;
+}
+#filter-tag{
+
+}
+#test-img{
+    width: 200px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin: 2px;
+    height: 199.99px;
+}
+#button-filter, #filter-container {
+    border-radius: 10px;
+
+}
+#button-filter{
+    margin-top: 20px;
+    width: 50%;
+    height: 30px;
+}
+#price-tag, #name-tag{
+    padding: 20px 10px 0px 20px;
+    text-align: initial;
+    color: black;
+}
+#name-tag{
+    padding: 20px 10px 20px 20px;
+    
+}
+#price-tag{
+    margin-top: -50px;
+}
+/*-------------------------------------------product page style---------------------------------------*/
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 50px;
+    height: 300px;
+
+}
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#productname{
+    color: black;
+    font-size: 40px;
+}
+p{
+    color: black;
+    font-size: 25px;
+}
+select#size{
+    background-color: white;
+    width: 20%;
+    font-size: 20px;
+    border-radius: 6px;
+}
+input#quantity{
+    background-color: white;
+    width: 20%;
+    font-size: 25px;
+    border: black solid 1px;
+    border-radius: 6px;
+}
+p#text{
+    margin-bottom: 0;
+    font-size: 24px;
+}
+#tekst{
+    margin-bottom: 0;
+    font-size: 24px;
+}
+#button{
+    font-size: 30px;
+    border-radius: 8px;
+    border: none;
+    background-color: #000563;
+    color: white;
+}
+article{
+    font-family: "Roobert", "Helvetica", "Arial", sans-serif;
+    color:black;
+}
+#content{
+    height: 700px;
+}
+#in_stock{
+    font-size: 18px;
+}
+#line{
+    color: rgb(0 0 0);
+    width: 500px;
+    border: 1px solid rgb(169 169 169);
+}
+
+#product {
+    width: 400px;
+    border-radius: 10px;
+}
+
+#product_id {
+    display: none;
+}
+
+/*-------------------------------------------cart page style---------------------------------------*/
+#cart{
+    margin: -20px;
+}
+section.details{
+    width: 50%;
+    float: left;
+    padding-left: 90px;
+}
+#checkout{
+    padding-left: 90px;
+    color: white;
+    font-size: 40px;
+}
+
+#produktinfo{
+    background-color: white;
+    border-radius: 8px;
+    height: 200px;
+    width: 600px;
+    margin-bottom: 20px;
+}
+
+#produktinfo img {
+    width: 180px;
+}
+
+#Billing{
+    color: white;
+}
+#overzicht{
+    background-color: white;
+    border-radius: 8px;
+    padding-left: 20px;
+    width: 550px;
+    float: right;
+    height: 600px;
+}
+section.Info{
+    padding-right: 75px;
+    padding-top: 75px;
+}
+
+#user{
+    padding-left:60px ;
+}
+
+#First\ name{
+     border-radius: 6px;
+     height: 30px;
+    border: solid black 1px;
+
+ }
+#Last\ name{
+    border-radius: 6px;
+    height: 30px;
+    border: solid black 1px;
+
+}
+#e-mail\ adress{
+    border-radius: 6px;
+    height: 30px;
+    margin-top: 0px;
+    width: 360px;
+    border: solid black 1px;
+}
+#streetname {
+    border-radius: 6px;
+    height: 30px;
+    border: solid black 1px;
+
+}
+#housenumber{
+      border-radius: 6px;
+      height: 30px;
+      border: solid black 1px;
+
+}
+#postcode{
+    border-radius: 6px;
+    height: 30px;
+    border: solid black 1px;
+
+}
+#City{
+    border-radius: 6px;
+    height: 30px;
+    border: solid black 1px;
+
+}
+#email{
+    margin-bottom:0px ;
+    font-size: 20px;
+}
+#name{
+    margin-bottom: 0px;
+    font-size: 20px;
+}
+#adress{
+    padding-left:60px;
+}
+#streetname,#housenumber{
+    margin-bottom: 10px;
+}
+#Payment{
+    padding-left:60px;
+}
+#expire{
+    font-size: 15px;
+    margin-bottom: -5px;
+
+}
+#month{
+ margin-top: 10px;
+ border-radius: 6px;
+    height:30px ;
+    border: solid black 1px;
+
+}
+#cvc{
+    border-radius: 6px;
+    height: 30px;
+    width: 185px;
+    border: solid black 1px;
+}
+#pay{
+    margin-top: 20px;
+    width: 300px;
+    height: 35px;
+    font-family: "Roobert", "Helvetica", "Arial", sans-serif;
+    font-size: 25px;
+    background-color: #000563;
+    color: white;
+    border-radius: 6px;
+    border-color: #000563;
+    margin-left: 30px;
+    border: 1px;
+}
+.topnav .icon {
+    display: none;
+}
+#price{
+    float: right;
+    text-align: center;
+    padding-right: 300px;
+
+}
+#details{
+
+}
+/*-------------------------------------responsive style--------------------*/
+
+@media only screen and (max-width:860px) {
+    /* For mobile phones: */
+    #menu {
+        text-decoration: none;
+        text-align: center;
+        margin:0;
+    }
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+    nav, ul,  li {
+        width: 100%;
+    }
+
+    .topnav.responsive {
+        position: relative;
+    }
+
+    .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .topnav.responsive .dropdown {float: none;}
+    .topnav.responsive .dropdown-content {position: relative;}
+    .topnav.responsive .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+    #image{
+        width: 300px;
+        padding: 20px;
+        float: right;
+        margin-top: 400px;
+
+    }
+}
