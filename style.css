@@ -324,7 +324,7 @@ footer {
     float: left;
     width: 50%;
     padding: 50px;
-    height: 300px;
+    height: 100%;
 
 }
 
@@ -376,7 +376,12 @@ article{
     color:black;
 }
 #content{
-    height: 700px;
+    border-radius: 10px;
+    margin-right: 40px;
+    margin-bottom: 212px;
+    margin-left: 40px;
+    height: 100%;
+}
 }
 #in_stock{
     font-size: 18px;
