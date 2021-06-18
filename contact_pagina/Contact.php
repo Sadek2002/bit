@@ -39,7 +39,7 @@
         $_POST['ordernumber'] = '0';
     }
     if(isset($_POST['submit'])) {
-        echo '<p id="sentMessage"  style="color: white">It has been sent</p>';
+        echo '<p id="sentMessage"  style="color: white">Contact form has been sent!</p>';
         require_once "../php/Database.php";
         $db = new Database("localhost", "bit_academy", "3306", "root", "");
         $db->insertRecordToMessages($_POST['mail'],$_POST['number'],$_POST['ordernumber'],

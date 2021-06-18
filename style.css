@@ -106,11 +106,21 @@ footer{
     width: 100%;
     bottom:0;
     background: #333782;
-    height: 100px;
     float: left;
 }
 #footer-text{
+    display: flex;
+    font-size: 1.333rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: rgb(255 255 255);
+}
+#footer-content{
+    justify-content: flex-end;
+    margin-top: 0;
+    text-decoration: none;
 
+}
 }
 /*-------------------Contact page style-----------------------*/
 #contact_form{
@@ -200,17 +210,15 @@ footer{
 
 /*------------------------------------------------product home page-------------------------*/
 #producten{
- 
+
     display: flex;
     align-content: center;
     flex-direction: row;
-    justify-content:center;
+    justify-content: flex-start;
     align-items: stretch;
     flex-wrap: wrap;
     margin: auto;
-    width: 1035px;
-    
-    
+    width: 800px;
 }
 #producten::after{
     content:'';
@@ -220,7 +228,7 @@ footer{
 #items{
     color: rgb(255 255 255);
     background-color: white;
-    margin: 20px;
+    margin: 30px;
     border-radius: 15px;
 
 }
