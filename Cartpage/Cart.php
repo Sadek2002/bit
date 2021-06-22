@@ -88,6 +88,13 @@
     else{
         echo '<p id="empty_log">Cart is empty</p>';
         $totalPrice =0;
+        echo'
+        <style>
+        footer{
+        margin-top: 100px;
+        }
+        </style>
+        ';
     }
     ?>
 </section>
