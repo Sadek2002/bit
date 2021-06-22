@@ -406,12 +406,8 @@ article{
 /*-------------------------------------------cart page style---------------------------------------*/
 #cart{
     margin: -20px;
-    background: url("img/Cart.png") no-repeat;
+}
 
-}
-#cart:hover{
-    margin: -20px;
-}
 section.details{
     width: 50%;
     float: left;
