@@ -5,21 +5,21 @@
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="../style.css">
     <?php
-        session_start();
+    session_start();
 
-        if (isset($_POST['product_id'])) {
-            $newProduct = array();
+    if (isset($_POST['product_id'])) {
+        $newProduct = array();
 
-            foreach ($_POST as $item => $value) {
-                $newProduct[$item] = $value;
-            }
-
-            $_SESSION['product_list'][] = $newProduct;
+        foreach ($_POST as $item => $value) {
+            $newProduct[$item] = $value;
         }
 
-        /*echo "<pre>";
-        print_r($_SESSION);
-        echo "</pre>";*/
+        $_SESSION['product_list'][] = $newProduct;
+    }
+
+    /*echo "<pre>";
+    print_r($_SESSION);
+    echo "</pre>";*/
     ?>
 </head>
 <body>
@@ -53,49 +53,43 @@
     <p id="Billing">Billing Details</p>
 
     <?php
-        require_once '../php/Database.php';
-        $db = new Database("localhost", "bit_academy", "3306", "root", "");
-        $db->checkConnectionToDatabase();
+    require_once '../php/Database.php';
+    $db = new Database("localhost", "bit_academy", "3306", "root", "");
+    $db->checkConnectionToDatabase();
 
 
-        //makes the ordered products
-        if(isset($_SESSION['product_list'])) {
+    //makes the ordered products
+    if(isset($_SESSION['product_list'])) {
 
-            $totalPrice = 0;
+        $totalPrice = 0;
 
-            foreach ($_SESSION['product_list'] as $row) {
-                echo "<div id='produktinfo'>";
+        foreach ($_SESSION['product_list'] as $row) {
+            echo "<div id='produktinfo'>";
 
-                $product = $db->getRecordsFromTable("products", "product_id", $row['product_id']);
+            $product = $db->getRecordsFromTable("products", "product_id", $row['product_id']);
 
-                echo "<img src='../" . $product[0]['img_url'] . "'>";
+            echo "<img src='../" . $product[0]['img_url'] . "'>";
+            echo '<p id="productName">' . $product[0]['name'] . '</p>';
+            echo '<p id="quantity">Quantity: ' . $row['quantity'] . '</p>';
 
-                echo "<div id='info'>";
-                echo "<p id='price'>";
-                //echo "<p id='productname'>". $product[0]['name']; echo "</p>";
-                echo "<br>";
-
-                echo '<p id="productName">' . $product[0]['name'] . '</p>';
-                echo '<p id="quantity">Quantity: ' . $row['quantity'] . '</p>';
-
-                if (isset($row['size'])) {
-                    echo '<p id="size">Size: ' . $row['size'] . "</p>";
-                }
-
-                echo "<p id='price'>" . '€' . $product[0]['price'] * $row['quantity'] . "<br>"."</p>";
-
-                echo "</div>";
-                $calc = $product[0]['price'] * $row['quantity'];
-                $totalPrice += $calc;
+            if (isset($row['size'])) {
+                echo '<p id="size">Size: ' . $row['size'] . "</p>";
             }
 
-            echo'<div id="totalprice">';
-            echo'$ '.$totalPrice;
-            echo'</div>';
+            echo "<p id='price'>" . '€' . $product[0]['price'] * $row['quantity'] . "<br>"."</p>";
+
+            echo "</div>";
+            $calc = $product[0]['price'] * $row['quantity'];
+            $totalPrice += $calc;
         }
-        else {
-            echo '<p id="empty_log">Cart is empty</p>';
-        }
+
+        echo'<div id="totalprice">';
+        echo'$ '.$totalPrice;
+        echo'</div>';
+    }
+    else {
+        echo '<p id="empty_log">Cart is empty</p>';
+    }
     ?>
 </section>
 <section class="Info">
@@ -105,18 +99,18 @@
             <div id="user">
 
                 <p id="name">First Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; Last Name</p>
-            <input type="text" name="First name" id="First name">
-               <input type="text" name="Last name" id="Last name">
+                <input type="text" name="First name" id="First name">
+                <input type="text" name="Last name" id="Last name">
                 <p id="email">Email Adress</p>
-            <input type="text" name="e-mail adress" id="e-mail adress">
-           </div>
+                <input type="text" name="e-mail adress" id="e-mail adress">
+            </div>
             <p>Adress</p>
             <div id="adress">
-            <input type="text" name="streetname" id="streetname" placeholder="Steetname">
-            <input type="text" name="housenumber" id="housenumber" placeholder="House #">
-            <input type="text" name="postcode" id="postcode" placeholder="Postal code">
-            <input type="text" name="City" id="City" placeholder="City">
-        </div>
+                <input type="text" name="streetname" id="streetname" placeholder="Steetname">
+                <input type="text" name="housenumber" id="housenumber" placeholder="House #">
+                <input type="text" name="postcode" id="postcode" placeholder="Postal code">
+                <input type="text" name="City" id="City" placeholder="City">
+            </div>
             <p>Payment </p>
             <div id="Payment">
                 <input type="text" name="e-mail adress" id="e-mail adress" placeholder="Card Number">
@@ -130,4 +124,22 @@
     </div>
 </section>
 </body>
+<footer>
+    <img src="../img/logo.svg"  id="bit-img">
+    <div id="footer-content">
+        <div id="footer-adres">
+            <h4>Adres</h4>
+            <a> Amsterdam<br>
+                Science Park 608A<br>
+                1098XH, Amsterdam<br>
+            </a>
+        </div>
+        <div id="footer-contact">
+            <h4>Contact</h4>
+            <a href="mailto:info@bit-academy.nl"  style="text-decoration: none"> info@bit-academy.nl</a><br>
+            <a href="tel:020 247 0347" style="text-decoration: none">020 247 0347</a>
+
+        </div>
+    </div>
+</footer>
 </html>
