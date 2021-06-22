@@ -101,7 +101,7 @@ if (isset($_POST['update'])) {
 </script>
 <link rel="stylesheet" href="AdminStyle.css">
 <header style="margin-left: 30px">
-    <img src="../img/logo.svg">
+    <img style="margin-top: 10px" src="../img/logo.svg">
 </header>
 <body style="background-color:#000563">
 <font color="white">
@@ -135,8 +135,7 @@ if (isset($_POST['update'])) {
                 </div>
                 <div class="form-group">
                     <label for="pwd">Item description</label>
-                    <input type="text" class="form-control" id="description" placeholder="Enter product description"
-                           name="description" value="<?php echo $product[0]['description']; ?>" required>
+                    <textarea class="form-control" id="description" name="description" placeholder="Enter product description" cols="45" rows="5" maxlength="500" required><?php echo $product[0]['description']; ?></textarea>
                 </div>
                 <div class="form-group">
                     <input type="file" name="file" required>
@@ -181,7 +180,7 @@ if (isset($_POST['update'])) {
                         ?>
                     </select>
                 </div>
-                <button type="submit" name="update" class="btn btn-default">Update</button>
+                <button style="margin-top: 10px; margin-bottom: 50px" type="submit" name="update" class="btn btn-default">Update</button>
             </form>
         </div>
     </div>
