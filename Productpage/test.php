@@ -118,7 +118,6 @@ $product = $db->getRecordsFromTable("products", "product_id", $_GET['id']);
             <h4>Contact</h4>
             <a href="mailto:info@bit-academy.nl"  style="text-decoration: none"> info@bit-academy.nl</a><br>
             <a href="tel:020 247 0347" style="text-decoration: none">020 247 0347</a>
-
         </div>
     </div>
 </footer>
