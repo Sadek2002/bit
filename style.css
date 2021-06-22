@@ -562,8 +562,30 @@ section.Info{
 #productName{
     padding-top: 20px;
 }
-#details{
+#totalprice{
+    color: black;
+    font-family: "Roobert", "Helvetica", "Arial", sans-serif;
+    font-size: 25px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    background-color: white;
+    width: 550px;
+    height: 40px;
+    padding-top: 5px;
+    margin-left: 723px;
 
+
+}
+#total{
+    float: left;
+    padding-left: 20px;
+}
+#prijs{
+    float: right;
+    padding-right: 20px;
+}
+#empty_log{
+    color: white;
 }
 /*-------------------------------------responsive style--------------------*/
 

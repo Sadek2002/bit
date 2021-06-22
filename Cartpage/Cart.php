@@ -83,16 +83,25 @@
             $totalPrice += $calc;
         }
 
-        echo'<div id="totalprice">';
-        echo'$ '.$totalPrice;
-        echo'</div>';
+
     }
-    else {
+    else{
         echo '<p id="empty_log">Cart is empty</p>';
+        $totalPrice =0;
     }
     ?>
 </section>
 <section class="Info">
+    <?php
+    echo'<div id="totalprice" >';
+    echo "<div id='total'>";
+    echo "Total: ";
+    echo "</div>";
+    echo "<div id='prijs'>";
+    echo' &euro; '.$totalPrice;
+    echo "</div>";
+    echo'</div>';
+    ?>
     <div id="overzicht">
         <form>
             <p>Contact Details</p>
