@@ -8,7 +8,6 @@
     <header>
             <nav id= "menu">
                 <ul>
-                    <li><img src="img/logo.svg" id="bit-img" style="float: left"></li>
                     <li style = "float: right" ><a href="Cartpage/Cart.php"><img src="img/Cart.png" id="cart"></a></li>
                     <li style = "float: right"><a href = "">Account</a></li>
                     <li style = "float: right"><a href = "contact_pagina/Contact.php">Contact</a></li>
