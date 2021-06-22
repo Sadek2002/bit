@@ -197,28 +197,19 @@ $db->checkConnectionToDatabase();
         $allowed = array('jpg', 'jpeg', 'png');
 
         if (in_array($fileActualExt, $allowed)) {
-            if ($fileError === 0) {
-                if ($fileSize < 1000000) {
-                    $fileNameNew = uniqid('', true) . "." . $fileActualExt;
-                    $fileDestination = '../img/' . $fileNameNew;
-                    move_uploaded_file($fileTmpName, $fileDestination);
-                } else {
-                    echo "Your file is too big!";
-                }
-            } else {
-                echo "There was an error uploading your file!";
-            }
-        } else {
-            echo "You cannot upload files of this type!";
+            $fileNameNew = uniqid('', true).".".$fileActualExt;
+            $fileDestination = '../img/'.$fileNameNew;
+            move_uploaded_file($fileTmpName, $fileDestination);
         }
-        $img_url = "img/" . $fileNameNew;
+
+        $img_url = "img/".$fileNameNew;
 
         $lastId = $db->insertRecordToProducts($_POST['product_type'], $_POST['name'], $_POST['description'], $img_url, $_POST['color'], $_POST['price'], $_POST['in_stock']);
 
         // insert sizes here
         for ($i = 0; $i < 10; $i++) {
-            if (isset($_POST['size' . $i])) {
-                $db->insertRecordToProductHasSizes($lastId, $_POST['size' . $i]);
+            if (isset($_POST['size'.$i])) {
+                $db->insertRecordToProductHasSizes($lastId, $_POST['size'.$i]);
             }
         }
         echo print_r($_POST);

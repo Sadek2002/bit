@@ -3,12 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="e55a344a-eec0-4b40-a085-ec6f953dd90f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin_Page/AdminStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/Admin_Page/AdminStyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Admin_Page/adminpage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin_Page/adminpage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin_Page/delete_types.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin_Page/delete_types.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin_Page/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin_Page/delete.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Admin_Page/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin_Page/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin_Page/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin_Page/messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin_Page/types.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin_Page/types.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/60cb51ee9338d9.08844139.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/60cc9d83907020.34604446.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +69,19 @@
       <recent name="C:\Users\31621\PhpstormProjects\bit\" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -90,7 +102,7 @@
       <workItem from="1624108566732" duration="462000" />
       <workItem from="1624115714932" duration="488000" />
       <workItem from="1624134115886" duration="13000" />
-      <workItem from="1624347848672" duration="2023000" />
+      <workItem from="1624347848672" duration="8136000" />
     </task>
     <servers />
   </component>
