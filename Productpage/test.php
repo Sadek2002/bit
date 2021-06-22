@@ -71,7 +71,7 @@ $product = $db->getRecordsFromTable("products", "product_id", $_GET['id']);
             <br>
             <p id="tekst">Quantity</p>
 
-            <input type="number" id="quantity" name="quantity" max="10" min="1" required>
+            <input type="number" id="quantity" name="quantity" max="10" min="1" value="1" required>
             <input type="number" id="product_id" name="product_id" value="<?php echo $_GET['id'] ?>" required>
 
             <?php
