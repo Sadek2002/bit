@@ -453,6 +453,7 @@ section.details{
 section.Info{
     padding-right: 75px;
     padding-top: 75px;
+    float: right;
 }
 
 #user{
@@ -572,7 +573,7 @@ section.Info{
     width: 550px;
     height: 40px;
     padding-top: 5px;
-    margin-left: 723px;
+    
 
 
 }
