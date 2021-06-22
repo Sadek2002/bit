@@ -85,7 +85,7 @@
             </div>
             <div id="footer-contact">
                 <h4>Contact</h4>
-                <a href="mailto:info@bit-academy.nl"  style="text-decoration: none"> info@bit-academy.nl</a><br>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=info@bit-academy.nl"  style="text-decoration: none"> info@bit-academy.nl</a><br>
                 <a href="tel:020 247 0347" style="text-decoration: none">020 247 0347</a>
 
             </div>
