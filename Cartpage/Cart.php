@@ -15,6 +15,7 @@
         }
 
         $_SESSION['product_list'][] = $newProduct;
+        header("location: Cart.php");
     }
 
     /*echo "<pre>";
