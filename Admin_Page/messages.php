@@ -11,20 +11,22 @@
 </head>
 <link rel="stylesheet" href="AdminStyle.css">
 <header style="margin-left: 30px">
-    <img src="../img/logo.svg">
+    <img src="../img/logo.svg" style="margin-top: 10px">
     <style>
         img.images{
             width: 50px;
         }
     </style>
-    <ul class="menu-border" style=" margin-bottom: 10px">
-        <li><a class="active" href="adminhome.php">Home</a></li>
+</header>
+    <body style="background-color: #000563">
+    <font color="white">
+    <ul class="menu-border" style="margin-top: 10px; margin-bottom: 30px">
         <li><a href="adminpage.php">Edit</a></li>
         <li><a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">Mail</a></li>
         <li><a href="messages.php">Messages</a></li>
-
+        <li><a href="types.php">Types</a></li>
     </ul>
-    <body style="background-color: #000563">
+
 <div class="col-lg-12">
     <table class="table table-bordered">
         <thead>
@@ -39,6 +41,7 @@
 </tr>
 </thead>
 <tbody>
+</font>
 </body>
 </html>
 <?php
