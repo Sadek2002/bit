@@ -62,14 +62,9 @@ $db->checkConnectionToDatabase();
                     <input type="text" class="form-control" id="name" placeholder="Enter product name" name="name"
                            required>
                 </div>
-                <!--                <div class="form-group">-->
-                <!--                    <label for="pwd">Item description</label>-->
-                <!--                    <input type="text" class="form-control" id="description" placeholder="Enter product description" name="description" maxlength="500" required>-->
-                <!--                </div>-->
                 <div class="form-group">
                     <label for="pwd">Item description</label>
-                    <textarea style="color: black" name="description" id="description" cols="45" rows="5"
-                              maxlength="500" required></textarea>
+                    <textarea style="color: black" class="form-control" name="description" id="description" placeholder="Enter product description" cols="45" rows="5" maxlength="500" required></textarea>
                 </div>
                 <div>
                     <label for="Images">Product Image</label>
