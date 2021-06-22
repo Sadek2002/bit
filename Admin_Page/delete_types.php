@@ -16,5 +16,5 @@ if (isset($_GET['color'])) {
 ?>
 
 <script type="text/javascript">
-window.location="types.php";
+    window.location = "types.php";
 </script>

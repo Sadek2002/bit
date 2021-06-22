@@ -64,7 +64,6 @@ echo "You cannot upload files of this type!";
 }
 ?>
 
-
 <!doctype html>
 <html lang="en">
 <head>
