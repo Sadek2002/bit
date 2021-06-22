@@ -105,6 +105,12 @@ if (isset($_POST['update'])) {
 </header>
 <body style="background-color:#000563">
 <font color="white">
+    <ul class="menu-border" style="margin-top: 10px; margin-bottom: 30px">
+        <li><a href="adminpage.php">Edit</a></li>
+        <li><a href="messages.php">Messages</a></li>
+        <li><a href="types.php">Types</a></li>
+    </ul>
+
     <div class="container">
         <div class="col-lg-4">
             <h2>Edit Product</h2>

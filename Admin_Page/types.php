@@ -35,7 +35,6 @@ $db->checkConnectionToDatabase();
 <font color="white">
     <ul class="menu-border" style="margin-top: 10px; margin-bottom: 30px">
         <li><a href="adminpage.php">Edit</a></li>
-        <li><a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">Mail</a></li>
         <li><a href="messages.php">Messages</a></li>
         <li><a href="types.php">Types</a></li>
     </ul>
