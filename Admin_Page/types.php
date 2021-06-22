@@ -17,7 +17,7 @@ $db->checkConnectionToDatabase();
 </head>
 
 <header style="margin-left: 30px">
-    <img src="../img/logo.svg" style="margin-top: 10px; margin-bottom: 10px">
+    <img src="../img/logo.svg" style="margin-top: 10px">
     <style>
         img.images {
             width: 50px;
