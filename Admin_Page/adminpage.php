@@ -7,7 +7,7 @@ $db->checkConnectionToDatabase();
 ?>
 
 <html lang="en">
-<head >
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -20,7 +20,7 @@ $db->checkConnectionToDatabase();
 <header style="margin-left: 30px">
     <img src="../img/logo.svg">
     <style>
-        img.images{
+        img.images {
             width: 50px;
         }
     </style>
@@ -51,7 +51,7 @@ $db->checkConnectionToDatabase();
                         <?php
                         echo "<option value='' id='color'>None</option>";
                         foreach ($db->getTableByName("product_types") as $row) {
-                            echo "<option value='".$row['product_type']."' id='product_type'>".$row['product_type']."</option>";
+                            echo "<option value='" . $row['product_type'] . "' id='product_type'>" . $row['product_type'] . "</option>";
                         }
                         ?>
 
@@ -59,15 +59,17 @@ $db->checkConnectionToDatabase();
                 </div>
                 <div class="form-group">
                     <label for="Item Name">Item Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="Enter product name" name="name" required>
+                    <input type="text" class="form-control" id="name" placeholder="Enter product name" name="name"
+                           required>
                 </div>
-<!--                <div class="form-group">-->
-<!--                    <label for="pwd">Item description</label>-->
-<!--                    <input type="text" class="form-control" id="description" placeholder="Enter product description" name="description" maxlength="500" required>-->
-<!--                </div>-->
+                <!--                <div class="form-group">-->
+                <!--                    <label for="pwd">Item description</label>-->
+                <!--                    <input type="text" class="form-control" id="description" placeholder="Enter product description" name="description" maxlength="500" required>-->
+                <!--                </div>-->
                 <div class="form-group">
                     <label for="pwd">Item description</label>
-                    <textarea style="color: black" name="description" id="description" cols="45" rows="5" maxlength="500" required></textarea>
+                    <textarea style="color: black" name="description" id="description" cols="45" rows="5"
+                              maxlength="500" required></textarea>
                 </div>
                 <div>
                     <label for="Images">Product Image</label>
@@ -77,22 +79,24 @@ $db->checkConnectionToDatabase();
                 </div>
                 <div class="form-group">
                     <label for="Price">Price</label>
-                    <input type="text" class="form-control" id="price" placeholder="Enter product price" name="price" required>
+                    <input type="text" class="form-control" id="price" placeholder="Enter product price" name="price"
+                           required>
                 </div>
                 <div class="form-group mb-3">
                     <label for="size">Sizes</label><br>
 
                     <?php
-                        $i = 0;
-                        foreach ($db->getTableByName("sizes") as $row) {
-                            echo "<input type='checkbox' value='".$row['size']."' name='size".$i."'>".$row['size']."<br>";
-                            $i++;
-                        }
+                    $i = 0;
+                    foreach ($db->getTableByName("sizes") as $row) {
+                        echo "<input type='checkbox' value='" . $row['size'] . "' name='size" . $i . "'>" . $row['size'] . "<br>";
+                        $i++;
+                    }
                     ?>
                 </div>
                 <div class="form-group">
                     <label for="Stock">Stock</label>
-                    <input type="text" class="form-control" id="in_stock" placeholder="Enter stock" name="in_stock" required>
+                    <input type="text" class="form-control" id="in_stock" placeholder="Enter stock" name="in_stock"
+                           required>
                 </div>
                 <div>
                     <label for="Product Color">Product Color</label>
@@ -102,7 +106,7 @@ $db->checkConnectionToDatabase();
                         <?php
                         echo "<option value='' id='color'>None</option>";
                         foreach ($db->getTableByName("colors") as $row) {
-                            echo "<option value='".$row['color']."' id='color'>".$row['color']."</option>";
+                            echo "<option value='" . $row['color'] . "' id='color'>" . $row['color'] . "</option>";
                         }
                         ?>
                     </select>
@@ -135,79 +139,96 @@ $db->checkConnectionToDatabase();
     <tbody>
     <?php
 
-    foreach ($db->getTableByName("products") as $row)
-    {
+    foreach ($db->getTableByName("products") as $row) {
         echo "<tr bgcolor='#333'>";
-        echo "<td>"; echo $row["product_id"]; echo "</td>";
-        echo "<td>"; echo $row["product_type"]; echo "</td>";
-        echo "<td>"; echo $row["name"]; echo "</td>";
-        echo "<td>"; echo $row["description"]; echo "</td>";
-        echo "<td>"; echo "<img class='images' src='../".$row["img_url"]."'>"; echo "</td>";
-        echo "<td>"; echo $row["price"]; echo "</td>";
-        echo "<td>"; echo $row["color"]; echo "</td>";
+        echo "<td>";
+        echo $row["product_id"];
+        echo "</td>";
+        echo "<td>";
+        echo $row["product_type"];
+        echo "</td>";
+        echo "<td>";
+        echo $row["name"];
+        echo "</td>";
+        echo "<td>";
+        echo $row["description"];
+        echo "</td>";
+        echo "<td>";
+        echo "<img class='images' src='../" . $row["img_url"] . "'>";
+        echo "</td>";
+        echo "<td>";
+        echo $row["price"];
+        echo "</td>";
+        echo "<td>";
+        echo $row["color"];
+        echo "</td>";
 
         //sizes
         echo "<td>";
         foreach ($db->getRecordsFromTable("product_has_sizes", "product_id", $row['product_id']) as $size) {
-            echo $size['size']." ";
+            echo $size['size'] . " ";
         }
-        echo "<td>"; echo $row["in_stock"]; echo "</td>";
+        echo "<td>";
+        echo $row["in_stock"];
+        echo "</td>";
         echo "</td>";
 
-        echo "<td>"; ?> <a href="edit.php?id=<?php echo $row["product_id"]; ?>"<button type="button" class="btn btn-success">Edit</button></a> <?php echo "</td>";
-        echo "<td>"; ?> <a href="delete.php?id=<?php echo $row["product_id"]; ?>"<button type="button" class="btn btn-danger">Delete</button></a> <?php echo "</td>";
+        echo "<td>"; ?> <a href="edit.php?id=<?php echo $row["product_id"]; ?>"
+        <button type="button" class="btn btn-success">Edit</button></a> <?php echo "</td>";
+        echo "<td>"; ?> <a href="delete.php?id=<?php echo $row["product_id"]; ?>"
+        <button type="button" class="btn btn-danger">Delete</button></a> <?php echo "</td>";
     }
     ?>
     </tbody>
     </table>
     <?php
-if (isset($_POST['create'])) {
-    $file = $_FILES['file'];
+    if (isset($_POST['create'])) {
+        $file = $_FILES['file'];
 
-    $fileName = $_FILES['file']['name'];
-    $fileTmpName = $_FILES['file']['tmp_name'];
-    $fileSize = $_FILES['file']['size'];
-    $fileError = $_FILES['file']['error'];
-    $fileType = $_FILES['file']['type'];
+        $fileName = $_FILES['file']['name'];
+        $fileTmpName = $_FILES['file']['tmp_name'];
+        $fileSize = $_FILES['file']['size'];
+        $fileError = $_FILES['file']['error'];
+        $fileType = $_FILES['file']['type'];
 
-    $fileExt = explode('.', $fileName);
-    $fileActualExt = strtolower(end($fileExt));
+        $fileExt = explode('.', $fileName);
+        $fileActualExt = strtolower(end($fileExt));
 
-    $allowed = array('jpg', 'jpeg', 'png');
+        $allowed = array('jpg', 'jpeg', 'png');
 
-    if (in_array($fileActualExt, $allowed)) {
-        if ($fileError === 0) {
-            if ($fileSize < 1000000) {
-                $fileNameNew = uniqid('', true).".".$fileActualExt;
-                $fileDestination = '../img/'.$fileNameNew;
-                move_uploaded_file($fileTmpName, $fileDestination);
+        if (in_array($fileActualExt, $allowed)) {
+            if ($fileError === 0) {
+                if ($fileSize < 1000000) {
+                    $fileNameNew = uniqid('', true) . "." . $fileActualExt;
+                    $fileDestination = '../img/' . $fileNameNew;
+                    move_uploaded_file($fileTmpName, $fileDestination);
+                } else {
+                    echo "Your file is too big!";
+                }
             } else {
-                echo "Your file is too big!";
+                echo "There was an error uploading your file!";
             }
         } else {
-            echo "There was an error uploading your file!";
+            echo "You cannot upload files of this type!";
         }
-    } else {
-        echo "You cannot upload files of this type!";
-    }
-    $img_url = "img/".$fileNameNew;
+        $img_url = "img/" . $fileNameNew;
 
-    $lastId = $db->insertRecordToProducts($_POST['product_type'], $_POST['name'], $_POST['description'], $img_url, $_POST['color'], $_POST['price'], $_POST['in_stock']);
+        $lastId = $db->insertRecordToProducts($_POST['product_type'], $_POST['name'], $_POST['description'], $img_url, $_POST['color'], $_POST['price'], $_POST['in_stock']);
 
-    // insert sizes here
-    for ($i = 0; $i < 10; $i++) {
-        if (isset($_POST['size' . $i])) {
-            $db->insertRecordToProductHasSizes($lastId, $_POST['size' . $i]);
+        // insert sizes here
+        for ($i = 0; $i < 10; $i++) {
+            if (isset($_POST['size' . $i])) {
+                $db->insertRecordToProductHasSizes($lastId, $_POST['size' . $i]);
+            }
         }
+        echo print_r($_POST);
+        ?>
+        <script type="text/javascript">
+            window.location.href = window.location.href;
+        </script>
+        <?php
     }
-    echo print_r($_POST);
     ?>
-    <script type="text/javascript">
-        window.location.href=window.location.href;
-    </script>
-    <?php
-}
-?>
 
 </font>
 </body>

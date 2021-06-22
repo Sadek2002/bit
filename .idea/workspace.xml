@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e55a344a-eec0-4b40-a085-ec6f953dd90f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Admin_Page/delete_types.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/60cc9d83907020.34604446.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin_Page/AdminStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/Admin_Page/AdminStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin_Page/adminpage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin_Page/adminpage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin_Page/delete_types.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin_Page/delete_types.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin_Page/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin_Page/edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin_Page/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin_Page/messages.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Admin_Page/types.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin_Page/types.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/60cc5746a32dc6.46117145.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/60cc890e3b4861.34503908.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +62,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="web.server" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -69,25 +70,10 @@
       <recent name="C:\Users\31621\PhpstormProjects\bit\" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="554e3221-1ad2-4288-95b8-5dd192fc38fa" name="Default Changelist" comment="" />
+      <changelist id="e55a344a-eec0-4b40-a085-ec6f953dd90f" name="Default Changelist" comment="" />
       <created>1623223635877</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -101,6 +87,10 @@
       <workItem from="1623842736722" duration="5667000" />
       <workItem from="1623871860540" duration="41000" />
       <workItem from="1623916917616" duration="13135000" />
+      <workItem from="1624108566732" duration="462000" />
+      <workItem from="1624115714932" duration="488000" />
+      <workItem from="1624134115886" duration="13000" />
+      <workItem from="1624347848672" duration="2023000" />
     </task>
     <servers />
   </component>
