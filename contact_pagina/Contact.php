@@ -39,7 +39,7 @@
         $_POST['ordernumber'] = '0';
     }
     if(isset($_POST['submit'])) {
-        echo '<p id="sentMessage"  style="color: white">It has been sent</p>';
+        echo '<p id="sentMessage"  style="color: white">Contact form has been sent!</p>';
         require_once "../php/Database.php";
         $db = new Database("localhost", "bit_academy", "3306", "root", "");
         $db->insertRecordToMessages($_POST['mail'],$_POST['number'],$_POST['ordernumber'],
@@ -81,8 +81,21 @@
 </div>
 </body>
 <footer>
-    <div id="footer-text">
+    <img src="../img/logo.svg"  id="bit-img">
+    <div id="footer-content">
+        <div id="footer-adres">
+            <h4>Adres</h4>
+            <a> Amsterdam<br>
+                Science Park 608A<br>
+                1098XH, Amsterdam<br>
+            </a>
+        </div>
+        <div id="footer-contact">
+            <h4>Contact</h4>
+            <a href="mailto:info@bit-academy.nl"  style="text-decoration: none"> info@bit-academy.nl</a><br>
+            <a href="tel:020 247 0347" style="text-decoration: none">020 247 0347</a>
 
+        </div>
     </div>
 </footer>
 </html>
