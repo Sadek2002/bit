@@ -64,7 +64,7 @@ if (isset($_POST['update'])) {
             list-style-type: none;
             margin: 0;
             padding: 0;
-            width: 100px;
+            width: auto;
             background-color: black;
         }
 

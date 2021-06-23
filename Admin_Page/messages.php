@@ -53,7 +53,7 @@ $db->checkConnectionToDatabase();
 foreach ($db->getTableByName("messages") as $row)
 {
     echo "<tr bgcolor='#333'>";
-    echo "<td><a href='mailto:".$row['email']."'>".$row['email']."</a></td>";
+    echo "<td><a href='https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=".$row['email']."' target='_blank'>".$row['email']."</a></td>";
     echo "<td>"; echo $row["telephone_nr"]; echo "</td>";
     echo "<td>"; echo $row["order_nr"]; echo "</td>";
     echo "<td>"; echo $row["name"]; echo "</td>";
