@@ -44,10 +44,6 @@
                 }
             }
         </script>
-            <!--<div class="slideshow">
-                <img src="img/banner1%20(1).jpg" height="200" width="600">
-                <img src="img/banner1%20(2).jpg" height="200" width="600">
-            </div>-->
         </header>
         <div id="wrapper">
             

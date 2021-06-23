@@ -76,11 +76,6 @@
         <button type="submit" value="submit" name="submit" id="submit_button">Verstuur</button>
     </form>
     <img src="../img/contact.jpg" id="image">
-    <!--<section id="Klantenservice">
-        <h2>Klantenservice</h2>
-        <h3>Email: Bitproject@gmail.com</h3>
-        <h3>Telefoonnnumer: 0612345678</h3>
-    </section>-->
 </div>
 </div>
 </body>
