@@ -89,7 +89,7 @@
             echo "</div>";
 
             echo "<div style='width: 20%; height: 100%; display: inline-block'>";
-            echo "<a id='cart-delete' href='Cart.php?index=".$i."'>delete</a>";
+            echo "<a id='cart-delete' href='Cart.php?index=".$i."'>Remove</a>";
             echo "</div>";
 
             echo "</div>";
