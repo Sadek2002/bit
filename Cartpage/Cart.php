@@ -73,6 +73,7 @@
 
         foreach ($_SESSION['product_list'] as $row) {
             echo "<div id='produktinfo'>";
+            echo "<div style='width: 80%; height: 100%; display: inline-block'>";
 
             $product = $db->getRecordsFromTable("products", "product_id", $row['product_id']);
 
@@ -85,8 +86,11 @@
             }
 
             echo "<p id='price'>" . '€ ' . $product[0]['price'] * $row['quantity'] . "<br>"."</p>";
+            echo "</div>";
 
+            echo "<div style='width: 20%; height: 100%; display: inline-block'>";
             echo "<a id='cart-delete' href='Cart.php?index=".$i."'>delete</a>";
+            echo "</div>";
 
             echo "</div>";
             $calc = $product[0]['price'] * $row['quantity'];
