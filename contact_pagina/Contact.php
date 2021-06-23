@@ -50,23 +50,23 @@
     ?>
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" id="contact_form">
         <h2 style="color: white">Guest Contact Form</h2>
-
-        <label>Name
+        <h6 id="required">Required *</h6>
+        <label>Name *
             <input name="name" type="text" class="contact_form_input" required>
         </label>
         <label>Phonenumber
             <input name="number" type="tel" class="contact_form_input">
         </label>
-        <label>Email
+        <label>Email *
             <input name="mail" type="email" class="contact_form_input" required>
         </label>
         <label>Ordernumber
             <input name="ordernumber" type="text" class="contact_form_input">
         </label>
-        <label>Subject
+        <label>Subject *
             <input name="subject" type="text" class="contact_form_input" required>
         </label>
-        <label>Message
+        <label>Message *
             <textarea name="message" id="contact_textarea" placeholder="bericht" required></textarea>
         </label>
         <button type="submit" value="submit" name="submit" id="submit_button">Verstuur</button>
@@ -92,7 +92,7 @@
         </div>
         <div id="footer-contact">
             <h4>Contact</h4>
-            <a href="mailto:info@bit-academy.nl"  style="text-decoration: none"> info@bit-academy.nl</a><br>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=info@bit-academy.nl"  style="text-decoration: none"> info@bit-academy.nl</a><br>
             <a href="tel:020 247 0347" style="text-decoration: none">020 247 0347</a>
 
         </div>
