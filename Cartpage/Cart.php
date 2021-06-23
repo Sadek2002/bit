@@ -15,6 +15,13 @@
         }
 
         $_SESSION['product_list'][] = $newProduct;
+        header("location: Cart.php");
+    }
+
+    if (isset($_GET['index'])) {
+        unset($_SESSION['product_list'][$_GET['index']]);
+        array_splice($_SESSION['product_list'], 0, count($_SESSION['product_list']), $_SESSION['product_list']);
+        header("location: Cart.php");
     }
 
     /*echo "<pre>";
@@ -59,12 +66,14 @@
 
 
     //makes the ordered products
-    if(isset($_SESSION['product_list'])) {
+    if(isset($_SESSION['product_list']) && !empty($_SESSION['product_list'])) {
 
         $totalPrice = 0;
+        $i = 0;
 
         foreach ($_SESSION['product_list'] as $row) {
             echo "<div id='produktinfo'>";
+            echo "<div style='width: 80%; height: 100%; display: inline-block'>";
 
             $product = $db->getRecordsFromTable("products", "product_id", $row['product_id']);
 
@@ -76,18 +85,21 @@
                 echo '<p id="size">Size: ' . $row['size'] . "</p>";
             }
 
-            echo "<p id='price'>" . '€' . $product[0]['price'] * $row['quantity'] . "<br>"."</p>";
+            echo "<p id='price'>" . '€ ' . $product[0]['price'] * $row['quantity'] . "<br>"."</p>";
+            echo "</div>";
+
+            echo "<div style='width: 20%; height: 100%; display: inline-block'>";
+            echo "<a id='cart-delete' href='Cart.php?index=".$i."'>Remove</a>";
+            echo "</div>";
 
             echo "</div>";
             $calc = $product[0]['price'] * $row['quantity'];
             $totalPrice += $calc;
+            $i++;
         }
-
-
-    }
-    else{
+    } else {
         echo '<p id="empty_log">Cart is empty</p>';
-        $totalPrice =0;
+        $totalPrice = 0;
     }
     ?>
 </section>

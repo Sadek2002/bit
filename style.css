@@ -228,7 +228,7 @@ footer {
     border: 1px solid rgb(204 204 204);
     border-radius: 4px;
     box-sizing: border-box;
-    background: rgb(238 89 101);
+    background: #57be8e;
 }
 
 
@@ -562,9 +562,7 @@ section.Info{
     font-weight: 200;
 
 }
-#productName{
-    padding-top: 20px;
-}
+
 #totalprice{
     color: black;
     font-family: "Roobert", "Helvetica", "Arial", sans-serif;
@@ -575,10 +573,8 @@ section.Info{
     width: 550px;
     height: 40px;
     padding-top: 5px;
-    
-
-
 }
+
 #total{
     float: left;
     padding-left: 20px;
@@ -590,6 +586,13 @@ section.Info{
 #empty_log{
     color: white;
 }
+
+#cart-delete {
+    text-decoration: none;
+    color: red;
+}
+
+
 /*-------------------------------------responsive style--------------------*/
 
 @media only screen and (max-width:860px) {

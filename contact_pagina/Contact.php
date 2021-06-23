@@ -39,12 +39,16 @@
         $_POST['ordernumber'] = '0';
     }
     if(isset($_POST['submit'])) {
-        echo '<p id="sentMessage"  style="color: white">Contact form has been sent!</p>';
         require_once "../php/Database.php";
         $db = new Database("localhost", "bit_academy", "3306", "root", "");
         $db->insertRecordToMessages($_POST['mail'],$_POST['number'],$_POST['ordernumber'],
             $_POST['name'],$_POST['subject'],$_POST['message']);
 
+        header('location: Contact.php?send=true');
+    }
+
+    if (isset($_GET['send'])) {
+        echo '<p id="sentMessage"  style="color: white">Contact form has been sent!</p>';
     }
 
     ?>
@@ -72,11 +76,6 @@
         <button type="submit" value="submit" name="submit" id="submit_button">Verstuur</button>
     </form>
     <img src="../img/contact.jpg" id="image">
-    <!--<section id="Klantenservice">
-        <h2>Klantenservice</h2>
-        <h3>Email: Bitproject@gmail.com</h3>
-        <h3>Telefoonnnumer: 0612345678</h3>
-    </section>-->
 </div>
 </div>
 </body>
