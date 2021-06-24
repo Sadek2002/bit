@@ -58,7 +58,7 @@ $db->checkConnectionToDatabase();
                 </div>
                 <div class="form-group">
                     <label for="Item Name">Item Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="Enter product name" name="name"
+                    <input type="text" class="form-control" id="name" placeholder="Enter product name" name="name" maxlength="17"
                            required>
                 </div>
                 <div class="form-group">
