@@ -73,7 +73,7 @@
         <label>Message *
             <textarea name="message" id="contact_textarea" placeholder="bericht" required></textarea>
         </label>
-        <button type="submit" value="submit" name="submit" id="submit_button">Verstuur</button>
+        <button type="submit" value="submit" name="submit" id="submit_button">Send</button>
     </form>
     <img src="../img/contact.jpg" id="image">
 </div>
